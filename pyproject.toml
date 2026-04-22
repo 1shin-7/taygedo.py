@@ -1,0 +1,55 @@
+[project]
+name = "tagedo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.1",
+    "cryptography>=43",
+    "curl-cffi>=0.15.0",
+    "pydantic>=2.13.2",
+]
+
+[project.scripts]
+tagedo = "tagedo.cli:app"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.11",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# utils/data.py predates PEP 695 type-parameter syntax; preserve as-is.
+"src/tagedo/utils/data.py" = ["UP047"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unused_ignores = true
+# `@endpoint`-decorated methods declare their contract via signature only;
+# their body is `...` and supplied by the framework at call time.
+disable_error_code = ["empty-body"]
+
+[[tool.mypy.overrides]]
+# utils/data.py predates several modern mypy strictness checks; preserved as-is.
+module = "tagedo.utils.data"
+ignore_errors = true
