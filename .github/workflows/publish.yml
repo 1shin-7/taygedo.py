@@ -1,31 +1,21 @@
-name: Publish to PyPI
+name: Publish
 
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v*"
 
 jobs:
-  build-and-publish:
-    name: Build & publish
+  publish:
     runs-on: ubuntu-latest
-    environment: pypi
+    environment:
+      name: pypi
     permissions:
-      id-token: write   # required for Trusted Publishing (OIDC)
-
+      id-token: write
+      contents: read
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v5
-        with:
-          enable-cache: true
-
-      - name: Build package
-        run: uv build
-
-      - name: Publish to PyPI
-        run: uv publish
-        env:
-          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.12
+      - run: uv build
+      - run: uv publish
