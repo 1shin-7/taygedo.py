@@ -5,7 +5,7 @@ from typing import Annotated
 import pytest
 from pydantic import BaseModel
 
-from tagedo.core import Body, Header, Path, Query, Service, endpoint, service
+from taygedo.core import Body, Header, Path, Query, Service, endpoint, service
 
 from ._helpers import MockClient
 

@@ -16,11 +16,11 @@ CAPTCHA="${2:?usage: $0 <cellphone> <captcha>}"
 # Run a tiny Python helper that does sms_login and prints the laohu token.
 TOKEN=$(uv run python <<PY
 import asyncio, json, sys
-from tagedo.client import TajiduoClient
-from tagedo.models import SmsLoginRequest
+from taygedo.client import TaygedoClient
+from taygedo.models import SmsLoginRequest
 
 async def main():
-    async with TajiduoClient() as c:
+    async with TaygedoClient() as c:
         env = await c.login.sms_login(
             body=SmsLoginRequest.model_validate({
                 "cellphone": "$PHONE",

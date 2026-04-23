@@ -6,9 +6,9 @@ from io import StringIO
 
 from rich.console import Console
 
-from tagedo.cli._render import render
-from tagedo.cli._storage import StoredAccount
-from tagedo.models import (
+from taygedo.cli._render import render
+from taygedo.cli._storage import StoredAccount
+from taygedo.models import (
     BindRole,
     HtNamedId,
     HtRoleGameRecord,

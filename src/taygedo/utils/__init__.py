@@ -1,4 +1,4 @@
-"""Utility helpers for the tagedo package."""
+"""Utility helpers for the taygedo package."""
 
 from .data import parse_with_model
 

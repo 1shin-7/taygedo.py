@@ -6,7 +6,7 @@ import json
 from collections.abc import Callable
 from typing import Any
 
-from tagedo.core import (
+from taygedo.core import (
     AuthProvider,
     BaseClient,
     PreparedRequest,

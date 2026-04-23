@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from pydantic import BaseModel
 
-from tagedo.core import PreparedRequest, Service, endpoint, service
+from taygedo.core import PreparedRequest, Service, endpoint, service
 
 from ._helpers import MockClient
 

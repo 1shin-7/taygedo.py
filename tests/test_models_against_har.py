@@ -14,7 +14,7 @@ from typing import Any
 
 import pytest
 
-from tagedo.models import (
+from taygedo.models import (
     AppConfig,
     AppStartupData,
     AreaCode,

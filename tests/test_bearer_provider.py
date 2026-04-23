@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from tagedo.core import BearerProvider, PreparedRequest
+from taygedo.core import BearerProvider, PreparedRequest
 
 
 @dataclass

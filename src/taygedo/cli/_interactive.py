@@ -1,4 +1,4 @@
-"""Interactive prompts used by ``tagedo auth login``.
+"""Interactive prompts used by ``taygedo auth login``.
 
 These are *async* because they're invoked from inside an asyncio loop
 (via ``@async_command``); calling the sync ``prompt_toolkit.prompt`` from

@@ -15,9 +15,9 @@ from __future__ import annotations
 
 import time
 
-from tagedo.core import PreparedRequest
-from tagedo.device import AndroidDeviceProfile
-from tagedo.signers import HTASSISTANT_APP_KEY, LOGIN_SENSITIVE_FIELDS, LaohuConfig, SignLaohu
+from taygedo.core import PreparedRequest
+from taygedo.device import AndroidDeviceProfile
+from taygedo.signers import HTASSISTANT_APP_KEY, LOGIN_SENSITIVE_FIELDS, LaohuConfig, SignLaohu
 
 
 def _device() -> AndroidDeviceProfile:
@@ -111,7 +111,7 @@ def test_timestamp_unit_seconds_vs_ms() -> None:
 def test_short_app_key_rejected() -> None:
     import pytest
 
-    from tagedo.core.exceptions import SignError
+    from taygedo.core.exceptions import SignError
 
     with pytest.raises(SignError, match="at least 16"):
         SignLaohu(LaohuConfig(app_key="too short"), _device())

@@ -1,4 +1,4 @@
-"""tagedo command-line entry point.
+"""taygedo command-line entry point.
 
 The top-level ``app`` group bundles five sub-groups, two of which are
 double-named for ergonomics:
@@ -28,14 +28,14 @@ __all__ = ["app"]
 
 
 @click.group()
-@click.version_option(package_name="tagedo")
+@click.version_option(package_name="taygedo")
 @click.option(
     "--debug",
     is_flag=True,
     help="Print every HTTP request/response to stderr.",
 )
 def app(debug: bool) -> None:
-    """tagedo — bbs-api.tajiduo.com client."""
+    """taygedo — bbs-api.tajiduo.com client."""
     if debug:
         os.environ["TAGEDO_DEBUG"] = "1"
 

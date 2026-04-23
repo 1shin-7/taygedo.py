@@ -11,9 +11,9 @@ from urllib.parse import parse_qs
 import pytest
 from click.testing import CliRunner
 
-from tagedo.cli import app
-from tagedo.cli._storage import Storage
-from tagedo.core import PreparedRequest, Response
+from taygedo.cli import app
+from taygedo.cli._storage import Storage
+from taygedo.core import PreparedRequest, Response
 
 from ._cli_fixtures import install_scripted_client, isolated_storage  # noqa: F401
 
@@ -134,7 +134,7 @@ def test_login_half_interactive_prompts_for_captcha(
     async def _captcha() -> str:
         return "654321"
 
-    monkeypatch.setattr("tagedo.cli.auth.prompt_captcha", _captcha)
+    monkeypatch.setattr("taygedo.cli.auth.prompt_captcha", _captcha)
     runner = CliRunner()
     result = runner.invoke(app, ["auth", "login", "--cellphone", "13800138000"])
     assert result.exit_code == 0, result.output
@@ -154,8 +154,8 @@ def test_login_fully_interactive(
     async def _cap() -> str:
         return "123456"
 
-    monkeypatch.setattr("tagedo.cli.auth.prompt_cellphone", _cell)
-    monkeypatch.setattr("tagedo.cli.auth.prompt_captcha", _cap)
+    monkeypatch.setattr("taygedo.cli.auth.prompt_cellphone", _cell)
+    monkeypatch.setattr("taygedo.cli.auth.prompt_captcha", _cap)
     runner = CliRunner()
     result = runner.invoke(app, ["auth", "login"])
     assert result.exit_code == 0, result.output
@@ -178,7 +178,7 @@ def test_login_form_body_is_signed(
     async def _cap() -> str:
         return "123456"
 
-    monkeypatch.setattr("tagedo.cli.auth.prompt_captcha", _cap)
+    monkeypatch.setattr("taygedo.cli.auth.prompt_captcha", _cap)
     runner = CliRunner()
     runner.invoke(app, ["auth", "login", "--cellphone", "13800138000"])
 

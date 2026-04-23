@@ -1,5 +1,5 @@
 [project]
-name = "tagedo"
+name = "taygedo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-tagedo = "tagedo.cli:app"
+taygedo = "taygedo.cli:app"
 
 [dependency-groups]
 dev = [
@@ -42,7 +42,7 @@ select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
 [tool.ruff.lint.per-file-ignores]
 # utils/data.py predates PEP 695 type-parameter syntax; preserve as-is.
-"src/tagedo/utils/data.py" = ["UP047"]
+"src/taygedo/utils/data.py" = ["UP047"]
 
 [tool.mypy]
 python_version = "3.13"
@@ -54,5 +54,5 @@ disable_error_code = ["empty-body"]
 
 [[tool.mypy.overrides]]
 # utils/data.py predates several modern mypy strictness checks; preserved as-is.
-module = "tagedo.utils.data"
+module = "taygedo.utils.data"
 ignore_errors = true

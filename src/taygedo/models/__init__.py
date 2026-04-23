@@ -1,12 +1,12 @@
-"""Public re-exports for ``tagedo.models``.
+"""Public re-exports for ``taygedo.models``.
 
 Models are organised by business domain (``community``, ``post``, ``user``,
 ``task``, ``game``, ``auth``, ``app``) and share two infrastructure modules:
 
-* :mod:`tagedo.models._base` — pydantic ``ConfigDict`` bases.
-* :mod:`tagedo.models.envelope` — generic response envelopes.
-* :mod:`tagedo.models.pagination` — generic ``CursorPage`` / ``ReplyFeedPage``.
-* :mod:`tagedo.models.common` — atomic value objects (``Image``, ``Vod``, ...).
+* :mod:`taygedo.models._base` — pydantic ``ConfigDict`` bases.
+* :mod:`taygedo.models.envelope` — generic response envelopes.
+* :mod:`taygedo.models.pagination` — generic ``CursorPage`` / ``ReplyFeedPage``.
+* :mod:`taygedo.models.common` — atomic value objects (``Image``, ``Vod``, ...).
 """
 
 from ._base import BbsBase, LaohuBase

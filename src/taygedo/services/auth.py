@@ -23,7 +23,7 @@ from ..models import BbsLoginResult, BbsResponse, ExchangeTokenRequest
 from ..signers import SignDs
 
 if TYPE_CHECKING:
-    from ..client import TajiduoClient
+    from ..client import TaygedoClient
     from ..models import SmsLoginResult
 
 __all__ = ["AuthService"]
@@ -70,7 +70,7 @@ class AuthService(Service):
         refresh failure can still recover via re-login by the caller, and on
         success populates ``access_token`` / ``refresh_token`` / ``uid``.
         """
-        client = cast("TajiduoClient", self.client)
+        client = cast("TaygedoClient", self.client)
         client.session_state.laohu_token = sms_result.token
         client.session_state.laohu_user_id = sms_result.user_id
         env = await self._exchange_raw(
@@ -100,7 +100,7 @@ class AuthService(Service):
         Returns ``True`` on success (session_state is mutated in place);
         ``False`` if no refresh_token is held or the server rejects it.
         """
-        client = cast("TajiduoClient", self.client)
+        client = cast("TaygedoClient", self.client)
         if not client.session_state.refresh_token:
             return False
         try:

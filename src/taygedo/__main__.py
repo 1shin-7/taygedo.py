@@ -1,4 +1,4 @@
-"""Module entry point: ``python -m tagedo``."""
+"""Module entry point: ``python -m taygedo``."""
 
 from __future__ import annotations
 

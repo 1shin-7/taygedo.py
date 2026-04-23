@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tagedo.models import BbsResponse, BindRole, HtRoleGameRecord
+from taygedo.models import BbsResponse, BindRole, HtRoleGameRecord
 
 HAR1 = (
     Path(__file__).parent.parent

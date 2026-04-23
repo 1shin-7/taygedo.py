@@ -1,6 +1,6 @@
 """User-facing client — composes BaseClient with all business Services.
 
-Single-account model: one ``TajiduoClient`` instance owns one ``SessionState``
+Single-account model: one ``TaygedoClient`` instance owns one ``SessionState``
 (the bbs/laohu tokens for one user). Token persistence is the caller's
 responsibility — restore by mutating ``client.session`` directly, or by
 running the LoginService → AuthService flow on each fresh process.
@@ -28,7 +28,7 @@ from .services import (
     UserService,
 )
 
-__all__ = ["SessionState", "TajiduoClient"]
+__all__ = ["SessionState", "TaygedoClient"]
 
 
 @dataclass(slots=True)
@@ -48,7 +48,7 @@ class SessionState:
     laohu_user_id: int = 0
 
 
-class TajiduoClient(BaseClient):
+class TaygedoClient(BaseClient):
     """Concrete client for ``bbs-api.tajiduo.com`` + ``user.laohu.com``."""
 
     login: LoginService = service()

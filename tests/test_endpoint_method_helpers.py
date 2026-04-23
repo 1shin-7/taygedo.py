@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import pytest
 
-from tagedo.core import Service, endpoint
-from tagedo.core.endpoint import EndpointSpec  # noqa: F401  (used for instance check)
+from taygedo.core import Service, endpoint
+from taygedo.core.endpoint import EndpointSpec  # noqa: F401  (used for instance check)
 
 from ._helpers import MockClient
 

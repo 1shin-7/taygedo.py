@@ -6,7 +6,7 @@ from typing import Any
 import pytest
 from pydantic import BaseModel
 
-from tagedo.utils.data import parse_with_model
+from taygedo.utils.data import parse_with_model
 
 
 class UserModel(BaseModel):

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from tagedo.core import BaseClient
+from taygedo.core import BaseClient
 
 
 async def test_session_unset_before_aenter() -> None:

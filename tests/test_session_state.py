@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tagedo.client import SessionState
+from taygedo.client import SessionState
 
 
 def test_default_is_logged_out() -> None:

@@ -5,7 +5,7 @@ from __future__ import annotations
 import pytest
 from prompt_toolkit.validation import ValidationError
 
-from tagedo.cli._interactive import _CaptchaValidator, _CellphoneValidator, mask_cellphone
+from taygedo.cli._interactive import _CaptchaValidator, _CellphoneValidator, mask_cellphone
 
 
 class _Doc:

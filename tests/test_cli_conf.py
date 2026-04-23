@@ -1,4 +1,4 @@
-"""tagedo conf show / set / path / edit."""
+"""taygedo conf show / set / path / edit."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ from pathlib import Path
 import pytest
 from click.testing import CliRunner
 
-from tagedo.cli import app
-from tagedo.cli._storage import Storage
+from taygedo.cli import app
+from taygedo.cli._storage import Storage
 
 from ._cli_fixtures import isolated_storage  # noqa: F401
 
@@ -53,7 +53,7 @@ def test_conf_edit_invokes_editor(
 ) -> None:
     captured: list[list[str]] = []
     monkeypatch.setattr(
-        "tagedo.cli.conf.subprocess.call",
+        "taygedo.cli.conf.subprocess.call",
         lambda argv: (captured.append(argv) or 0),
     )
     monkeypatch.delenv("VISUAL", raising=False)

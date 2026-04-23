@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pydantic import BaseModel
 
-from tagedo.core import Service, endpoint, service
+from taygedo.core import Service, endpoint, service
 
 from ._helpers import MockClient
 

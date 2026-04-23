@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from tagedo.core import BearerAuthService, PreparedRequest, Response, Service, endpoint
+from taygedo.core import BearerAuthService, PreparedRequest, Response, Service, endpoint
 
 from ._helpers import MockClient
 
@@ -53,7 +53,7 @@ async def test_401_then_200_succeeds_after_one_retry() -> None:
 async def test_401_with_failed_refresh_propagates_error() -> None:
     import pytest
 
-    from tagedo.core import ApiError
+    from taygedo.core import ApiError
 
     client = MockClient(_make_responder(401))
     svc = _Refreshable(client)
@@ -68,7 +68,7 @@ async def test_401_with_failed_refresh_propagates_error() -> None:
 async def test_401_then_401_only_retries_once() -> None:
     import pytest
 
-    from tagedo.core import ApiError
+    from taygedo.core import ApiError
 
     client = MockClient(_make_responder(401, 401))
     svc = _Refreshable(client)

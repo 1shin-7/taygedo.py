@@ -1,4 +1,4 @@
-"""``tagedo auth`` — login / logout / info / switch / list.
+"""``taygedo auth`` — login / logout / info / switch / list.
 
 The login command supports two modes via the same flag set: pass
 ``--cellphone`` and ``--captcha`` for fully non-interactive use, or omit
@@ -12,7 +12,7 @@ from typing import Any
 import click
 from rich.console import Console
 
-from ..client import TajiduoClient
+from ..client import TaygedoClient
 from ..core import ApiError, ResponseValidationError
 from ..device import AndroidDeviceProfile
 from ..models import (
@@ -60,7 +60,7 @@ async def login(
         cellphone = await prompt_cellphone()
 
     device = AndroidDeviceProfile.for_htassistant()
-    client = TajiduoClient(device=device)
+    client = TaygedoClient(device=device)
     console = Console()
 
     async with client:
@@ -213,7 +213,7 @@ def list_(json_out: bool) -> None:
         render([a.to_dict() for a in accounts], json_out=True)
         return
     if not accounts:
-        Console().print("尚未登录任何账号 — `tagedo auth login`")
+        Console().print("尚未登录任何账号 — `taygedo auth login`")
         return
     render(accounts, json_out=False)
 

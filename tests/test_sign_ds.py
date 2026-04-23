@@ -16,8 +16,8 @@ from pathlib import Path
 
 import pytest
 
-from tagedo.core import PreparedRequest
-from tagedo.signers import HTASSISTANT_DS_SALT, DsConfig, SignDs
+from taygedo.core import PreparedRequest
+from taygedo.signers import HTASSISTANT_DS_SALT, DsConfig, SignDs
 
 HAR_PATH = (
     Path(__file__).parent.parent

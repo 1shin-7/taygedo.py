@@ -1,4 +1,4 @@
-"""``tagedo conf`` — view + edit ``~/.config/taygedo/config.toml``."""
+"""``taygedo conf`` — view + edit ``~/.config/taygedo/config.toml``."""
 
 from __future__ import annotations
 
@@ -53,7 +53,7 @@ def set_(key: str, value: str) -> None:
 
 @conf_group.command()
 def path() -> None:
-    """Print the on-disk paths used by tagedo."""
+    """Print the on-disk paths used by taygedo."""
     render(
         {
             "config": str(_storage.CONFIG_FILE),

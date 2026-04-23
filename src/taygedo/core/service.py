@@ -4,11 +4,11 @@ A ``Service`` is a namespace of related endpoints (e.g. ``UserService`` groups
 all ``/api/user/*`` calls). Services are mounted on a Client via the
 ``service()`` descriptor::
 
-    class TajiduoClient(BaseClient):
+    class TaygedoClient(BaseClient):
         user: UserService = service()
         post: PostService = service()
 
-    client = TajiduoClient(base_url="...")
+    client = TaygedoClient(base_url="...")
     await client.user.get_user_info(uid=1)   # ← LSP sees this method natively
 
 The descriptor lazily instantiates each Service on first access and caches it

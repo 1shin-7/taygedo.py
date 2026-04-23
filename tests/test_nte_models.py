@@ -12,7 +12,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-from tagedo.models import (
+from taygedo.models import (
     BbsResponse,
     NteArea,
     NteCharacter,

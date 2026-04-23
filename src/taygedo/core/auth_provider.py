@@ -41,7 +41,7 @@ class BearerProvider:
     """Reads ``access_token`` from a session holder at call time.
 
     The session holder is any object exposing a string attribute (default
-    ``access_token``); typically :class:`tagedo.client.SessionState`. We
+    ``access_token``); typically :class:`taygedo.client.SessionState`. We
     intentionally do **not** raise when the token is empty — instead the
     request goes out unauthenticated and the server's 401 triggers the
     framework's refresh middleware.

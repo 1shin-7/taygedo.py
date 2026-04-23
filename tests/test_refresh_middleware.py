@@ -5,8 +5,8 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from tagedo.client import TajiduoClient
-from tagedo.core import PreparedRequest, Response
+from taygedo.client import TaygedoClient
+from taygedo.core import PreparedRequest, Response
 
 
 def _resp(status: int, payload: dict[str, Any]) -> Response:
@@ -17,7 +17,7 @@ def _resp(status: int, payload: dict[str, Any]) -> Response:
     )
 
 
-class _ScriptedClient(TajiduoClient):
+class _ScriptedClient(TaygedoClient):
     def __init__(self, scripts: list[Response]) -> None:
         super().__init__()
         self.sent: list[PreparedRequest] = []
@@ -97,7 +97,7 @@ async def test_nte_401_triggers_refresh_then_retry() -> None:
 async def test_refresh_failure_does_not_retry() -> None:
     import pytest
 
-    from tagedo.core import ApiError
+    from taygedo.core import ApiError
 
     client = _ScriptedClient(
         scripts=[

@@ -6,8 +6,8 @@ import json
 from typing import Any
 from urllib.parse import parse_qs
 
-from tagedo.client import TajiduoClient
-from tagedo.core import PreparedRequest, Response
+from taygedo.client import TaygedoClient
+from taygedo.core import PreparedRequest, Response
 
 
 def _ok(payload: dict[str, Any]) -> Response:
@@ -18,15 +18,15 @@ def _ok(payload: dict[str, Any]) -> Response:
     )
 
 
-class _MockTajiduo(TajiduoClient):
-    """TajiduoClient with a stubbed transport that asserts on URLs."""
+class _MockTaygedo(TaygedoClient):
+    """TaygedoClient with a stubbed transport that asserts on URLs."""
 
     def __init__(self, scripts: list[Response]) -> None:
         super().__init__()
         self.sent: list[PreparedRequest] = []
         self._scripts = scripts
 
-    async def __aenter__(self) -> _MockTajiduo:  # type: ignore[override]
+    async def __aenter__(self) -> _MockTaygedo:  # type: ignore[override]
         return self
 
     async def __aexit__(self, *exc: object) -> None:
@@ -50,7 +50,7 @@ class _MockTajiduo(TajiduoClient):
 
 
 async def test_login_with_laohu_writes_session_state() -> None:
-    from tagedo.models import SmsLoginResult
+    from taygedo.models import SmsLoginResult
 
     sms = SmsLoginResult.model_validate(
         {
@@ -59,7 +59,7 @@ async def test_login_with_laohu_writes_session_state() -> None:
             "token": "laohu-tok-xyz",
         },
     )
-    client = _MockTajiduo(
+    client = _MockTaygedo(
         scripts=[
             _ok(
                 {
@@ -97,9 +97,9 @@ async def test_login_with_laohu_writes_session_state() -> None:
 
 
 async def test_send_captcha_uses_user_laohu_base_url() -> None:
-    from tagedo.models import CaptchaRequest
+    from taygedo.models import CaptchaRequest
 
-    client = _MockTajiduo(scripts=[_ok({"code": 0, "message": "OK"})])
+    client = _MockTaygedo(scripts=[_ok({"code": 0, "message": "OK"})])
     await client.login.send_captcha(
         body=CaptchaRequest(cellphone="13800138000"),
     )

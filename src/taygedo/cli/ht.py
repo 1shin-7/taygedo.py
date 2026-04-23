@@ -1,4 +1,4 @@
-"""``tagedo ht`` (alias ``tagedo tof``) — 幻塔 game record + sub-views.
+"""``taygedo ht`` (alias ``taygedo tof``) — 幻塔 game record + sub-views.
 
 The TOF backend exposes one big endpoint (``ht/getRoleGameRecord``) that
 returns role + weapons + imitations + mounts + fashion in a single payload.
@@ -14,7 +14,7 @@ from typing import Any
 
 import click
 
-from ..client import TajiduoClient
+from ..client import TaygedoClient
 from ..models import HtRoleGameRecord
 from ._render import render
 from ._shared import async_command, flush_session, load_client, storage
@@ -49,7 +49,7 @@ def ht_group() -> None:
 
 
 async def _resolve_ht_role_id(
-    client: TajiduoClient, account: StoredAccount, role_id: int | None,
+    client: TaygedoClient, account: StoredAccount, role_id: int | None,
 ) -> int:
     """--role-id wins; else cached account.ht_role_id; else look up + cache."""
     if role_id is not None:

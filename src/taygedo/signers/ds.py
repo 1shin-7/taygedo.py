@@ -14,7 +14,7 @@ The salt and appVersion are wired into the host app at build time; for
 and ``"1.2.2"``.
 
 This Signer only sets the ``ds`` header and does NOT touch ``Authorization``
-— that's :class:`tagedo.core.BearerProvider`'s job. They compose naturally:
+— that's :class:`taygedo.core.BearerProvider`'s job. They compose naturally:
 the AuthProvider runs after the Signer in :meth:`BaseClient.send`.
 """
 

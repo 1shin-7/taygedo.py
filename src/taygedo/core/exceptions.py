@@ -1,4 +1,4 @@
-"""Exception hierarchy for the tagedo framework."""
+"""Exception hierarchy for the taygedo framework."""
 
 from __future__ import annotations
 

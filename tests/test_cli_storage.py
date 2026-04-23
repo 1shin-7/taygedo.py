@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from tagedo.cli._storage import Storage, StoredAccount
+from taygedo.cli._storage import Storage, StoredAccount
 
 
 def _storage(tmp_path: Path) -> Storage:

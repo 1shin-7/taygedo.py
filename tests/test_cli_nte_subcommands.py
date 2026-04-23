@@ -10,9 +10,9 @@ from typing import Any
 import pytest
 from click.testing import CliRunner
 
-from tagedo.cli import app
-from tagedo.cli._storage import Storage, StoredAccount
-from tagedo.core import PreparedRequest, Response
+from taygedo.cli import app
+from taygedo.cli._storage import Storage, StoredAccount
+from taygedo.core import PreparedRequest, Response
 
 from ._cli_fixtures import install_scripted_client, isolated_storage  # noqa: F401
 

@@ -5,7 +5,7 @@ import json
 import pytest
 from pydantic import BaseModel
 
-from tagedo.core import (
+from taygedo.core import (
     ApiError,
     Response,
     ResponseValidationError,

@@ -1,6 +1,6 @@
-"""tagedo — a Pythonic, LSP-friendly HTTP API client framework."""
+"""taygedo — a Pythonic, LSP-friendly HTTP API client framework."""
 
-from .client import TajiduoClient
+from .client import TaygedoClient
 from .core import (
     ApiError,
     BaseClient,
@@ -35,7 +35,7 @@ __all__ = [
     "SignError",
     "Signer",
     "TagedoError",
-    "TajiduoClient",
+    "TaygedoClient",
     "endpoint",
     "service",
 ]

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from tagedo.core import PreparedRequest, Service, endpoint
+from taygedo.core import PreparedRequest, Service, endpoint
 
 from ._helpers import MockClient
 

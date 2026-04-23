@@ -1,4 +1,4 @@
-"""Business services mounted on :class:`tagedo.client.TajiduoClient`."""
+"""Business services mounted on :class:`taygedo.client.TaygedoClient`."""
 
 from .auth import AuthService
 from .community import CommunityService

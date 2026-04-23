@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from tagedo.assets import nte
+from taygedo.assets import nte
 
 
 def test_character_tall_uses_PNG_extension() -> None:

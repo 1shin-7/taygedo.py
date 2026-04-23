@@ -39,7 +39,7 @@ DATA_FILE = CONFIG_DIR / "data.json"
 CONFIG_FILE = CONFIG_DIR / "config.toml"
 
 _DEFAULT_CONFIG_TOML = """\
-# tagedo CLI configuration
+# taygedo CLI configuration
 
 [output]
 # table | json

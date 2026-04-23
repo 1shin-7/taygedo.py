@@ -1,4 +1,4 @@
-"""``tagedo nte`` (alias ``tagedo yh``) — 异环 game queries + sign-in."""
+"""``taygedo nte`` (alias ``taygedo yh``) — 异环 game queries + sign-in."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from typing import Any
 import click
 from rich.console import Console
 
-from ..client import TajiduoClient
+from ..client import TaygedoClient
 from ..core import ApiError
 from ._render import render
 from ._shared import async_command, flush_session, load_client
@@ -39,7 +39,7 @@ def nte_group() -> None:
     """异环 (gameId=1289) data + monthly sign-in."""
 
 
-async def _resolve_role_id(client: TajiduoClient, role_id: int | None) -> int:
+async def _resolve_role_id(client: TaygedoClient, role_id: int | None) -> int:
     """If role_id is None, hit /yh/roleHome to discover it."""
     if role_id is not None:
         return role_id

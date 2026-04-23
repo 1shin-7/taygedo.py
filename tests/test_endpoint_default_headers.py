@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Annotated, ClassVar
 
-from tagedo.core import Header, Service, endpoint
+from taygedo.core import Header, Service, endpoint
 
 from ._helpers import MockClient
 

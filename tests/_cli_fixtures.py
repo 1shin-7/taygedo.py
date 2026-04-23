@@ -2,10 +2,10 @@
 
 Two pieces of infrastructure are reused across every CLI test:
 
-1. ``isolated_storage`` — point ``tagedo.cli._storage.CONFIG_DIR``
+1. ``isolated_storage`` — point ``taygedo.cli._storage.CONFIG_DIR``
    (and the cached ``_shared.storage`` singleton) at a tmp_path so tests
    never touch the user's real ``~/.config/taygedo``.
-2. ``ScriptedClient`` — a TajiduoClient subclass whose ``send`` returns
+2. ``ScriptedClient`` — a TaygedoClient subclass whose ``send`` returns
    pre-canned responses, so CLI commands run their full async path without
    network I/O.
 """
@@ -19,9 +19,9 @@ from typing import Any
 
 import pytest
 
-from tagedo.cli import _shared, _storage
-from tagedo.client import SessionState, TajiduoClient
-from tagedo.core import PreparedRequest, Response, Service
+from taygedo.cli import _shared, _storage
+from taygedo.client import SessionState, TaygedoClient
+from taygedo.core import PreparedRequest, Response, Service
 
 
 @pytest.fixture
@@ -44,8 +44,8 @@ def _make_response(payload: dict[str, Any] | bytes, status: int = 200) -> Respon
     )
 
 
-class ScriptedClient(TajiduoClient):
-    """TajiduoClient with a programmable transport.
+class ScriptedClient(TaygedoClient):
+    """TaygedoClient with a programmable transport.
 
     Responder is a callable ``(prepared) -> Response | dict``. Dicts are
     auto-JSON-encoded and given a 200 status. Each call appends its
@@ -92,7 +92,7 @@ def install_scripted_client(
     *,
     seed_session: SessionState | None = None,
 ) -> list[ScriptedClient]:
-    """Make the CLI use a ScriptedClient instead of the real TajiduoClient.
+    """Make the CLI use a ScriptedClient instead of the real TaygedoClient.
 
     Returns a list that grows as each command instantiates a fresh client;
     inspect e.g. ``clients[0].sent`` to assert against requests issued.
@@ -107,6 +107,6 @@ def install_scripted_client(
         instances.append(c)
         return c
 
-    monkeypatch.setattr("tagedo.cli.auth.TajiduoClient", factory)
-    monkeypatch.setattr("tagedo.cli._shared.TajiduoClient", factory)
+    monkeypatch.setattr("taygedo.cli.auth.TaygedoClient", factory)
+    monkeypatch.setattr("taygedo.cli._shared.TaygedoClient", factory)
     return instances
