@@ -13,6 +13,21 @@ all ``/api/user/*`` calls). Services are mounted on a Client via the
 
 The descriptor lazily instantiates each Service on first access and caches it
 on the Client instance.
+
+Service-level configuration
+---------------------------
+
+Subclasses tune the engine via class attributes:
+
+* ``signer``        — fallback Signer for endpoints that don't override.
+* ``default_headers`` — static identity headers (``Origin`` / ``Referer`` /
+  ``User-Agent`` overrides) merged into every endpoint before user params.
+* ``base_url``      — service-specific origin (e.g. ``user.laohu.com``)
+  overriding the Client's default.
+* ``auth_required`` — opt into the Client's :class:`AuthProvider` injection.
+* ``on_unauthorized`` — coroutine called when an endpoint sees HTTP 401.
+  Returning ``True`` triggers a single retry. ``BearerAuthService`` delegates
+  to ``client.auth.on_unauthorized`` so the refresh logic lives in one place.
 """
 
 from __future__ import annotations
@@ -24,30 +39,58 @@ if TYPE_CHECKING:
     from .signing import Signer
 
 
-__all__ = ["Service", "ServiceDescriptor", "service"]
+__all__ = ["BearerAuthService", "Service", "ServiceDescriptor", "service"]
 
 
 class Service:
-    """Base class for all business modules.
+    """Base class for all business modules."""
 
-    Subclasses may set ``signer`` as a class attribute to provide a default
-    signing strategy for every endpoint declared on them. The endpoint-level
-    ``sign=`` argument always takes precedence.
+    signer: ClassVar[Signer | type[Signer] | Any] = None
+    """Fallback Signer applied to every endpoint that doesn't override.
+
+    May be a Signer instance, a zero-arg Signer class, ``None``, or a callable
+    ``(service_instance) -> Signer`` factory (resolved per-call).
     """
 
-    signer: ClassVar[Signer | type[Signer] | None] = None
+    default_headers: ClassVar[dict[str, str]] = {}
+    """Static headers merged into every endpoint request as the base layer."""
+
+    base_url: ClassVar[str] = ""
+    """Service-specific base URL; empty falls back to ``client.base_url``."""
+
+    auth_required: ClassVar[bool] = False
+    """If True, the Client's AuthProvider injects auth headers automatically."""
 
     def __init__(self, client: BaseClient) -> None:
         self.client = client
 
+    async def on_unauthorized(self) -> bool:
+        """Hook invoked when an endpoint receives HTTP 401.
+
+        Return ``True`` to indicate that recovery succeeded (e.g. tokens were
+        refreshed) and the endpoint should retry once. Default: ``False``.
+        """
+        return False
+
+
+class BearerAuthService(Service):
+    """Mixin for services that want client-managed Authorization + auto-refresh.
+
+    The actual refresh logic lives on ``client.auth`` (an ``AuthService``); this
+    base class merely wires the 401 hook through.
+    """
+
+    auth_required: ClassVar[bool] = True
+
+    async def on_unauthorized(self) -> bool:
+        auth = getattr(self.client, "auth", None)
+        if auth is None:
+            return False
+        return cast("bool", await auth.on_unauthorized())
+
 
 class ServiceDescriptor[ServiceT: Service]:
-    """Lazy, per-instance Service mount.
-
-    The descriptor stashes the Service factory and resolves the concrete class
-    from the owner's annotation at first access. Each Client instance gets its
-    own Service instance, cached in ``client.__dict__``.
-    """
+    """Lazy, per-instance Service mount."""
 
     __slots__ = ("_attr_name", "_service_cls")
 
@@ -57,15 +100,12 @@ class ServiceDescriptor[ServiceT: Service]:
 
     def __set_name__(self, owner: type[BaseClient], name: str) -> None:
         self._attr_name = name
-        # Resolve the service class from the variable annotation eagerly so
-        # mistakes surface at class-definition time rather than first access.
         ann = owner.__annotations__.get(name)
         if ann is None:
             raise TypeError(
                 f"{owner.__name__}.{name} must be annotated with its Service class",
             )
         if isinstance(ann, str):
-            # Annotation is a forward reference — defer until first access.
             self._service_cls = None
         else:
             self._service_cls = cast("type[ServiceT]", ann)

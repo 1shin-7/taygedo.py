@@ -9,9 +9,13 @@ from ._base import BbsBase, LaohuBase
 __all__ = [
     "AreaCode",
     "BbsLoginResult",
+    "CaptchaRequest",
+    "CheckCaptchaRequest",
+    "ExchangeTokenRequest",
     "GdtAdConfig",
     "InitConfig",
     "OneKeySmsLogin",
+    "SmsLoginRequest",
     "SmsLoginResult",
     "UserIdentify",
     "WebViewUrls",
@@ -30,7 +34,55 @@ class BbsLoginResult(BbsBase):
     first_login: bool = Field(alias="firstLogin", default=False)
 
 
+class ExchangeTokenRequest(BbsBase):
+    """``POST /usercenter/api/login`` request body (laohu → bbs token)."""
+
+    token: str
+    user_identity: str = Field(alias="userIdentity")
+    app_id: str = Field(alias="appId", default="10551")
+
+
 # ---------- user.laohu.com --------------------------------------------------
+
+
+class CaptchaRequest(LaohuBase):
+    """``POST /m/newApi/sendPhoneCaptchaWithOutLogin`` body.
+
+    Static fields (deviceType / deviceId / appId / sdkVersion / bid /
+    channelId / versionCode / deviceSys / deviceModel / t) are injected by
+    :class:`SignLaohu` from a :class:`DeviceProfile`; only the fields that
+    vary per call are listed here.
+    """
+
+    cellphone: str
+    type: str = "16"
+    area_code_id: str = Field(alias="areaCodeId", default="1")
+
+
+class CheckCaptchaRequest(LaohuBase):
+    """``POST /m/newApi/checkPhoneCaptchaWithOutLogin`` body."""
+
+    cellphone: str
+    captcha: str
+
+
+class SmsLoginRequest(LaohuBase):
+    """``POST /openApi/sms/new/login`` body.
+
+    The wire format includes empty placeholders (``idfa`` / ``adm`` /
+    ``mac`` / ``sign``) that the LaohuSDK sends; we keep them to match
+    server-side validation byte-for-byte.
+    """
+
+    cellphone: str
+    captcha: str
+    type: str = "16"
+    area_code_id: str = Field(alias="areaCodeId", default="1")
+    version: str = ""
+    idfa: str = ""
+    adm: str = ""
+    mac: str = ""
+    sign: str = ""
 
 
 class UserIdentify(LaohuBase):

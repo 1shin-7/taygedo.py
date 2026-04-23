@@ -42,4 +42,11 @@ class Header(ParamMarker):
 
 @dataclass(frozen=True, slots=True)
 class Body(ParamMarker):
-    """Mark a parameter as the request body. At most one Body per endpoint."""
+    """Mark a parameter as the request body. At most one Body per endpoint.
+
+    ``form=True`` sends the body as ``application/x-www-form-urlencoded``
+    (the value should be a dict or BaseModel — its fields are urlencoded
+    and the params dict is what Signers see). Default is JSON.
+    """
+
+    form: bool = False

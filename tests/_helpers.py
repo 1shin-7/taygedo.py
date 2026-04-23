@@ -6,19 +6,30 @@ import json
 from collections.abc import Callable
 from typing import Any
 
-from tagedo.core import BaseClient, PreparedRequest, Response
+from tagedo.core import (
+    AuthProvider,
+    BaseClient,
+    PreparedRequest,
+    Response,
+    Service,
+)
 
 
 class MockClient(BaseClient):
-    """Records every PreparedRequest and returns scripted responses."""
+    """Records every PreparedRequest and returns scripted responses.
+
+    Honours the AuthProvider/auth_required protocol so tests can exercise the
+    real production codepath without hitting the network.
+    """
 
     def __init__(
         self,
         responder: Callable[[PreparedRequest], Response | dict[str, Any]] | None = None,
         *,
         base_url: str = "https://example.test",
+        auth_provider: AuthProvider | None = None,
     ) -> None:
-        super().__init__(base_url=base_url)
+        super().__init__(base_url=base_url, auth_provider=auth_provider)
         self.sent: list[PreparedRequest] = []
         self._responder = responder or (lambda _req: {})
 
@@ -28,7 +39,18 @@ class MockClient(BaseClient):
     async def __aexit__(self, *exc: object) -> None:
         return None
 
-    async def send(self, prepared: PreparedRequest) -> Response:
+    async def send(  # type: ignore[override]
+        self,
+        prepared: PreparedRequest,
+        *,
+        service: Service | None = None,
+    ) -> Response:
+        if (
+            service is not None
+            and getattr(type(service), "auth_required", False)
+            and self._auth_provider is not None
+        ):
+            prepared = self._auth_provider.apply(prepared)
         self.sent.append(prepared)
         result = self._responder(prepared)
         if isinstance(result, Response):

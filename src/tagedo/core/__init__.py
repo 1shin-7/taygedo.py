@@ -1,15 +1,19 @@
 """Framework core — transport, signing, services, endpoints."""
 
+from .auth_provider import AuthProvider, BearerProvider
 from .client import BaseClient, Response
 from .endpoint import EndpointSpec, Method, endpoint
 from .exceptions import ApiError, ResponseValidationError, SignError, TagedoError
 from .params import Body, Header, ParamMarker, Path, Query
-from .service import Service, ServiceDescriptor, service
+from .service import BearerAuthService, Service, ServiceDescriptor, service
 from .signing import NullSigner, PreparedRequest, Signer, resolve_signer
 
 __all__ = [
     "ApiError",
+    "AuthProvider",
     "BaseClient",
+    "BearerAuthService",
+    "BearerProvider",
     "Body",
     "EndpointSpec",
     "Header",

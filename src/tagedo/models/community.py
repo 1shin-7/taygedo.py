@@ -11,7 +11,7 @@ from pydantic import Field
 from ._base import BbsBase
 from .common import Ann, Banner, Column, NavigatorEntry
 
-__all__ = ["ColumnHome", "Community", "CommunityHome"]
+__all__ = ["ColumnHome", "Community", "CommunityHome", "NotificationUnread", "UnreadCount"]
 
 
 class Community(BbsBase):
@@ -36,6 +36,29 @@ class CommunityHome(BbsBase):
     anns: list[Ann] = Field(default_factory=list)
     banners: list[Banner] = Field(default_factory=list)
     navigator: list[NavigatorEntry] = Field(default_factory=list)
+
+
+class NotificationUnread(BbsBase):
+    """``getUserUnreadCnt.notificationUnread`` — per-channel unread tallies."""
+
+    id: int = 0
+    uid: int = 0
+    at: int = 0
+    comment: int = 0
+    like: int = 0
+    follow: int = 0
+    system: int = 0
+    channel_unread: int = Field(alias="channelUnread", default=0)
+    create_time: int = Field(alias="createTime", default=0)
+    update_time: int = Field(alias="updateTime", default=0)
+
+
+class UnreadCount(BbsBase):
+    """``GET /apihub/api/getUserUnreadCnt`` payload."""
+
+    notification_unread: NotificationUnread = Field(
+        alias="notificationUnread", default_factory=NotificationUnread,
+    )
 
 
 class ColumnHome(BbsBase):

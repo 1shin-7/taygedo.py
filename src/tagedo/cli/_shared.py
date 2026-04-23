@@ -1,33 +1,92 @@
-"""Shared click options and output helpers used by every CLI subcommand."""
+"""Shared CLI plumbing: storage singleton, client factory, async-command bridge.
+
+Every CLI subcommand goes through ``load_client`` to obtain an authenticated
+:class:`TajiduoClient` seeded from on-disk session state. The auth provider
+reads the live ``client.session_state``, so a 401 → refresh inside the
+endpoint engine transparently rewrites the in-memory tokens; the CLI then
+flushes the rotated tokens back to disk via :func:`flush_session` when the
+command completes.
+"""
 
 from __future__ import annotations
 
-import json
+import asyncio
 from collections.abc import Callable
+from datetime import UTC, datetime
+from functools import lru_cache, wraps
 from typing import Any
 
 import click
 
 from ..client import TajiduoClient
+from ..device import AndroidDeviceProfile
+from ._storage import Storage, StoredAccount
 
-__all__ = ["base_url_option", "make_client", "render"]
-
-
-def base_url_option(f: Callable[..., Any]) -> Callable[..., Any]:
-    return click.option(
-        "--base-url",
-        default="https://bbs-api.tajiduo.com",
-        show_default=True,
-        help="API base URL.",
-    )(f)
-
-
-def make_client(base_url: str) -> TajiduoClient:
-    return TajiduoClient(base_url=base_url)
+__all__ = [
+    "async_command",
+    "flush_session",
+    "load_client",
+    "now_iso",
+    "require_account",
+    "storage",
+]
 
 
-def render(value: Any) -> None:
-    """Pretty-print a result as JSON."""
-    if hasattr(value, "model_dump"):
-        value = value.model_dump(mode="json")
-    click.echo(json.dumps(value, ensure_ascii=False, indent=2))
+@lru_cache(maxsize=1)
+def storage() -> Storage:
+    return Storage()
+
+
+def now_iso() -> str:
+    return datetime.now(UTC).astimezone().isoformat(timespec="seconds")
+
+
+def require_account(uid: int | None) -> StoredAccount:
+    """Resolve a uid (or fall back to the active one) to a stored account."""
+    s = storage()
+    if uid is None:
+        uid = s.active_uid()
+        if uid is None:
+            raise click.UsageError(
+                "no account is logged in — run `tagedo auth login` first",
+            )
+    account = s.get_account(uid)
+    if account is None:
+        raise click.UsageError(f"no stored account with uid={uid}")
+    return account
+
+
+def load_client(*, uid: int | None = None) -> tuple[TajiduoClient, StoredAccount]:
+    """Build a TajiduoClient seeded with the stored session and device.
+
+    Returns ``(client, account)``. The caller is responsible for using the
+    client as an async-context-manager; on exit, call :func:`flush_session`
+    to persist any rotated tokens back to disk.
+    """
+    account = require_account(uid)
+    device = AndroidDeviceProfile.for_htassistant(device_id=account.device_id or None)
+    client = TajiduoClient(device=device)
+    client.session_state.access_token = account.access_token
+    client.session_state.refresh_token = account.refresh_token
+    client.session_state.uid = account.uid
+    client.session_state.laohu_token = account.laohu_token
+    client.session_state.laohu_user_id = account.laohu_user_id
+    return client, account
+
+
+def flush_session(client: TajiduoClient, account: StoredAccount) -> None:
+    """Write back any rotated tokens + bump last_used_at."""
+    account.access_token = client.session_state.access_token
+    account.refresh_token = client.session_state.refresh_token
+    account.last_used_at = now_iso()
+    storage().upsert_account(account, set_active=False)
+
+
+def async_command(f: Callable[..., Any]) -> Callable[..., Any]:
+    """Wrap an async click command function with ``asyncio.run``."""
+
+    @wraps(f)
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        return asyncio.run(f(*args, **kwargs))
+
+    return wrapper

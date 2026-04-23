@@ -1,19 +1,19 @@
-"""Built-in request signers."""
+"""Built-in request signers (computational header/param injection only)."""
 
+from .ds import HTASSISTANT_DS_SALT, DsConfig, SignDs
 from .laohu import (
     HTASSISTANT_APP_KEY,
     LOGIN_SENSITIVE_FIELDS,
     LaohuConfig,
     SignLaohu,
 )
-from .v1 import SignV1
-from .v2 import SignV2
 
 __all__ = [
     "HTASSISTANT_APP_KEY",
+    "HTASSISTANT_DS_SALT",
     "LOGIN_SENSITIVE_FIELDS",
+    "DsConfig",
     "LaohuConfig",
+    "SignDs",
     "SignLaohu",
-    "SignV1",
-    "SignV2",
 ]

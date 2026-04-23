@@ -8,7 +8,10 @@ dependencies = [
     "click>=8.1",
     "cryptography>=43",
     "curl-cffi>=0.15.0",
+    "prompt-toolkit>=3.0",
     "pydantic>=2.13.2",
+    "rich>=13",
+    "tomlkit>=0.12",
 ]
 
 [project.scripts]

@@ -19,7 +19,12 @@ __all__ = ["NullSigner", "PreparedRequest", "Signer", "resolve_signer"]
 
 @dataclass(slots=True)
 class PreparedRequest:
-    """Transport-agnostic representation of an outgoing HTTP request."""
+    """Transport-agnostic representation of an outgoing HTTP request.
+
+    ``form`` indicates that ``params`` should be sent as a form-urlencoded
+    request body (POST/PUT/PATCH) rather than a URL query string. Signers
+    that operate on ``params`` still see the same dict regardless.
+    """
 
     method: str
     url: str
@@ -27,6 +32,7 @@ class PreparedRequest:
     params: dict[str, str | int | float | bool] = field(default_factory=dict)
     json_body: JsonObject | list[JsonObject] | None = None
     data: bytes | str | None = None
+    form: bool = False
 
     def copy(self) -> PreparedRequest:
         """Return a deep copy so signers can mutate freely without aliasing."""

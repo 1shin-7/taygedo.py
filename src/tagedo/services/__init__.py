@@ -1,5 +1,21 @@
-"""Business services bundled with the framework.
+"""Business services mounted on :class:`tagedo.client.TajiduoClient`."""
 
-Concrete services for the tajiduo BBS API will be added per the
-``_dev_data/api-doc.md`` plan (community / posts / user / tasks / game / auth).
-"""
+from .auth import AuthService
+from .community import CommunityService
+from .ht import BindRoleService, HtService
+from .login import LoginService
+from .nte import NteService
+from .nte_sign import NteSignRequest, NteSignService
+from .user import UserService
+
+__all__ = [
+    "AuthService",
+    "BindRoleService",
+    "CommunityService",
+    "HtService",
+    "LoginService",
+    "NteService",
+    "NteSignRequest",
+    "NteSignService",
+    "UserService",
+]
