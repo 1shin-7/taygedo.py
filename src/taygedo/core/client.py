@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from types import TracebackType
-from typing import TYPE_CHECKING, Any, Self
+from typing import TYPE_CHECKING, Any
 
 from curl_cffi.requests import AsyncSession
 
@@ -52,7 +52,7 @@ class BaseClient:
         base_url: str,
         impersonate: str | None = None,
         timeout: float = 30.0,
-        session: AsyncSession | None = None,
+        session: AsyncSession | None = None,  # type: ignore[type-arg]
         auth_provider: AuthProvider | None = None,
     ) -> None:
         self.base_url = base_url.rstrip("/")
@@ -63,14 +63,14 @@ class BaseClient:
         self._auth_provider = auth_provider
 
     @property
-    def session(self) -> AsyncSession:
+    def session(self) -> AsyncSession:  # type: ignore[type-arg]
         if self._session is None:
             raise RuntimeError(
                 "Session not initialised. Use 'async with client:' or pass session=...",
             )
         return self._session
 
-    async def __aenter__(self) -> Self:
+    async def __aenter__(self) -> BaseClient:
         if self._session is None:
             kwargs: dict[str, Any] = {"timeout": self._timeout}
             if self._impersonate:

@@ -1,13 +1,7 @@
-"""Common pydantic configuration shared by every model in this package.
+"""Pydantic bases for the two upstream APIs.
 
-Two model bases are exported:
-
-* ``BbsBase`` — for ``bbs-api.tajiduo.com`` payloads. Tolerant of unknown fields
-  (the API frequently adds new keys).
-* ``LaohuBase`` — for ``user.laohu.com`` payloads. Same policy.
-
-Both enable ``populate_by_name`` so fields declared with ``Field(alias=...)`` are
-addressable by their Pythonic name at construction time.
+``extra="allow"`` because both APIs add fields without notice;
+``populate_by_name=True`` so ``Field(alias=...)`` fields accept Pythonic names.
 """
 
 from __future__ import annotations
@@ -16,7 +10,7 @@ from pydantic import BaseModel, ConfigDict
 
 
 class BbsBase(BaseModel):
-    """Base for every model representing a ``bbs-api.tajiduo.com`` payload."""
+    """Base for ``bbs-api.tajiduo.com`` payloads."""
 
     model_config = ConfigDict(
         extra="allow",
@@ -26,7 +20,7 @@ class BbsBase(BaseModel):
 
 
 class LaohuBase(BaseModel):
-    """Base for every model representing a ``user.laohu.com`` payload."""
+    """Base for ``user.laohu.com`` payloads."""
 
     model_config = ConfigDict(
         extra="allow",

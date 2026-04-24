@@ -3,7 +3,7 @@ name = "taygedo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "click>=8.1",
     "cryptography>=43",
@@ -34,18 +34,14 @@ asyncio_mode = "auto"
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py310"
 line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
 
-[tool.ruff.lint.per-file-ignores]
-# utils/data.py predates PEP 695 type-parameter syntax; preserve as-is.
-"src/taygedo/utils/data.py" = ["UP047"]
-
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.10"
 strict = true
 warn_unused_ignores = true
 # `@endpoint`-decorated methods declare their contract via signature only;
@@ -53,6 +49,7 @@ warn_unused_ignores = true
 disable_error_code = ["empty-body"]
 
 [[tool.mypy.overrides]]
-# utils/data.py predates several modern mypy strictness checks; preserved as-is.
+# utils/data.py uses Protocol with TypeVar — variance + cast checks tightened
+# in newer mypy releases conflict with the call-site contract; preserved as-is.
 module = "taygedo.utils.data"
 ignore_errors = true

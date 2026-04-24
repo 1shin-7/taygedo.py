@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import asyncio
 from collections.abc import Callable
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from functools import lru_cache, wraps
 from typing import Any
 
@@ -38,7 +38,7 @@ def storage() -> Storage:
 
 
 def now_iso() -> str:
-    return datetime.now(UTC).astimezone().isoformat(timespec="seconds")
+    return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
 
 
 def require_account(uid: int | None) -> StoredAccount:

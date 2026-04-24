@@ -11,28 +11,18 @@ all ``/api/user/*`` calls). Services are mounted on a Client via the
     client = TaygedoClient(base_url="...")
     await client.user.get_user_info(uid=1)   # ← LSP sees this method natively
 
-The descriptor lazily instantiates each Service on first access and caches it
-on the Client instance.
-
-Service-level configuration
----------------------------
-
 Subclasses tune the engine via class attributes:
 
-* ``signer``        — fallback Signer for endpoints that don't override.
-* ``default_headers`` — static identity headers (``Origin`` / ``Referer`` /
-  ``User-Agent`` overrides) merged into every endpoint before user params.
-* ``base_url``      — service-specific origin (e.g. ``user.laohu.com``)
-  overriding the Client's default.
-* ``auth_required`` — opt into the Client's :class:`AuthProvider` injection.
-* ``on_unauthorized`` — coroutine called when an endpoint sees HTTP 401.
-  Returning ``True`` triggers a single retry. ``BearerAuthService`` delegates
-  to ``client.auth.on_unauthorized`` so the refresh logic lives in one place.
+* ``signer``            — fallback Signer for endpoints that don't override.
+* ``default_headers``   — static identity headers merged before user params.
+* ``base_url``          — service-specific origin (overrides Client default).
+* ``auth_required``     — opt into AuthProvider injection.
+* ``on_unauthorized``   — 401 hook; returning True triggers one retry.
 """
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, ClassVar, cast, overload
+from typing import TYPE_CHECKING, Any, ClassVar, Generic, TypeVar, cast, overload
 
 if TYPE_CHECKING:
     from .client import BaseClient
@@ -46,38 +36,23 @@ class Service:
     """Base class for all business modules."""
 
     signer: ClassVar[Signer | type[Signer] | Any] = None
-    """Fallback Signer applied to every endpoint that doesn't override.
-
-    May be a Signer instance, a zero-arg Signer class, ``None``, or a callable
-    ``(service_instance) -> Signer`` factory (resolved per-call).
-    """
+    """Instance, class, ``None``, or ``(service) -> Signer`` factory."""
 
     default_headers: ClassVar[dict[str, str]] = {}
-    """Static headers merged into every endpoint request as the base layer."""
-
     base_url: ClassVar[str] = ""
-    """Service-specific base URL; empty falls back to ``client.base_url``."""
-
     auth_required: ClassVar[bool] = False
-    """If True, the Client's AuthProvider injects auth headers automatically."""
 
     def __init__(self, client: BaseClient) -> None:
         self.client = client
 
     async def on_unauthorized(self) -> bool:
-        """Hook invoked when an endpoint receives HTTP 401.
-
-        Return ``True`` to indicate that recovery succeeded (e.g. tokens were
-        refreshed) and the endpoint should retry once. Default: ``False``.
-        """
         return False
 
 
 class BearerAuthService(Service):
-    """Mixin for services that want client-managed Authorization + auto-refresh.
+    """Services that want client-managed Authorization + auto-refresh.
 
-    The actual refresh logic lives on ``client.auth`` (an ``AuthService``); this
-    base class merely wires the 401 hook through.
+    Refresh logic lives on ``client.auth``; this base wires the 401 hook through.
     """
 
     auth_required: ClassVar[bool] = True
@@ -89,7 +64,10 @@ class BearerAuthService(Service):
         return cast("bool", await auth.on_unauthorized())
 
 
-class ServiceDescriptor[ServiceT: Service]:
+ServiceT = TypeVar("ServiceT", bound=Service)
+
+
+class ServiceDescriptor(Generic[ServiceT]):
     """Lazy, per-instance Service mount."""
 
     __slots__ = ("_attr_name", "_service_cls")
@@ -111,7 +89,9 @@ class ServiceDescriptor[ServiceT: Service]:
             self._service_cls = cast("type[ServiceT]", ann)
 
     @overload
-    def __get__(self, instance: None, owner: type[BaseClient]) -> ServiceDescriptor[ServiceT]: ...
+    def __get__(
+        self, instance: None, owner: type[BaseClient],
+    ) -> ServiceDescriptor[ServiceT]: ...
     @overload
     def __get__(self, instance: BaseClient, owner: type[BaseClient]) -> ServiceT: ...
     def __get__(
@@ -147,8 +127,7 @@ class ServiceDescriptor[ServiceT: Service]:
 def service() -> Any:
     """Declare a lazy Service mount on a Client.
 
-    The return type is ``Any`` so the variable annotation drives static type
-    inference: ``user: UserService = service()`` makes mypy treat ``client.user``
-    as ``UserService``.
+    Return type is ``Any`` so the variable annotation drives static inference:
+    ``user: UserService = service()`` makes mypy treat ``client.user`` as ``UserService``.
     """
     return ServiceDescriptor()

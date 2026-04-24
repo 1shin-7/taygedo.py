@@ -4,23 +4,20 @@ Both APIs wrap their actual payload in a uniform shell::
 
     bbs:    {"code": 0, "data": <payload>, "msg": "ok", "ok": true}
     laohu:  {"code": 0, "result": <payload>, "message": "..."}
-
-By making the envelope generic in ``T`` we avoid declaring one envelope class
-per endpoint::
-
-    BbsResponse[Post]                # GET /posts/123
-    BbsResponse[list[Community]]     # GET /apihub/api/getAllCommunity
-    LaohuResponse[SmsLoginResult]    # POST /openApi/sms/new/login
 """
 
 from __future__ import annotations
+
+from typing import Generic, TypeVar
 
 from ._base import BbsBase, LaohuBase
 
 __all__ = ["BbsResponse", "LaohuResponse"]
 
+T = TypeVar("T")
 
-class BbsResponse[T](BbsBase):
+
+class BbsResponse(BbsBase, Generic[T]):
     """Standard ``bbs-api.tajiduo.com`` response envelope."""
 
     code: int
@@ -33,7 +30,7 @@ class BbsResponse[T](BbsBase):
         return self.code == 0 and self.ok
 
 
-class LaohuResponse[T](LaohuBase):
+class LaohuResponse(LaohuBase, Generic[T]):
     """Standard ``user.laohu.com`` response envelope."""
 
     code: int

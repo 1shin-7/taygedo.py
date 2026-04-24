@@ -1,25 +1,17 @@
 """Laohu (user.laohu.com) request signing — MD5 over sorted values + AES-ECB.
 
-Algorithm reverse-engineered from the LaohuSDK 4.273.0 dex (see
-``com.laohu.sdk.e.c::a(Map, boolean)``, ``com.laohu.sdk.e.k::a``,
-``com.laohu.sdk.util.e::a``, ``com.laohu.sdk.util.r::a``):
+Algorithm (reverse-engineered from LaohuSDK 4.273.0 dex,
+``com.laohu.sdk.{e.c,e.k,util.e,util.r}``):
 
-1. Sensitive fields (``cellphone``, ``captcha``, ``username``, ``password``,
-   ``unlockCode``) are AES-ECB-PKCS5 encrypted with a key derived from the
-   last 16 bytes of the host-app key, then base64-encoded (NO_WRAP).
-2. The full param map (encrypted-where-applicable, plus device base + ``t``)
-   is reduced to ``"".join(value for key, value in sorted(params.items()))``.
-3. The host-app key is appended and the result MD5-hashed; the hex digest
-   is written back as ``params["sign"]``.
+1. AES-ECB-PKCS5 encrypt sensitive fields (cellphone/captcha/username/
+   password/unlockCode) with key = ``app_key[-16:]``, base64 NO_WRAP.
+2. ``"".join(v for k, v in sorted(params.items()))`` over the (encrypted)
+   param map plus device base + ``t``.
+3. Append ``app_key``, MD5; hex digest → ``params["sign"]``.
 
-The default ``LaohuConfig`` carries the htassistant-specific app_key extracted
-from ``com.pwrd.htassistant.MainActivity:35``::
-
-    LaohuPlatform.getInstance().initAppInfo(
-        mainActivity, 10550, "89155cc4e8634ec5b1b6364013b23e3e", ...);
-
-This key is host-app-public (any reverse engineer obtains it); host apps using
-a different LaohuSDK registration override it via the constructor.
+Default ``app_key`` ``89155cc4e8634ec5b1b6364013b23e3e`` is the htassistant
+LaohuSDK registration extracted from ``com.pwrd.htassistant.MainActivity:35``.
+Other host apps override via constructor; the key is host-app-public.
 """
 
 from __future__ import annotations
@@ -44,19 +36,11 @@ HTASSISTANT_APP_KEY = "89155cc4e8634ec5b1b6364013b23e3e"
 """Default app_key for the com.pwrd.htassistant Android client."""
 
 DEFAULT_SENSITIVE_FIELDS: frozenset[str] = frozenset()
-"""Empty by default — sensitive fields are decided per-endpoint, not per-app.
+"""Empty default — sensitive fields are decided per-endpoint, not per-app.
 
-Reverse-engineered from ``com.laohu.sdk.e.c`` vs ``com.laohu.sdk.e.k``:
-
-* ``sendPhoneCaptchaWithOutLogin`` / ``checkPhoneCaptchaWithOutLogin`` send
-  ``cellphone`` in plain text and feed plain text into the sign computation.
-* ``/openApi/sms/new/login`` AES-encrypts both ``cellphone`` and ``captcha``,
-  and the ENCRYPTED ciphertexts are what enters the sign.
-
-So the encryption decision is endpoint-level. Construct ``SignLaohu`` instances
-with the appropriate ``sensitive_fields`` per endpoint group::
-
-    SignLaohu(LaohuConfig(sensitive_fields=frozenset({"cellphone","captcha"})), ...)
+``send|checkPhoneCaptchaWithOutLogin`` send cellphone in plain text and feed
+plain text into the sign; ``/openApi/sms/new/login`` AES-encrypts cellphone
++ captcha and feeds the ciphertexts. Pick the right set per endpoint.
 """
 
 LOGIN_SENSITIVE_FIELDS = frozenset({"cellphone", "captcha", "username", "password", "unlockCode"})

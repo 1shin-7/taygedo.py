@@ -1,22 +1,10 @@
 """Authorization injection — orthogonal to Signer.
 
-A ``Signer`` performs *computational* request mutation (DS, MD5, AES) with
-fixed inputs declared at decoration time. Authentication, by contrast, is
-*stateful*: its inputs (access tokens) live on the Client and change at
-runtime when the user logs in or refreshes a session.
-
-Mixing the two would force every service to know about token plumbing. This
-module separates them: an :class:`AuthProvider` is owned by the Client and
-applied automatically to outgoing requests for any Service that opts in via
-``auth_required = True``.
-
-Built-in implementations:
-
-* :class:`BearerProvider` — reads ``access_token`` from a ``SessionState``
-  on every call (so a refresh transparently propagates).
-
-A future ``CookieProvider`` / ``OAuth2Provider`` would slot in here without
-touching Service or endpoint code.
+Signers are *computational* (DS/MD5/AES) with inputs fixed at decoration
+time. Authentication is *stateful* — tokens live on the Client and rotate on
+login / refresh. Keeping them separate means services never touch tokens:
+the Client owns an ``AuthProvider`` and applies it to every request of any
+Service with ``auth_required = True``.
 """
 
 from __future__ import annotations
@@ -31,20 +19,15 @@ __all__ = ["AuthProvider", "BearerProvider"]
 
 @runtime_checkable
 class AuthProvider(Protocol):
-    """Strategy that injects authentication into a prepared request."""
-
     def apply(self, req: PreparedRequest) -> PreparedRequest: ...
 
 
 @dataclass(slots=True)
 class BearerProvider:
-    """Reads ``access_token`` from a session holder at call time.
+    """Reads ``access_token`` from the session holder at call time.
 
-    The session holder is any object exposing a string attribute (default
-    ``access_token``); typically :class:`taygedo.client.SessionState`. We
-    intentionally do **not** raise when the token is empty — instead the
-    request goes out unauthenticated and the server's 401 triggers the
-    framework's refresh middleware.
+    Empty token → request goes out unauthenticated and the server's 401
+    triggers the framework's refresh middleware (not an exception here).
     """
 
     session: object

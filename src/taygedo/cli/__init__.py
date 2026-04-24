@@ -1,20 +1,8 @@
 """taygedo command-line entry point.
 
-The top-level ``app`` group bundles nine sub-groups; two pairs are
-double-named for ergonomics:
-
-* ``auth``                — login / logout / info / switch / list
-* ``ht`` and ``tof``      — Tower of Fantasy queries (same handler)
-* ``nte`` and ``yh``      — 异环 queries (same handler)
-* ``community``           — BBS community: listings, signin, tasks, shop
-* ``post``                — Post detail / comments / like / collect
-* ``search``              — Posts / topics / users / hot keywords
-* ``user``                — Profile / feeds / follow
-* ``conf``                — config.toml view + edit
-
-Pass ``--debug`` (or set ``TAGEDO_DEBUG=1``) to dump every HTTP
-request/response to stderr — useful when a server returns a non-zero
-business code and you need to see the raw payload.
+``ht``/``tof`` and ``nte``/``yh`` are aliased — the English acronym and the
+Pinyin both work. Pass ``--debug`` (or set ``TAGEDO_DEBUG=1``) to dump every
+HTTP request/response to stderr.
 """
 
 from __future__ import annotations

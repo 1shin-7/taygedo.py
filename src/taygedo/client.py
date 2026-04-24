@@ -1,14 +1,8 @@
 """User-facing client — composes BaseClient with all business Services.
 
-Single-account model: one ``TaygedoClient`` instance owns one ``SessionState``
-(the bbs/laohu tokens for one user). Token persistence is the caller's
-responsibility — restore by mutating ``client.session`` directly, or by
-running the LoginService → AuthService flow on each fresh process.
-
-Service mounts are declared as class-level annotations; the descriptor lazily
-instantiates each Service on first access. mypy / IDE see them as instances
-of the declared Service class so ``client.nte.get_role_home(...)`` is fully
-typed.
+Single-account: one ``TaygedoClient`` instance owns one ``SessionState``.
+Token persistence is the caller's responsibility (mutate ``client.session``
+or run the LoginService → AuthService flow per process).
 """
 
 from __future__ import annotations
@@ -35,13 +29,7 @@ __all__ = ["SessionState", "TaygedoClient"]
 
 @dataclass(slots=True)
 class SessionState:
-    """Mutable holder of every credential the client cares about.
-
-    All fields default to empty so a freshly-constructed client is in the
-    "logged out" state. The Auth/Login services mutate this in place so
-    every Service that reads from it sees the latest values without any
-    explicit propagation.
-    """
+    """Every credential the client tracks. Mutated in place by Auth/Login services."""
 
     access_token: str = ""
     refresh_token: str = ""

@@ -1,54 +1,18 @@
-"""The endpoint decorator and its runtime engine.
+"""Endpoint decorator and runtime engine.
 
-The decorator turns a Service method declaration into a fully working HTTP
-call. The method body is irrelevant (typically ``...``); the decorator
-inspects the signature to build an :class:`EndpointSpec` once at class
-definition time, and at call time uses the spec to assemble a request, sign
-it, dispatch it, and parse the response.
+Turns a ``Service`` method declaration into a working HTTP call. Method body
+is ``...`` — the decorator inspects the signature once at class-definition
+time and uses it to assemble + sign + dispatch + parse at call time.
 
-Usage
------
+Parameter inference (per param besides ``self``):
+  * ``Annotated[T, Path()|Query()|Header()|Body()]`` → that role explicitly.
+  * Else: name in path template → Path; BaseModel subclass → Body; else Query.
 
-Idiomatic form (one method per HTTP verb)::
+Header merging order at call time (later wins): ``service.default_headers``
+→ endpoint-param headers → ``client._auth_provider`` (Authorization).
 
-    class NteService(BearerAuthService):
-        @endpoint.get("/apihub/awapi/yh/roleHome")
-        async def get_role_home(self) -> BbsResponse[NteRoleHome]: ...
-
-        @endpoint.post("/apihub/awapi/sign")
-        async def _sign_raw(self, body: Annotated[str, Body()]) -> BbsResponse[None]: ...
-
-The legacy ``@endpoint("GET", "/path", sign=...)`` two-arg form is preserved
-for endpoints that need a non-default Signer override.
-
-Type discipline
----------------
-The decorator preserves the wrapped method's signature verbatim for LSP and
-mypy. There are no injected parameters: the method's declared signature *is*
-its public contract.
-
-Parameter inference
--------------------
-For each parameter (besides ``self``):
-  * If annotated as ``Annotated[T, Path()]`` → URL path variable.
-  * If annotated as ``Annotated[T, Query(alias=...)]`` → query string entry.
-  * If annotated as ``Annotated[T, Header(alias=...)]`` → HTTP header.
-  * If annotated as ``Annotated[T, Body()]`` → request body.
-  * Otherwise:
-      - if its name appears in the path template → Path
-      - if its type is a BaseModel subclass → Body
-      - else → Query
-
-Service-level layering
-----------------------
-At call time, headers are merged in this order (later wins):
-  1. ``service.default_headers`` (static identity headers)
-  2. Endpoint parameter headers (per-call business headers)
-  3. ``client._auth_provider.apply`` (Authorization, applied in BaseClient.send)
-
-The 401 retry middleware is endpoint-level: if the response status is 401,
-the engine awaits ``service.on_unauthorized()`` and retries the request once
-if it returns ``True``.
+401 retry: on HTTP 401 the engine awaits ``service.on_unauthorized()`` and,
+if it returns ``True``, retries once.
 """
 
 from __future__ import annotations
@@ -62,6 +26,7 @@ from typing import (
     Annotated,
     Any,
     Literal,
+    Union,
     cast,
     get_args,
     get_origin,
@@ -109,11 +74,32 @@ def _extract_path_vars(path: str) -> frozenset[str]:
     )
 
 
+def _unwrap_optional_around_annotated(annotation: Any) -> Any:
+    """Strip an outer ``Optional[...]`` so inner ``Annotated`` markers surface.
+
+    Python 3.10's ``get_type_hints`` wraps ``Annotated[T, Marker] = None`` into
+    ``Optional[Annotated[T, Marker]]``; 3.11+ keeps the ``Annotated`` at the
+    top level. Normalise both to the 3.11+ shape.
+    """
+    import types
+
+    origin = get_origin(annotation)
+    is_union = origin is Union or origin is types.UnionType
+    if not is_union:
+        return annotation
+    args = get_args(annotation)
+    non_none = [a for a in args if a is not type(None)]
+    if len(non_none) == 1 and get_origin(non_none[0]) is Annotated:
+        return non_none[0]
+    return annotation
+
+
 def _classify_parameter(
     name: str,
     annotation: Any,
     path_vars: frozenset[str],
 ) -> _ParamBinding:
+    annotation = _unwrap_optional_around_annotated(annotation)
     if get_origin(annotation) is Annotated:
         args = get_args(annotation)
         inner_type = args[0]
