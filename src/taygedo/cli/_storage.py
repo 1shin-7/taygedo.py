@@ -14,13 +14,13 @@ Both files are created lazily; missing values fall back to documented defaults.
 
 from __future__ import annotations
 
-import json
 import os
 import tempfile
 from dataclasses import asdict, dataclass, field, fields
 from pathlib import Path
 from typing import Any
 
+import orjson
 import tomlkit
 from tomlkit.toml_document import TOMLDocument
 
@@ -114,8 +114,8 @@ class Storage:
         if not self._data_file.exists():
             self._cache.data = {"active_uid": None, "accounts": {}}
             return self._cache.data
-        with self._data_file.open(encoding="utf-8") as f:
-            data: dict[str, Any] = json.load(f)
+        with self._data_file.open("rb") as f:
+            data: dict[str, Any] = orjson.loads(f.read())
         data.setdefault("active_uid", None)
         data.setdefault("accounts", {})
         self._cache.data = data
@@ -125,7 +125,7 @@ class Storage:
         self._dir.mkdir(parents=True, exist_ok=True)
         self._atomic_write(
             self._data_file,
-            json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8"),
+            orjson.dumps(data, option=orjson.OPT_INDENT_2),
             mode=0o600,
         )
         self._cache.data = data

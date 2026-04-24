@@ -8,6 +8,7 @@ dependencies = [
     "click>=8.1",
     "cryptography>=43",
     "curl-cffi>=0.15.0",
+    "orjson>=3.11.8",
     "prompt-toolkit>=3.0",
     "pydantic>=2.13.2",
     "rich>=13",

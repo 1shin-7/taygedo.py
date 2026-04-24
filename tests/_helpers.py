@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-import json
 from collections.abc import Callable
 from typing import Any
+
+import orjson
 
 from taygedo.core import (
     AuthProvider,
@@ -58,5 +59,5 @@ class MockClient(BaseClient):
         return Response(
             status_code=200,
             headers={"content-type": "application/json"},
-            content=json.dumps(result).encode("utf-8"),
+            content=orjson.dumps(result),
         )

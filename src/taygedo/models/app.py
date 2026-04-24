@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-import json
-
+import orjson
 from pydantic import Field
 
 from ._base import BbsBase
@@ -49,8 +48,8 @@ class AppConfigs(BbsBase):
         if not self.im_config:
             return []
         try:
-            raw = json.loads(self.im_config)
-        except json.JSONDecodeError:
+            raw = orjson.loads(self.im_config)
+        except orjson.JSONDecodeError:
             return []
         if not isinstance(raw, list):
             return []

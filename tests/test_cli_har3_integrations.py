@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-import json
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+import orjson
 import pytest
 from click.testing import CliRunner
 
@@ -37,7 +37,7 @@ def _ok(payload: dict[str, Any]) -> Response:
     return Response(
         status_code=200,
         headers={"content-type": "application/json"},
-        content=json.dumps(payload).encode("utf-8"),
+        content=orjson.dumps(payload),
     )
 
 

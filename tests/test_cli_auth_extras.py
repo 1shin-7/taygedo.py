@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any
 
+import orjson
 import pytest
 from click.testing import CliRunner
 
@@ -97,7 +97,7 @@ def test_list_json(isolated_storage: Path) -> None:  # noqa: F811
     _seed(isolated_storage)
     result = CliRunner().invoke(app, ["auth", "list", "--json"])
     assert result.exit_code == 0
-    parsed = json.loads(result.output)
+    parsed = orjson.loads(result.output)
     assert {a["uid"] for a in parsed} == {1, 2}
 
 
@@ -118,7 +118,7 @@ def _user_full_info_responder() -> Any:
             return Response(
                 status_code=200,
                 headers={"content-type": "application/json"},
-                content=json.dumps(
+                content=orjson.dumps(
                     {
                         "code": 0,
                         "ok": True,
@@ -143,7 +143,7 @@ def _user_full_info_responder() -> Any:
                             "inBlackList": False,
                         },
                     },
-                ).encode("utf-8"),
+                ),
             )
         return Response(
             status_code=200,

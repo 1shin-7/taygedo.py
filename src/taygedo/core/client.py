@@ -34,9 +34,9 @@ class Response:
     content: bytes
 
     def json(self) -> Any:
-        import json
+        import orjson
 
-        return json.loads(self.content.decode("utf-8"))
+        return orjson.loads(self.content)
 
     @property
     def text(self) -> str:

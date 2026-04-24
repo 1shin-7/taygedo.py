@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-import json
 from typing import Any
 from urllib.parse import parse_qs
+
+import orjson
 
 from taygedo.client import TaygedoClient
 from taygedo.core import PreparedRequest, Response
@@ -14,7 +15,7 @@ def _ok(payload: dict[str, Any]) -> Response:
     return Response(
         status_code=200,
         headers={"content-type": "application/json"},
-        content=json.dumps(payload).encode("utf-8"),
+        content=orjson.dumps(payload),
     )
 
 

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
-import json
-
+import orjson
 import pytest
 from pydantic import BaseModel
 
@@ -51,7 +50,7 @@ async def test_4xx_raises_api_error() -> None:
         return Response(
             status_code=404,
             headers={},
-            content=json.dumps({"error": "not found"}).encode("utf-8"),
+            content=orjson.dumps({"error": "not found"}),
         )
 
     client = Cli(responder=responder)

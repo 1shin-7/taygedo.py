@@ -12,11 +12,11 @@ Two pieces of infrastructure are reused across every CLI test:
 
 from __future__ import annotations
 
-import json
 from collections.abc import Callable, Iterator
 from pathlib import Path
 from typing import Any
 
+import orjson
 import pytest
 
 from taygedo.cli import _shared, _storage
@@ -36,7 +36,7 @@ def isolated_storage(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterato
 
 
 def _make_response(payload: dict[str, Any] | bytes, status: int = 200) -> Response:
-    body = payload if isinstance(payload, bytes) else json.dumps(payload).encode("utf-8")
+    body = payload if isinstance(payload, bytes) else orjson.dumps(payload)
     return Response(
         status_code=status,
         headers={"content-type": "application/json"},

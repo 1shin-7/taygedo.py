@@ -12,10 +12,10 @@ abstraction needed to make them dynamic is not, so we don't.
 
 from __future__ import annotations
 
-import json
 from collections.abc import Callable, Iterable
 from typing import Any
 
+import orjson
 from pydantic import BaseModel
 from rich.console import Console
 from rich.panel import Panel
@@ -84,20 +84,25 @@ def render(value: Any, *, json_out: bool = False, console: Console | None = None
     console.print(_to_json_str(value))
 
 
+_JSON_OPTIONS = orjson.OPT_INDENT_2 | orjson.OPT_NON_STR_KEYS
+
+
 def _to_json_str(value: Any) -> str:
     if isinstance(value, BaseModel):
         return value.model_dump_json(indent=2, by_alias=True)
     if isinstance(value, list) and value and isinstance(value[0], BaseModel):
-        return json.dumps(
+        return orjson.dumps(
             [v.model_dump(mode="json", by_alias=True) for v in value],
-            ensure_ascii=False, indent=2,
-        )
+            option=_JSON_OPTIONS,
+        ).decode("utf-8")
     if hasattr(value, "to_dict"):
-        return json.dumps(value.to_dict(), ensure_ascii=False, indent=2)
+        return orjson.dumps(value.to_dict(), option=_JSON_OPTIONS).decode("utf-8")
     if isinstance(value, list) and value and hasattr(value[0], "to_dict"):
-        return json.dumps([v.to_dict() for v in value], ensure_ascii=False, indent=2)
+        return orjson.dumps(
+            [v.to_dict() for v in value], option=_JSON_OPTIONS,
+        ).decode("utf-8")
     try:
-        return json.dumps(value, ensure_ascii=False, indent=2, default=str)
+        return orjson.dumps(value, default=str, option=_JSON_OPTIONS).decode("utf-8")
     except TypeError:
         return str(value)
 

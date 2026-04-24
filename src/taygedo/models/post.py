@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-import json
 from typing import Any
 
+import orjson
 from pydantic import Field, field_validator
 
 from ._base import BbsBase
@@ -110,8 +110,8 @@ class Post(BbsBase):
         """Cover arrives as ``"{...}"`` (JSON string) — parse it transparently."""
         if isinstance(v, str) and v:
             try:
-                return json.loads(v)
-            except json.JSONDecodeError:
+                return orjson.loads(v)
+            except orjson.JSONDecodeError:
                 return None
         return v
 
@@ -120,8 +120,8 @@ class Post(BbsBase):
         if not self.structured_content:
             return []
         try:
-            decoded = json.loads(self.structured_content)
-        except json.JSONDecodeError:
+            decoded = orjson.loads(self.structured_content)
+        except orjson.JSONDecodeError:
             return []
         if isinstance(decoded, list):
             return [d for d in decoded if isinstance(d, dict)]

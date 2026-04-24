@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
-import json
 from typing import Any
+
+import orjson
 
 from taygedo.core import BearerAuthService, PreparedRequest, Response, Service, endpoint
 
@@ -19,7 +20,7 @@ def _make_responder(*statuses: int) -> Any:
         return Response(
             status_code=status,
             headers={"content-type": "application/json"},
-            content=json.dumps({"code": 0, "ok": True}).encode("utf-8"),
+            content=orjson.dumps({"code": 0, "ok": True}),
         )
 
     return responder

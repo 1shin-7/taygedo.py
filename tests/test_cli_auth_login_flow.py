@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-import json
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs
 
+import orjson
 import pytest
 from click.testing import CliRunner
 
@@ -22,7 +22,7 @@ def _ok(payload: dict[str, Any], status: int = 200) -> Response:
     return Response(
         status_code=status,
         headers={"content-type": "application/json"},
-        content=json.dumps(payload).encode("utf-8"),
+        content=orjson.dumps(payload),
     )
 
 

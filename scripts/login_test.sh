@@ -15,7 +15,7 @@ CAPTCHA="${2:?usage: $0 <cellphone> <captcha>}"
 
 # Run a tiny Python helper that does sms_login and prints the laohu token.
 TOKEN=$(uv run python <<PY
-import asyncio, json, sys
+import asyncio, sys
 from taygedo.client import TaygedoClient
 from taygedo.models import SmsLoginRequest
 
