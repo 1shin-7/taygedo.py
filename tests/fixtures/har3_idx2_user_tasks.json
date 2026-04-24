@@ -1,0 +1,105 @@
+{
+  "code": 0,
+  "data": {
+    "task_list3": [
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 5,
+        "limitTimes": 1,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "signin_exp",
+        "title": "签到",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 5,
+        "limitTimes": 3,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "browse_post_exp",
+        "title": "浏览帖子",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 30,
+        "limitTimes": 1,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "send_post_exp",
+        "title": "发送主帖",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 10,
+        "limitTimes": 2,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "send_comment_exp",
+        "title": "发送评论",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 2,
+        "limitTimes": 10,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "like_post_exp",
+        "title": "点赞帖子",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 5,
+        "limitTimes": 10,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "be_like_post_exp",
+        "title": "被点赞帖子",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 10,
+        "limitTimes": 10,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "be_reply_exp",
+        "title": "被回复",
+        "uid": 10000001
+      },
+      {
+        "coin": 0,
+        "completeTimes": 0,
+        "contTimes": 0,
+        "exp": 5,
+        "limitTimes": 10,
+        "period": 20260424,
+        "targetTimes": 1,
+        "taskKey": "be_collect_exp",
+        "title": "被收藏",
+        "uid": 10000001
+      }
+    ]
+  },
+  "msg": "ok",
+  "ok": true
+}

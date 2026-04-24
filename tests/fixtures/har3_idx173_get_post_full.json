@@ -1,0 +1,93 @@
+{
+  "code": 0,
+  "data": {
+    "draftId": 0,
+    "fr": {
+      "fid": 10000002,
+      "followed": false,
+      "following": true,
+      "time": 1777040541351
+    },
+    "hot": true,
+    "post": {
+      "columnId": 4,
+      "columnTop": false,
+      "communityId": 2,
+      "content": "<p>所至之处，星途璀璨。</p><p>没错，伟大的Persona1Family一代目——闪亮登场！<br/></p>",
+      "cover": "{\"cropRect\":{\"height\":0,\"width\":0},\"url\":\"https://bbs-upload.tajiduo.com/20260423/10000002/UV0E7SCB24F06J4N52UFDMJ1RF2VLJQ7.jpg\"}",
+      "createTime": 1776909152483,
+      "deleteTime": 0,
+      "draftId": 0,
+      "images": [],
+      "isDelete": false,
+      "lastEditTime": 0,
+      "mentions": [],
+      "postId": 189988,
+      "postStat": {
+        "collectNum": 122,
+        "commentNum": 538,
+        "likeNum": 8480,
+        "postId": 189988
+      },
+      "prime": false,
+      "region": "江苏",
+      "scheduleTime": 0,
+      "selfOperation": {
+        "isCollected": true,
+        "liked": true
+      },
+      "sendTime": 1776913200028,
+      "showingMissing": false,
+      "structuredContent": "[{\"txt\":\"所至之处，星途璀璨。\"},{\"txt\":\"\\n\"},{\"txt\":\"没错，伟大的Persona1Family一代目——闪亮登场！\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"}]",
+      "subject": "《Game1》Persona1EP丨Magical Lights",
+      "topicIds": [],
+      "type": 3,
+      "uid": 10000002,
+      "updateTime": 1776913200028,
+      "userStick": false,
+      "version": 0,
+      "vods": [
+        {
+          "cover": "https://bbs-upload.tajiduo.com/20260423/10000002/UV0E7SCB24F06J4N52UFDMJ1RF2VLJQ7.jpg",
+          "duration": 195,
+          "items": [
+            {
+              "height": 0,
+              "size": 241810807,
+              "url": "https://bbs-upload.tajiduo.com/20260423/10000002/N0TB0V1HOESGKS6UCQVVOIPQG3EK5HJM.mp4",
+              "width": 0
+            }
+          ],
+          "url": "https://bbs-upload.tajiduo.com/20260423/10000002/N0TB0V1HOESGKS6UCQVVOIPQG3EK5HJM.mp4"
+        }
+      ]
+    },
+    "topics": [],
+    "users": [
+      {
+        "account": "9_100000099",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+        "certification": {},
+        "createTime": 1729068040848,
+        "deviceId": "ABCDEF0123456789ABCDEF0123456789",
+        "expLevel": {
+          "communityId": 2,
+          "exp": 53714,
+          "level": 10
+        },
+        "forbidEndTime": 0,
+        "gender": -1,
+        "ipRegion": "江苏",
+        "isRealname": false,
+        "nickname": "Game1",
+        "officialMaster": true,
+        "silentEndTime": 0,
+        "uid": 10000002,
+        "updateTime": 1777008252209,
+        "userMaster": false
+      }
+    ]
+  },
+  "msg": "ok",
+  "ok": true
+}

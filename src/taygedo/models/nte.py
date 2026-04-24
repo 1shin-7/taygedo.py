@@ -37,6 +37,7 @@ __all__ = [
     "NteSkill",
     "NteSkillItem",
     "NteSuit",
+    "NteTeamRecommend",
     "NteVehicle",
     "NteVehicleData",
     "NteVehicleShow",
@@ -265,3 +266,16 @@ class NteSignState(BbsBase):
     days: int = 0
     today_sign: bool = Field(alias="todaySign", default=False)
     re_sign_cnt: int = Field(alias="reSignCnt", default=0)
+
+
+# ---------- team recommendations -------------------------------------------
+
+
+class NteTeamRecommend(BbsBase):
+    """One row in ``GET /apihub/awapi/yh/team`` — a recommended team build."""
+
+    id: str
+    name: str
+    icon: str = ""
+    desc: str = ""
+    imgs: list[str] = Field(default_factory=list)

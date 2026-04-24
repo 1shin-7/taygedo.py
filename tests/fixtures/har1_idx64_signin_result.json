@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "data": {
+    "exp": 5,
+    "goldCoin": 40
+  },
+  "msg": "ok",
+  "ok": true
+}

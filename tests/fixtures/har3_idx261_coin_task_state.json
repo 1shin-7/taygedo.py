@@ -1,0 +1,10 @@
+{
+  "code": 0,
+  "data": {
+    "todayGet": 0,
+    "todayTotal": 150,
+    "total": 230
+  },
+  "msg": "ok",
+  "ok": true
+}

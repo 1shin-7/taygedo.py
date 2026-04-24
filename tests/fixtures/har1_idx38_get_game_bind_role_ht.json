@@ -1,0 +1,15 @@
+{
+  "code": 0,
+  "data": {
+    "account": "9_100000001",
+    "gameId": 1256,
+    "gender": 1,
+    "lev": 100,
+    "roleId": 1000000000001,
+    "roleName": "TesterHT",
+    "serverId": 14508,
+    "serverName": "方舟演算"
+  },
+  "msg": "ok",
+  "ok": true
+}

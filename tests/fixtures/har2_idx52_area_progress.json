@@ -1,0 +1,242 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "detail": [
+        {
+          "id": "callbox",
+          "name": "ReroRero电话亭",
+          "total": 2
+        },
+        {
+          "id": "wittheimer",
+          "name": "维特海默塔",
+          "total": 1
+        },
+        {
+          "id": "yushi",
+          "name": "谕石",
+          "total": 37
+        },
+        {
+          "id": "branch",
+          "name": "支线",
+          "total": 15
+        },
+        {
+          "id": "21gift",
+          "name": "「21 的赠礼 」",
+          "total": 12
+        },
+        {
+          "id": "vision",
+          "name": "异象委托",
+          "total": 9
+        },
+        {
+          "id": "punchclock",
+          "name": "打卡",
+          "total": 6
+        }
+      ],
+      "id": "001",
+      "name": "桥间地",
+      "total": 1500
+    },
+    {
+      "detail": [
+        {
+          "id": "callbox",
+          "name": "ReroRero电话亭",
+          "total": 1
+        },
+        {
+          "id": "wittheimer",
+          "name": "维特海默塔",
+          "total": 1
+        },
+        {
+          "id": "yushi",
+          "name": "谕石",
+          "total": 25
+        },
+        {
+          "id": "21gift",
+          "name": "「21 的赠礼 」",
+          "total": 10
+        },
+        {
+          "id": "vision",
+          "name": "异象委托",
+          "total": 3
+        },
+        {
+          "id": "headlessiron",
+          "name": "无首铁驭",
+          "total": 1
+        },
+        {
+          "id": "serenity",
+          "name": "塞润尼缇",
+          "total": 1
+        },
+        {
+          "id": "punchclock",
+          "name": "打卡",
+          "total": 5
+        }
+      ],
+      "id": "002",
+      "name": "未闻浦",
+      "total": 650
+    },
+    {
+      "detail": [
+        {
+          "id": "callbox",
+          "name": "ReroRero电话亭",
+          "total": 2
+        },
+        {
+          "id": "wittheimer",
+          "name": "维特海默塔",
+          "total": 1
+        },
+        {
+          "id": "yushi",
+          "name": "谕石",
+          "total": 50
+        },
+        {
+          "id": "21gift",
+          "name": "「21 的赠礼 」",
+          "total": 22
+        },
+        {
+          "id": "vision",
+          "name": "异象委托",
+          "total": 6
+        },
+        {
+          "id": "musicking",
+          "name": "音霸魔王",
+          "total": 1
+        },
+        {
+          "id": "punchclock",
+          "name": "打卡",
+          "total": 6
+        }
+      ],
+      "id": "003",
+      "name": "绘空町",
+      "total": 1100
+    },
+    {
+      "detail": [
+        {
+          "id": "callbox",
+          "name": "ReroRero电话亭",
+          "total": 3
+        },
+        {
+          "id": "wittheimer",
+          "name": "维特海默塔",
+          "total": 1
+        },
+        {
+          "id": "yushi",
+          "name": "谕石",
+          "total": 45
+        },
+        {
+          "id": "branch",
+          "name": "支线",
+          "total": 3
+        },
+        {
+          "id": "21gift",
+          "name": "「21 的赠礼 」",
+          "total": 15
+        },
+        {
+          "id": "vision",
+          "name": "异象委托",
+          "total": 8
+        },
+        {
+          "id": "punchclock",
+          "name": "打卡",
+          "total": 9
+        }
+      ],
+      "id": "004",
+      "name": "米格尔区",
+      "total": 1200
+    },
+    {
+      "detail": [
+        {
+          "id": "callbox",
+          "name": "ReroRero电话亭",
+          "total": 5
+        },
+        {
+          "id": "wittheimer",
+          "name": "维特海默塔",
+          "total": 1
+        },
+        {
+          "id": "yushi",
+          "name": "谕石",
+          "total": 50
+        },
+        {
+          "id": "branch",
+          "name": "支线",
+          "total": 3
+        },
+        {
+          "id": "21gift",
+          "name": "「21 的赠礼 」",
+          "total": 20
+        },
+        {
+          "id": "vision",
+          "name": "异象委托",
+          "total": 11
+        },
+        {
+          "id": "blackbook",
+          "name": "黑之书",
+          "total": 1
+        },
+        {
+          "id": "captives",
+          "name": "海囚",
+          "total": 1
+        },
+        {
+          "id": "nestbird",
+          "name": "囿巢鸟",
+          "total": 1
+        },
+        {
+          "id": "butterfly",
+          "name": "斑蝶",
+          "total": 1
+        },
+        {
+          "id": "punchclock",
+          "name": "打卡",
+          "total": 9
+        }
+      ],
+      "id": "005",
+      "name": "新赫兰德区",
+      "total": 1500
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

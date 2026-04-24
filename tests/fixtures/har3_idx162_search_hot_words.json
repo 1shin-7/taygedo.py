@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "count": 0,
+      "keyword": "kw2"
+    },
+    {
+      "count": 0,
+      "keyword": "kw4"
+    },
+    {
+      "count": 0,
+      "keyword": "kw3"
+    },
+    {
+      "count": 0,
+      "keyword": "Persona1"
+    },
+    {
+      "count": 11374,
+      "keyword": "kw1"
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

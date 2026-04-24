@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "data": {
+    "env_id": "10",
+    "version": "1.0.0"
+  },
+  "msg": "ok",
+  "ok": true
+}

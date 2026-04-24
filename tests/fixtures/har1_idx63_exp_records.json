@@ -1,0 +1,18 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "communityId": 2,
+      "createTime": 1776740741977,
+      "id": 6339789,
+      "num": 5,
+      "sourceId": "11530531",
+      "title": "签到",
+      "type": 3,
+      "uid": 10000001,
+      "updateTime": 1776740741985
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "data": {
+    "hasMore": false,
+    "page": 0,
+    "posts": [],
+    "users": [],
+    "version": 0
+  },
+  "msg": "ok",
+  "ok": true
+}

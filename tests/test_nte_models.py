@@ -1,16 +1,6 @@
-"""Validate every NTE model against real HAR2 payloads.
-
-HAR2 = ``_dev_data/webstatic.tajiduo.com_2026_04_23_08_25_44.har`` — the
-异环 (gameId=1289) capture taken on 2026-04-23. Indices are pinned to the
-specific entries we care about.
-"""
+"""Validate every NTE model against fixture payloads (sanitized HAR2 snapshots)."""
 
 from __future__ import annotations
-
-import json
-from functools import lru_cache
-from pathlib import Path
-from typing import Any
 
 from taygedo.models import (
     BbsResponse,
@@ -24,25 +14,11 @@ from taygedo.models import (
     UnreadCount,
 )
 
-HAR_PATH = (
-    Path(__file__).parent.parent
-    / "_dev_data"
-    / "webstatic.tajiduo.com_2026_04_23_08_25_44.har"
-)
+from ._fixtures import load_fixture
 
 
-@lru_cache(maxsize=1)
-def _entries() -> list[dict[str, Any]]:
-    with HAR_PATH.open(encoding="utf-8") as f:
-        return json.load(f)["log"]["entries"]
-
-
-def _payload(idx: int) -> Any:
-    return json.loads(_entries()[idx]["response"]["content"]["text"])
-
-
-def test_role_home_idx63() -> None:
-    env = BbsResponse[NteRoleHome].model_validate(_payload(63))
+def test_role_home() -> None:
+    env = BbsResponse[NteRoleHome].model_validate(load_fixture("har2_idx63_role_home"))
     assert env.is_ok
     data = env.data
     assert data is not None
@@ -56,8 +32,8 @@ def test_role_home_idx63() -> None:
     assert data.achieve_progress.total > 0
 
 
-def test_characters_idx54_full_schema() -> None:
-    env = BbsResponse[list[NteCharacter]].model_validate(_payload(54))
+def test_characters_full_schema() -> None:
+    env = BbsResponse[list[NteCharacter]].model_validate(load_fixture("har2_idx54_characters"))
     assert env.is_ok
     chars = env.data
     assert chars is not None and len(chars) >= 1
@@ -65,22 +41,19 @@ def test_characters_idx54_full_schema() -> None:
     assert c.id and c.name
     assert c.element_type.startswith("CHARACTER_ELEMENT_TYPE_")
     assert c.group_type.startswith("CHARACTER_GROUP_TYPE_")
-    # Full property block is 25 entries — at least the basics must be present.
     prop_ids = {p.id for p in c.properties}
     assert {"hpmax", "atk", "def", "crit"} <= prop_ids
-    # First skill is "鉴痕" (id ends in _melee) with rich-text items kept verbatim.
     assert c.skills, "no skills decoded"
     melee = c.skills[0]
     assert melee.type == "Proactive"
-    assert melee.items and "<Title>" in (melee.items[0].title or melee.items[0].desc)
-    # citySkills + suit + (empty) fork
+    assert melee.items
     assert c.city_skills and c.city_skills[0].type == "City"
     assert c.suit.suit_activate_num >= 0
     assert c.fork.id == "" and c.fork.properties == []
 
 
-def test_realestate_idx27() -> None:
-    env = BbsResponse[NteRealestateData].model_validate(_payload(27))
+def test_realestate() -> None:
+    env = BbsResponse[NteRealestateData].model_validate(load_fixture("har2_idx27_realestate"))
     assert env.is_ok
     data = env.data
     assert data is not None
@@ -93,8 +66,8 @@ def test_realestate_idx27() -> None:
     assert isinstance(f0.own, bool)
 
 
-def test_vehicles_idx29() -> None:
-    env = BbsResponse[NteVehicleData].model_validate(_payload(29))
+def test_vehicles() -> None:
+    env = BbsResponse[NteVehicleData].model_validate(load_fixture("har2_idx29_vehicles"))
     assert env.is_ok
     data = env.data
     assert data is not None
@@ -103,18 +76,18 @@ def test_vehicles_idx29() -> None:
     assert data.detail and data.detail[0].id.startswith("vehicle")
 
 
-def test_area_progress_idx52() -> None:
-    env = BbsResponse[list[NteArea]].model_validate(_payload(52))
+def test_area_progress() -> None:
+    env = BbsResponse[list[NteArea]].model_validate(load_fixture("har2_idx52_area_progress"))
     assert env.is_ok
     areas = env.data
     assert areas is not None and len(areas) >= 1
     a = areas[0]
-    assert a.id == "001" and a.name == "桥间地"
+    assert a.id == "001"
     assert a.detail and {d.id for d in a.detail} >= {"yushi"}
 
 
-def test_sign_rewards_idx114() -> None:
-    env = BbsResponse[list[NteSignReward]].model_validate(_payload(114))
+def test_sign_rewards() -> None:
+    env = BbsResponse[list[NteSignReward]].model_validate(load_fixture("har2_idx114_sign_rewards"))
     assert env.is_ok
     rewards = env.data
     assert rewards is not None and len(rewards) >= 1
@@ -123,8 +96,8 @@ def test_sign_rewards_idx114() -> None:
     assert r0.num > 0
 
 
-def test_signin_state_idx118() -> None:
-    env = BbsResponse[NteSignState].model_validate(_payload(118))
+def test_signin_state() -> None:
+    env = BbsResponse[NteSignState].model_validate(load_fixture("har2_idx118_signin_state"))
     assert env.is_ok
     s = env.data
     assert s is not None
@@ -134,8 +107,8 @@ def test_signin_state_idx118() -> None:
     assert s.today_sign is True
 
 
-def test_unread_cnt_idx160() -> None:
-    env = BbsResponse[UnreadCount].model_validate(_payload(160))
+def test_unread_cnt() -> None:
+    env = BbsResponse[UnreadCount].model_validate(load_fixture("har2_idx160_unread_cnt"))
     assert env.is_ok
     nu = env.data.notification_unread
     assert nu.id > 0

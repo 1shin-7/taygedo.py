@@ -1,0 +1,24 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "backgroundImage": "https://webstatic.tajiduo.com/bbs/pic/huantabeijing.png",
+      "bindRoleInfo": {
+        "account": "9_100000001",
+        "gameId": 1256,
+        "gender": 1,
+        "lev": 100,
+        "roleId": 1000000000001,
+        "roleName": "TesterHT",
+        "serverId": 14508,
+        "serverName": "方舟演算"
+      },
+      "gameIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-huanta.png",
+      "gameId": 1256,
+      "gameName": "Game2",
+      "link": "https://webstatic.tajiduo.com/bbs/game-records/index.html?fullscreen=1"
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

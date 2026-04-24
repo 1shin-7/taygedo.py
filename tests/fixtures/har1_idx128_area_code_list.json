@@ -1,0 +1,1201 @@
+{
+  "code": 0,
+  "message": "SUCCESS",
+  "result": [
+    {
+      "areaCodeId": 1,
+      "areaCode": 86,
+      "areaName": "中国内地"
+    },
+    {
+      "areaCodeId": 2,
+      "areaCode": 886,
+      "areaName": "中国台湾"
+    },
+    {
+      "areaCodeId": 3,
+      "areaCode": 852,
+      "areaName": "中国香港"
+    },
+    {
+      "areaCodeId": 4,
+      "areaCode": 853,
+      "areaName": "中国澳门"
+    },
+    {
+      "areaCodeId": 5,
+      "areaCode": 1,
+      "areaName": "美国"
+    },
+    {
+      "areaCodeId": 6,
+      "areaCode": 81,
+      "areaName": "日本"
+    },
+    {
+      "areaCodeId": 7,
+      "areaCode": 355,
+      "areaName": "阿尔巴尼亚"
+    },
+    {
+      "areaCodeId": 8,
+      "areaCode": 213,
+      "areaName": "阿尔及利亚"
+    },
+    {
+      "areaCodeId": 9,
+      "areaCode": 93,
+      "areaName": "阿富汗"
+    },
+    {
+      "areaCodeId": 10,
+      "areaCode": 54,
+      "areaName": "阿根廷"
+    },
+    {
+      "areaCodeId": 11,
+      "areaCode": 971,
+      "areaName": "阿联酋"
+    },
+    {
+      "areaCodeId": 12,
+      "areaCode": 297,
+      "areaName": "阿鲁巴"
+    },
+    {
+      "areaCodeId": 13,
+      "areaCode": 968,
+      "areaName": "阿曼"
+    },
+    {
+      "areaCodeId": 14,
+      "areaCode": 994,
+      "areaName": "阿塞拜疆"
+    },
+    {
+      "areaCodeId": 15,
+      "areaCode": 20,
+      "areaName": "埃及"
+    },
+    {
+      "areaCodeId": 16,
+      "areaCode": 251,
+      "areaName": "埃塞俄比亚"
+    },
+    {
+      "areaCodeId": 17,
+      "areaCode": 353,
+      "areaName": "爱尔兰"
+    },
+    {
+      "areaCodeId": 18,
+      "areaCode": 372,
+      "areaName": "爱沙尼亚"
+    },
+    {
+      "areaCodeId": 19,
+      "areaCode": 376,
+      "areaName": "安道尔"
+    },
+    {
+      "areaCodeId": 20,
+      "areaCode": 244,
+      "areaName": "安哥拉"
+    },
+    {
+      "areaCodeId": 21,
+      "areaCode": 1264,
+      "areaName": "安圭拉"
+    },
+    {
+      "areaCodeId": 22,
+      "areaCode": 1268,
+      "areaName": "安提瓜和巴布达"
+    },
+    {
+      "areaCodeId": 23,
+      "areaCode": 43,
+      "areaName": "奥地利"
+    },
+    {
+      "areaCodeId": 24,
+      "areaCode": 61,
+      "areaName": "澳大利亚"
+    },
+    {
+      "areaCodeId": 25,
+      "areaCode": 1246,
+      "areaName": "巴巴多斯"
+    },
+    {
+      "areaCodeId": 26,
+      "areaCode": 1242,
+      "areaName": "巴哈马"
+    },
+    {
+      "areaCodeId": 27,
+      "areaCode": 92,
+      "areaName": "巴基斯坦"
+    },
+    {
+      "areaCodeId": 28,
+      "areaCode": 595,
+      "areaName": "巴拉圭"
+    },
+    {
+      "areaCodeId": 29,
+      "areaCode": 970,
+      "areaName": "巴勒斯坦"
+    },
+    {
+      "areaCodeId": 30,
+      "areaCode": 973,
+      "areaName": "巴林"
+    },
+    {
+      "areaCodeId": 31,
+      "areaCode": 507,
+      "areaName": "巴拿马"
+    },
+    {
+      "areaCodeId": 32,
+      "areaCode": 55,
+      "areaName": "巴西"
+    },
+    {
+      "areaCodeId": 33,
+      "areaCode": 375,
+      "areaName": "白俄罗斯"
+    },
+    {
+      "areaCodeId": 34,
+      "areaCode": 1441,
+      "areaName": "百慕大"
+    },
+    {
+      "areaCodeId": 35,
+      "areaCode": 359,
+      "areaName": "保加利亚"
+    },
+    {
+      "areaCodeId": 36,
+      "areaCode": 229,
+      "areaName": "贝宁"
+    },
+    {
+      "areaCodeId": 37,
+      "areaCode": 32,
+      "areaName": "比利时"
+    },
+    {
+      "areaCodeId": 38,
+      "areaCode": 354,
+      "areaName": "冰岛"
+    },
+    {
+      "areaCodeId": 39,
+      "areaCode": 1787,
+      "areaName": "波多黎各"
+    },
+    {
+      "areaCodeId": 40,
+      "areaCode": 48,
+      "areaName": "波兰"
+    },
+    {
+      "areaCodeId": 41,
+      "areaCode": 387,
+      "areaName": "波黑"
+    },
+    {
+      "areaCodeId": 42,
+      "areaCode": 591,
+      "areaName": "玻利维亚"
+    },
+    {
+      "areaCodeId": 43,
+      "areaCode": 501,
+      "areaName": "伯利兹"
+    },
+    {
+      "areaCodeId": 44,
+      "areaCode": 267,
+      "areaName": "博茨瓦纳"
+    },
+    {
+      "areaCodeId": 45,
+      "areaCode": 975,
+      "areaName": "不丹"
+    },
+    {
+      "areaCodeId": 46,
+      "areaCode": 226,
+      "areaName": "布基纳法索"
+    },
+    {
+      "areaCodeId": 47,
+      "areaCode": 257,
+      "areaName": "布隆迪"
+    },
+    {
+      "areaCodeId": 48,
+      "areaCode": 850,
+      "areaName": "朝鲜"
+    },
+    {
+      "areaCodeId": 49,
+      "areaCode": 240,
+      "areaName": "赤道几内亚"
+    },
+    {
+      "areaCodeId": 50,
+      "areaCode": 45,
+      "areaName": "丹麦"
+    },
+    {
+      "areaCodeId": 51,
+      "areaCode": 49,
+      "areaName": "德国"
+    },
+    {
+      "areaCodeId": 52,
+      "areaCode": 670,
+      "areaName": "东帝汶"
+    },
+    {
+      "areaCodeId": 53,
+      "areaCode": 228,
+      "areaName": "多哥"
+    },
+    {
+      "areaCodeId": 54,
+      "areaCode": 1767,
+      "areaName": "多米尼克"
+    },
+    {
+      "areaCodeId": 55,
+      "areaCode": 1809,
+      "areaName": "多米尼加"
+    },
+    {
+      "areaCodeId": 56,
+      "areaCode": 7,
+      "areaName": "俄罗斯联邦"
+    },
+    {
+      "areaCodeId": 57,
+      "areaCode": 593,
+      "areaName": "厄瓜多尔"
+    },
+    {
+      "areaCodeId": 58,
+      "areaCode": 291,
+      "areaName": "厄立特里亚"
+    },
+    {
+      "areaCodeId": 59,
+      "areaCode": 33,
+      "areaName": "法国"
+    },
+    {
+      "areaCodeId": 60,
+      "areaCode": 298,
+      "areaName": "法罗群岛"
+    },
+    {
+      "areaCodeId": 61,
+      "areaCode": 689,
+      "areaName": "法属波利尼西亚"
+    },
+    {
+      "areaCodeId": 62,
+      "areaCode": 594,
+      "areaName": "法属圭亚那"
+    },
+    {
+      "areaCodeId": 63,
+      "areaCode": 63,
+      "areaName": "菲律宾"
+    },
+    {
+      "areaCodeId": 64,
+      "areaCode": 679,
+      "areaName": "斐济"
+    },
+    {
+      "areaCodeId": 65,
+      "areaCode": 358,
+      "areaName": "芬兰"
+    },
+    {
+      "areaCodeId": 66,
+      "areaCode": 238,
+      "areaName": "佛得角"
+    },
+    {
+      "areaCodeId": 67,
+      "areaCode": 220,
+      "areaName": "冈比亚"
+    },
+    {
+      "areaCodeId": 68,
+      "areaCode": 242,
+      "areaName": "刚果（布）"
+    },
+    {
+      "areaCodeId": 69,
+      "areaCode": 243,
+      "areaName": "刚果（金）"
+    },
+    {
+      "areaCodeId": 70,
+      "areaCode": 57,
+      "areaName": "哥伦比亚"
+    },
+    {
+      "areaCodeId": 71,
+      "areaCode": 506,
+      "areaName": "哥斯达黎加"
+    },
+    {
+      "areaCodeId": 72,
+      "areaCode": 1473,
+      "areaName": "格林纳达"
+    },
+    {
+      "areaCodeId": 73,
+      "areaCode": 299,
+      "areaName": "格陵兰"
+    },
+    {
+      "areaCodeId": 74,
+      "areaCode": 995,
+      "areaName": "格鲁吉亚"
+    },
+    {
+      "areaCodeId": 75,
+      "areaCode": 53,
+      "areaName": "古巴"
+    },
+    {
+      "areaCodeId": 76,
+      "areaCode": 590,
+      "areaName": "瓜德罗普"
+    },
+    {
+      "areaCodeId": 77,
+      "areaCode": 1671,
+      "areaName": "关岛"
+    },
+    {
+      "areaCodeId": 78,
+      "areaCode": 592,
+      "areaName": "圭亚那"
+    },
+    {
+      "areaCodeId": 79,
+      "areaCode": 7,
+      "areaName": "哈萨克斯坦"
+    },
+    {
+      "areaCodeId": 80,
+      "areaCode": 509,
+      "areaName": "海地"
+    },
+    {
+      "areaCodeId": 81,
+      "areaCode": 82,
+      "areaName": "韩国"
+    },
+    {
+      "areaCodeId": 82,
+      "areaCode": 31,
+      "areaName": "荷兰"
+    },
+    {
+      "areaCodeId": 83,
+      "areaCode": 599,
+      "areaName": "荷属安的列斯"
+    },
+    {
+      "areaCodeId": 84,
+      "areaCode": 382,
+      "areaName": "黑山"
+    },
+    {
+      "areaCodeId": 85,
+      "areaCode": 504,
+      "areaName": "洪都拉斯"
+    },
+    {
+      "areaCodeId": 86,
+      "areaCode": 253,
+      "areaName": "吉布提"
+    },
+    {
+      "areaCodeId": 87,
+      "areaCode": 996,
+      "areaName": "吉尔吉斯斯坦"
+    },
+    {
+      "areaCodeId": 88,
+      "areaCode": 224,
+      "areaName": "几内亚"
+    },
+    {
+      "areaCodeId": 89,
+      "areaCode": 245,
+      "areaName": "几内亚比绍"
+    },
+    {
+      "areaCodeId": 90,
+      "areaCode": 1,
+      "areaName": "加拿大"
+    },
+    {
+      "areaCodeId": 91,
+      "areaCode": 233,
+      "areaName": "加纳"
+    },
+    {
+      "areaCodeId": 92,
+      "areaCode": 241,
+      "areaName": "加蓬"
+    },
+    {
+      "areaCodeId": 93,
+      "areaCode": 855,
+      "areaName": "柬埔寨"
+    },
+    {
+      "areaCodeId": 94,
+      "areaCode": 420,
+      "areaName": "捷克"
+    },
+    {
+      "areaCodeId": 95,
+      "areaCode": 263,
+      "areaName": "津巴布韦"
+    },
+    {
+      "areaCodeId": 96,
+      "areaCode": 237,
+      "areaName": "喀麦隆"
+    },
+    {
+      "areaCodeId": 97,
+      "areaCode": 974,
+      "areaName": "卡塔尔"
+    },
+    {
+      "areaCodeId": 98,
+      "areaCode": 1345,
+      "areaName": "开曼群岛"
+    },
+    {
+      "areaCodeId": 99,
+      "areaCode": 269,
+      "areaName": "科摩罗"
+    },
+    {
+      "areaCodeId": 100,
+      "areaCode": 965,
+      "areaName": "科威特"
+    },
+    {
+      "areaCodeId": 101,
+      "areaCode": 385,
+      "areaName": "克罗地亚"
+    },
+    {
+      "areaCodeId": 102,
+      "areaCode": 254,
+      "areaName": "肯尼亚"
+    },
+    {
+      "areaCodeId": 103,
+      "areaCode": 682,
+      "areaName": "库克群岛"
+    },
+    {
+      "areaCodeId": 104,
+      "areaCode": 371,
+      "areaName": "拉脱维亚"
+    },
+    {
+      "areaCodeId": 105,
+      "areaCode": 266,
+      "areaName": "莱索托"
+    },
+    {
+      "areaCodeId": 106,
+      "areaCode": 856,
+      "areaName": "老挝"
+    },
+    {
+      "areaCodeId": 107,
+      "areaCode": 961,
+      "areaName": "黎巴嫩"
+    },
+    {
+      "areaCodeId": 108,
+      "areaCode": 370,
+      "areaName": "立陶宛"
+    },
+    {
+      "areaCodeId": 109,
+      "areaCode": 231,
+      "areaName": "利比里亚"
+    },
+    {
+      "areaCodeId": 110,
+      "areaCode": 218,
+      "areaName": "利比亚"
+    },
+    {
+      "areaCodeId": 111,
+      "areaCode": 423,
+      "areaName": "列支敦士登"
+    },
+    {
+      "areaCodeId": 112,
+      "areaCode": 262,
+      "areaName": "留尼汪"
+    },
+    {
+      "areaCodeId": 113,
+      "areaCode": 352,
+      "areaName": "卢森堡"
+    },
+    {
+      "areaCodeId": 114,
+      "areaCode": 250,
+      "areaName": "卢旺达"
+    },
+    {
+      "areaCodeId": 115,
+      "areaCode": 40,
+      "areaName": "罗马尼亚"
+    },
+    {
+      "areaCodeId": 116,
+      "areaCode": 261,
+      "areaName": "马达加斯加"
+    },
+    {
+      "areaCodeId": 117,
+      "areaCode": 960,
+      "areaName": "马尔代夫"
+    },
+    {
+      "areaCodeId": 118,
+      "areaCode": 356,
+      "areaName": "马耳他"
+    },
+    {
+      "areaCodeId": 119,
+      "areaCode": 265,
+      "areaName": "马拉维"
+    },
+    {
+      "areaCodeId": 120,
+      "areaCode": 60,
+      "areaName": "马来西亚"
+    },
+    {
+      "areaCodeId": 121,
+      "areaCode": 223,
+      "areaName": "马里"
+    },
+    {
+      "areaCodeId": 122,
+      "areaCode": 389,
+      "areaName": "北马其顿"
+    },
+    {
+      "areaCodeId": 123,
+      "areaCode": 596,
+      "areaName": "马提尼克"
+    },
+    {
+      "areaCodeId": 124,
+      "areaCode": 230,
+      "areaName": "毛里求斯"
+    },
+    {
+      "areaCodeId": 125,
+      "areaCode": 222,
+      "areaName": "毛里塔尼亚"
+    },
+    {
+      "areaCodeId": 126,
+      "areaCode": 976,
+      "areaName": "蒙古"
+    },
+    {
+      "areaCodeId": 127,
+      "areaCode": 1664,
+      "areaName": "蒙特塞拉特"
+    },
+    {
+      "areaCodeId": 128,
+      "areaCode": 880,
+      "areaName": "孟加拉国"
+    },
+    {
+      "areaCodeId": 129,
+      "areaCode": 51,
+      "areaName": "秘鲁"
+    },
+    {
+      "areaCodeId": 130,
+      "areaCode": 373,
+      "areaName": "摩尔多瓦"
+    },
+    {
+      "areaCodeId": 131,
+      "areaCode": 212,
+      "areaName": "摩洛哥"
+    },
+    {
+      "areaCodeId": 132,
+      "areaCode": 377,
+      "areaName": "摩纳哥"
+    },
+    {
+      "areaCodeId": 133,
+      "areaCode": 258,
+      "areaName": "莫桑比克"
+    },
+    {
+      "areaCodeId": 134,
+      "areaCode": 52,
+      "areaName": "墨西哥"
+    },
+    {
+      "areaCodeId": 135,
+      "areaCode": 264,
+      "areaName": "纳米比亚"
+    },
+    {
+      "areaCodeId": 136,
+      "areaCode": 27,
+      "areaName": "南非"
+    },
+    {
+      "areaCodeId": 137,
+      "areaCode": 211,
+      "areaName": "南苏丹"
+    },
+    {
+      "areaCodeId": 138,
+      "areaCode": 977,
+      "areaName": "尼泊尔"
+    },
+    {
+      "areaCodeId": 139,
+      "areaCode": 505,
+      "areaName": "尼加拉瓜"
+    },
+    {
+      "areaCodeId": 140,
+      "areaCode": 227,
+      "areaName": "尼日尔"
+    },
+    {
+      "areaCodeId": 141,
+      "areaCode": 234,
+      "areaName": "尼日利亚"
+    },
+    {
+      "areaCodeId": 142,
+      "areaCode": 47,
+      "areaName": "挪威"
+    },
+    {
+      "areaCodeId": 143,
+      "areaCode": 351,
+      "areaName": "葡萄牙"
+    },
+    {
+      "areaCodeId": 144,
+      "areaCode": 46,
+      "areaName": "瑞典"
+    },
+    {
+      "areaCodeId": 145,
+      "areaCode": 41,
+      "areaName": "瑞士"
+    },
+    {
+      "areaCodeId": 146,
+      "areaCode": 503,
+      "areaName": "萨尔瓦多"
+    },
+    {
+      "areaCodeId": 147,
+      "areaCode": 685,
+      "areaName": "萨摩亚"
+    },
+    {
+      "areaCodeId": 148,
+      "areaCode": 381,
+      "areaName": "塞尔维亚"
+    },
+    {
+      "areaCodeId": 149,
+      "areaCode": 232,
+      "areaName": "塞拉利昂"
+    },
+    {
+      "areaCodeId": 150,
+      "areaCode": 221,
+      "areaName": "塞内加尔"
+    },
+    {
+      "areaCodeId": 151,
+      "areaCode": 357,
+      "areaName": "塞浦路斯"
+    },
+    {
+      "areaCodeId": 152,
+      "areaCode": 248,
+      "areaName": "塞舌尔"
+    },
+    {
+      "areaCodeId": 153,
+      "areaCode": 966,
+      "areaName": "沙特阿拉伯"
+    },
+    {
+      "areaCodeId": 154,
+      "areaCode": 239,
+      "areaName": "圣多美和普林西比"
+    },
+    {
+      "areaCodeId": 155,
+      "areaCode": 1869,
+      "areaName": "圣基茨和尼维斯"
+    },
+    {
+      "areaCodeId": 156,
+      "areaCode": 1758,
+      "areaName": "圣卢西亚"
+    },
+    {
+      "areaCodeId": 157,
+      "areaCode": 378,
+      "areaName": "圣马力诺"
+    },
+    {
+      "areaCodeId": 158,
+      "areaCode": 508,
+      "areaName": "圣皮埃尔岛及密克"
+    },
+    {
+      "areaCodeId": 159,
+      "areaCode": 1784,
+      "areaName": "圣文森特和格林纳丁斯"
+    },
+    {
+      "areaCodeId": 160,
+      "areaCode": 94,
+      "areaName": "斯里兰卡"
+    },
+    {
+      "areaCodeId": 161,
+      "areaCode": 421,
+      "areaName": "斯洛伐克"
+    },
+    {
+      "areaCodeId": 162,
+      "areaCode": 386,
+      "areaName": "斯洛文尼亚"
+    },
+    {
+      "areaCodeId": 163,
+      "areaCode": 268,
+      "areaName": "斯威士兰"
+    },
+    {
+      "areaCodeId": 164,
+      "areaCode": 249,
+      "areaName": "苏丹"
+    },
+    {
+      "areaCodeId": 165,
+      "areaCode": 597,
+      "areaName": "苏里南"
+    },
+    {
+      "areaCodeId": 166,
+      "areaCode": 252,
+      "areaName": "索马里"
+    },
+    {
+      "areaCodeId": 167,
+      "areaCode": 992,
+      "areaName": "塔吉克斯坦"
+    },
+    {
+      "areaCodeId": 168,
+      "areaCode": 66,
+      "areaName": "泰国"
+    },
+    {
+      "areaCodeId": 169,
+      "areaCode": 255,
+      "areaName": "坦桑尼亚"
+    },
+    {
+      "areaCodeId": 170,
+      "areaCode": 676,
+      "areaName": "汤加"
+    },
+    {
+      "areaCodeId": 171,
+      "areaCode": 1649,
+      "areaName": "特克斯和凯科斯群岛"
+    },
+    {
+      "areaCodeId": 172,
+      "areaCode": 1868,
+      "areaName": "特立尼达和多巴哥"
+    },
+    {
+      "areaCodeId": 173,
+      "areaCode": 216,
+      "areaName": "突尼斯"
+    },
+    {
+      "areaCodeId": 174,
+      "areaCode": 90,
+      "areaName": "土耳其"
+    },
+    {
+      "areaCodeId": 175,
+      "areaCode": 993,
+      "areaName": "土库曼斯坦"
+    },
+    {
+      "areaCodeId": 176,
+      "areaCode": 678,
+      "areaName": "瓦努阿图"
+    },
+    {
+      "areaCodeId": 177,
+      "areaCode": 502,
+      "areaName": "危地马拉"
+    },
+    {
+      "areaCodeId": 178,
+      "areaCode": 58,
+      "areaName": "委内瑞拉"
+    },
+    {
+      "areaCodeId": 179,
+      "areaCode": 673,
+      "areaName": "文莱"
+    },
+    {
+      "areaCodeId": 180,
+      "areaCode": 256,
+      "areaName": "乌干达"
+    },
+    {
+      "areaCodeId": 181,
+      "areaCode": 380,
+      "areaName": "乌克兰"
+    },
+    {
+      "areaCodeId": 182,
+      "areaCode": 598,
+      "areaName": "乌拉圭"
+    },
+    {
+      "areaCodeId": 183,
+      "areaCode": 998,
+      "areaName": "乌兹别克斯坦"
+    },
+    {
+      "areaCodeId": 184,
+      "areaCode": 34,
+      "areaName": "西班牙"
+    },
+    {
+      "areaCodeId": 185,
+      "areaCode": 30,
+      "areaName": "希腊"
+    },
+    {
+      "areaCodeId": 186,
+      "areaCode": 225,
+      "areaName": "科特迪瓦"
+    },
+    {
+      "areaCodeId": 187,
+      "areaCode": 65,
+      "areaName": "新加坡"
+    },
+    {
+      "areaCodeId": 188,
+      "areaCode": 687,
+      "areaName": "新喀里多尼亚"
+    },
+    {
+      "areaCodeId": 189,
+      "areaCode": 64,
+      "areaName": "新西兰"
+    },
+    {
+      "areaCodeId": 190,
+      "areaCode": 36,
+      "areaName": "匈牙利"
+    },
+    {
+      "areaCodeId": 191,
+      "areaCode": 963,
+      "areaName": "叙利亚"
+    },
+    {
+      "areaCodeId": 192,
+      "areaCode": 1876,
+      "areaName": "牙买加"
+    },
+    {
+      "areaCodeId": 193,
+      "areaCode": 374,
+      "areaName": "亚美尼亚"
+    },
+    {
+      "areaCodeId": 194,
+      "areaCode": 967,
+      "areaName": "也门"
+    },
+    {
+      "areaCodeId": 195,
+      "areaCode": 964,
+      "areaName": "伊拉克"
+    },
+    {
+      "areaCodeId": 196,
+      "areaCode": 98,
+      "areaName": "伊朗"
+    },
+    {
+      "areaCodeId": 197,
+      "areaCode": 972,
+      "areaName": "以色列"
+    },
+    {
+      "areaCodeId": 198,
+      "areaCode": 39,
+      "areaName": "意大利"
+    },
+    {
+      "areaCodeId": 199,
+      "areaCode": 91,
+      "areaName": "印度"
+    },
+    {
+      "areaCodeId": 200,
+      "areaCode": 62,
+      "areaName": "印度尼西亚"
+    },
+    {
+      "areaCodeId": 201,
+      "areaCode": 44,
+      "areaName": "英国"
+    },
+    {
+      "areaCodeId": 202,
+      "areaCode": 1340,
+      "areaName": "美属维尔京群岛"
+    },
+    {
+      "areaCodeId": 203,
+      "areaCode": 962,
+      "areaName": "约旦"
+    },
+    {
+      "areaCodeId": 204,
+      "areaCode": 84,
+      "areaName": "越南"
+    },
+    {
+      "areaCodeId": 205,
+      "areaCode": 260,
+      "areaName": "赞比亚"
+    },
+    {
+      "areaCodeId": 206,
+      "areaCode": 44,
+      "areaName": "泽西岛"
+    },
+    {
+      "areaCodeId": 207,
+      "areaCode": 235,
+      "areaName": "乍得"
+    },
+    {
+      "areaCodeId": 208,
+      "areaCode": 350,
+      "areaName": "直布罗陀"
+    },
+    {
+      "areaCodeId": 209,
+      "areaCode": 56,
+      "areaName": "智利"
+    },
+    {
+      "areaCodeId": 210,
+      "areaCode": 236,
+      "areaName": "中非"
+    },
+    {
+      "areaCodeId": 211,
+      "areaCode": 95,
+      "areaName": "缅甸"
+    },
+    {
+      "areaCodeId": 212,
+      "areaCode": 246,
+      "areaName": "迪戈加西亚"
+    },
+    {
+      "areaCodeId": 213,
+      "areaCode": 247,
+      "areaName": "阿森松岛"
+    },
+    {
+      "areaCodeId": 214,
+      "areaCode": 259,
+      "areaName": "桑西巴"
+    },
+    {
+      "areaCodeId": 215,
+      "areaCode": 290,
+      "areaName": "圣赫勒拿"
+    },
+    {
+      "areaCodeId": 216,
+      "areaCode": 379,
+      "areaName": "梵蒂冈"
+    },
+    {
+      "areaCodeId": 217,
+      "areaCode": 383,
+      "areaName": "科索沃"
+    },
+    {
+      "areaCodeId": 218,
+      "areaCode": 500,
+      "areaName": "福克兰群岛"
+    },
+    {
+      "areaCodeId": 219,
+      "areaCode": 649,
+      "areaName": "皮特凯恩"
+    },
+    {
+      "areaCodeId": 220,
+      "areaCode": 672,
+      "areaName": "澳大利亚海外领地"
+    },
+    {
+      "areaCodeId": 221,
+      "areaCode": 674,
+      "areaName": "瑙鲁"
+    },
+    {
+      "areaCodeId": 222,
+      "areaCode": 675,
+      "areaName": "巴布亚新几内亚"
+    },
+    {
+      "areaCodeId": 223,
+      "areaCode": 677,
+      "areaName": "所罗门群岛"
+    },
+    {
+      "areaCodeId": 224,
+      "areaCode": 680,
+      "areaName": "帕劳"
+    },
+    {
+      "areaCodeId": 225,
+      "areaCode": 681,
+      "areaName": "瓦利斯和富图纳"
+    },
+    {
+      "areaCodeId": 226,
+      "areaCode": 683,
+      "areaName": "纽埃"
+    },
+    {
+      "areaCodeId": 227,
+      "areaCode": 684,
+      "areaName": "美属萨摩亚"
+    },
+    {
+      "areaCodeId": 228,
+      "areaCode": 686,
+      "areaName": "基里巴斯"
+    },
+    {
+      "areaCodeId": 229,
+      "areaCode": 688,
+      "areaName": "图瓦卢"
+    },
+    {
+      "areaCodeId": 230,
+      "areaCode": 690,
+      "areaName": "托克劳"
+    },
+    {
+      "areaCodeId": 231,
+      "areaCode": 691,
+      "areaName": "密克罗尼西亚联邦"
+    },
+    {
+      "areaCodeId": 232,
+      "areaCode": 692,
+      "areaName": "马绍尔群岛"
+    },
+    {
+      "areaCodeId": 233,
+      "areaCode": 1284,
+      "areaName": "英属维尔京群岛"
+    },
+    {
+      "areaCodeId": 234,
+      "areaCode": 1670,
+      "areaName": "北马里亚纳"
+    },
+    {
+      "areaCodeId": 235,
+      "areaCode": 1808,
+      "areaName": "夏威夷"
+    },
+    {
+      "areaCodeId": 236,
+      "areaCode": 1939,
+      "areaName": "波多黎各"
+    },
+    {
+      "areaCodeId": 237,
+      "areaCode": 3906,
+      "areaName": "梵蒂冈"
+    },
+    {
+      "areaCodeId": 238,
+      "areaCode": 21228,
+      "areaName": "西撒哈拉"
+    },
+    {
+      "areaCodeId": 239,
+      "areaCode": 35818,
+      "areaName": "奥兰群岛"
+    }
+  ]
+}

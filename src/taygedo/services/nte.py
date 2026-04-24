@@ -24,6 +24,7 @@ from ..models import (
     NteCharacter,
     NteRealestateData,
     NteRoleHome,
+    NteTeamRecommend,
     NteVehicleData,
 )
 from ..signers import SignDs
@@ -64,3 +65,6 @@ class NteService(BearerAuthService):
     async def get_area_progress(
         self, role_id: Annotated[int, Query(alias="roleId")],
     ) -> BbsResponse[list[NteArea]]: ...
+
+    @endpoint.get("/apihub/awapi/yh/team")
+    async def get_team_recommends(self) -> BbsResponse[list[NteTeamRecommend]]: ...

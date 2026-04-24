@@ -1,31 +1,14 @@
-"""Validate services/ht.py shapes by re-parsing HAR1 ground-truth payloads."""
+"""Validate services/ht.py shapes against fixture payloads."""
 
 from __future__ import annotations
 
-import json
-from pathlib import Path
-from typing import Any
-
 from taygedo.models import BbsResponse, BindRole, HtRoleGameRecord
 
-HAR1 = (
-    Path(__file__).parent.parent
-    / "_dev_data"
-    / "bbs-api.tajiduo.com_2026_04_21_11_10_31.har"
-)
+from ._fixtures import load_fixture
 
 
-def _entries() -> list[dict[str, Any]]:
-    with HAR1.open(encoding="utf-8") as f:
-        return json.load(f)["log"]["entries"]
-
-
-def _payload(idx: int) -> Any:
-    return json.loads(_entries()[idx]["response"]["content"]["text"])
-
-
-def test_get_game_bind_role_idx38_parses_as_bindrole() -> None:
-    env = BbsResponse[BindRole].model_validate(_payload(38))
+def test_get_game_bind_role_parses_as_bindrole() -> None:
+    env = BbsResponse[BindRole].model_validate(load_fixture("har1_idx38_get_game_bind_role_ht"))
     assert env.is_ok
     assert env.data is not None
     assert env.data.game_id == 1256
@@ -33,8 +16,8 @@ def test_get_game_bind_role_idx38_parses_as_bindrole() -> None:
     assert env.data.role_name != ""
 
 
-def test_get_role_game_record_idx36_parses_as_htrolegamerecord() -> None:
-    env = BbsResponse[HtRoleGameRecord].model_validate(_payload(36))
+def test_get_role_game_record_parses_as_htrolegamerecord() -> None:
+    env = BbsResponse[HtRoleGameRecord].model_validate(load_fixture("har1_idx36_ht_role_record"))
     assert env.is_ok
     rec = env.data
     assert rec is not None

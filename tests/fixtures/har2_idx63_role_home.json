@@ -1,0 +1,69 @@
+{
+  "code": 0,
+  "data": {
+    "achieveProgress": {
+      "total": 348
+    },
+    "areaProgress": [
+      {
+        "id": "001",
+        "name": "桥间地",
+        "total": 1500
+      },
+      {
+        "id": "002",
+        "name": "未闻浦",
+        "total": 650
+      },
+      {
+        "id": "003",
+        "name": "绘空町",
+        "total": 1100
+      },
+      {
+        "id": "004",
+        "name": "米格尔区",
+        "total": 1200
+      },
+      {
+        "id": "005",
+        "name": "新赫兰德区",
+        "total": 1500
+      }
+    ],
+    "avatar": "None",
+    "characters": [
+      {
+        "awakenEffect": [],
+        "awakenLev": 0,
+        "elementType": "CHARACTER_ELEMENT_TYPE_COSMOS",
+        "groupType": "CHARACTER_GROUP_TYPE_ONE",
+        "id": "1051",
+        "name": "TesterChar(女)",
+        "quality": "ITEM_QUALITY_ORANGE"
+      }
+    ],
+    "charidCnt": 1,
+    "lev": 1,
+    "realestate": {
+      "showId": "bigword_l_1",
+      "showName": "维纳公寓",
+      "total": 5
+    },
+    "roleid": "2000000000001",
+    "roleloginDays": 1,
+    "rolename": "9_100000001",
+    "serverid": "14001",
+    "servername": "OB游戏服",
+    "tycoonLevel": 1,
+    "userid": "9_100000001",
+    "vehicle": {
+      "showId": "vehicle008",
+      "showName": "M1000",
+      "total": 17
+    },
+    "worldlevel": 0
+  },
+  "msg": "ok",
+  "ok": true
+}

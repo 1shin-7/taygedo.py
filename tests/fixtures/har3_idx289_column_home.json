@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "data": {
+    "anns": [
+      {
+        "appPath": "htapp://article/182113?version=",
+        "title": "《Game1》Persona1角色PV丨心有猛虎",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/nanaliPV-gonggaolan.jpg",
+        "webPath": "post?postId=182113"
+      },
+      {
+        "appPath": "htapp://article/183456?version=",
+        "title": "【有奖活动】EventName情报局丨Persona1",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/huodong-nanali-gonggaolan.jpg",
+        "webPath": "post?postId=183456"
+      },
+      {
+        "appPath": "htapp://article/166327?version=",
+        "title": "《Game1》全平台公测正式定档2026年4月23日",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/gongce-gonggaolan.png",
+        "webPath": "post?postId=166327"
+      },
+      {
+        "appPath": "https://www.wjx.cn/vm/exeBt91.aspx",
+        "title": "塔吉多游戏玩家社区反馈问卷",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/tajiduo-wenjuanfankui.jpg",
+        "webPath": "https://www.wjx.cn/vm/exeBt91.aspx"
+      }
+    ],
+    "column": {
+      "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-yihuan.png",
+      "columnName": "「袋先生」邮箱",
+      "communityId": 2,
+      "createTime": 1724312396920,
+      "gameId": 1257,
+      "id": 4,
+      "showType": 3
+    },
+    "topPosts": []
+  },
+  "msg": "ok",
+  "ok": true
+}

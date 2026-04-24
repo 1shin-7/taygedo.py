@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "data": {
+    "notificationUnread": {
+      "at": 0,
+      "channelUnread": 0,
+      "comment": 0,
+      "createTime": 1752281079609,
+      "follow": 0,
+      "id": 28493,
+      "like": 0,
+      "system": 0,
+      "uid": 10000001,
+      "updateTime": 1752281079609
+    }
+  },
+  "msg": "ok",
+  "ok": true
+}

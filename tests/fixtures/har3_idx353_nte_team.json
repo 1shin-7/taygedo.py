@@ -1,0 +1,215 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1046.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1051.png",
+        "https://webstatic.tajiduo.com/bbs/pic/yinengtuijian-ling.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1046-1051.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-ling.png"
+      ],
+      "name": "TesterChar",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_nanzhu_256.png",
+      "id": "1046",
+      "desc": "释放变轨技能即可瞬间充满环合值，随后衔接极轨终结打出高额爆发伤害。操作简洁，节奏明快，适合作为队伍中的速切爆发输出位。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1051.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1051.png",
+        "https://webstatic.tajiduo.com/bbs/pic/yinengtuijian-ling.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1046-1051.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-ling.png"
+      ],
+      "name": "TesterChar",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_009_256.png",
+      "id": "1051",
+      "desc": "释放变轨技能即可瞬间充满环合值，随后衔接极轨终结打出高额爆发伤害。操作简洁，节奏明快，适合作为队伍中的速切爆发输出位。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1010.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1010.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1010.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1010.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-nanali-.png"
+      ],
+      "name": "Persona1",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_010_256.png",
+      "id": "1010",
+      "desc": "以普通攻击持续驻场输出，释放极轨终结后获得副手增援显著强化输出，释放变轨技能进一步提升伤害。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1073.png",
+        "https://webstatic.tajiduo.com/bbs/pic/2team_rec/1073.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1073.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1073.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-xiaozhi.png"
+      ],
+      "name": "小吱",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_xiaozhi_256.png",
+      "id": "1073",
+      "desc": "通过普通攻击积累金谷，随后释放变轨技能，根据当前持有的金谷数量造成伤害。释放极轨终结可进入金谷市场，根据金谷K线的波动走势获得大量金谷，为爆发积蓄充足资源。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1054.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1054.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1054.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1054.png",
+        "https://webstatic.tajiduo.com/bbs/pic/konmu-dafudier.png"
+      ],
+      "name": "达芙蒂尔",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_005_256.png",
+      "id": "1054",
+      "desc": "释放极轨终结后获得幻影移形使用次数，通过承轨反击打出高额伤害，并频繁使目标陷入倾陷以获取额外输出机会。操作节奏紧凑，对战斗时机把握要求较高。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1055.png",
+        "https://webstatic.tajiduo.com/bbs/pic/2team_rec/1055.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1055.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1055.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-jiuyuan.png"
+      ],
+      "name": "九原",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_104_256.png",
+      "id": "1055",
+      "desc": "以极轨终结与变轨技能快速衔接完成速切循环——变轨技能与目标缔结致命玫约，极轨终结触发致约清算造成大量伤害。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1039.png",
+        "https://webstatic.tajiduo.com/bbs/pic/2team_rec/1039.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1039.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1039.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-fadiya.png"
+      ],
+      "name": "法蒂娅",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_027_256.png",
+      "id": "1039",
+      "desc": "在后台持续为前场角色分摊所受伤害，有效降低队伍减员风险。需要时释放极轨终结打出爆发伤害，同时回复自身生命值。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1025.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1025.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1025.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1025.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-hasuoer.png"
+      ],
+      "name": "哈索尔",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_012_256.png",
+      "id": "1025",
+      "desc": "通过战斗积攒闪送之力，点数充足后释放极轨终结进行强化，随后使用强化后的变轨技能打出高额爆发伤害。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1003.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1003.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1003.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1003.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-zaowu.png"
+      ],
+      "name": "早雾",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_003_256.png",
+      "id": "1003",
+      "desc": "释放变轨技能聚拢敌人，再以极轨终结为全队施加增伤效果，大幅提升队伍整体输出能力。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1023.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1023.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1023.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1023.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-baizang.png"
+      ],
+      "name": "白藏",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_028_256.png",
+      "id": "1023",
+      "desc": "驻场期间通过战斗积攒言灵字，释放极轨终结进入爆发状态。核心伤害集中在极轨终结期间的强化输出窗口，爆发期内输出极为可观。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1070.png",
+        "https://webstatic.tajiduo.com/bbs/pic/haiyue-peidui.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1070.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1070.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-haiyue.png"
+      ],
+      "name": "海月",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_haiyue_256.png",
+      "id": "1070",
+      "desc": "海月是一位长轴前台驻场的主C，主要依赖于【华彩】状态下的长闪分支进行输出，【华彩】状态可通过E技能、觉醒2获得。 此外，海月的大招也能为队伍提供一定的聚怪能力。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1019.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1019.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1019.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1019.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-bohe.png"
+      ],
+      "name": "薄荷",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_019_256.png",
+      "id": "1019",
+      "desc": "通过普通攻击与变轨技能交替使用进行持续驻场输出，操作流畅，输出节奏稳定。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1020.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1020.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1020.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1020.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-daniya.png"
+      ],
+      "name": "哈尼娅",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_020_256.png",
+      "id": "1020",
+      "desc": "通过变轨技能与极轨终结召唤咕咕子，为全队提供攻击力加成。技能释放完毕后切至后台，由咕咕子持续提供增益效果。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1021.png",
+        "https://webstatic.tajiduo.com/bbs/pic/2team_rec/1021.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1021.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1021.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-eidejia.png"
+      ],
+      "name": "埃德嘉",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_021_256.png",
+      "id": "1021",
+      "desc": "常规状态下提供稳定的单体治疗支援；释放极轨终结时可获得群体治疗能力，在危急时刻为全队回复生命值。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1033.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1033.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1033.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1033.png",
+        "https://webstatic.tajiduo.com/bbs/pic/kongmu-adele.png"
+      ],
+      "name": "阿德勒",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_015_256.png",
+      "id": "1033",
+      "desc": "释放变轨技能为队伍提供护盾保护，有效提升全队生存能力。"
+    },
+    {
+      "imgs": [
+        "https://webstatic.tajiduo.com/bbs/pic/1character_card/1008.png",
+        "https://webstatic.tajiduo.com/bbs/pic/peidui1008.png",
+        "https://webstatic.tajiduo.com/bbs/pic/3jineng/1008.png",
+        "https://webstatic.tajiduo.com/bbs/pic/4hupan/1008.png",
+        "https://webstatic.tajiduo.com/bbs/pic/ongmu-yi.png"
+      ],
+      "name": "翳",
+      "icon": "https://webstatic.tajiduo.com/bbs/pic/player_008_256.png",
+      "id": "1008",
+      "desc": "以变轨技能为核心进行持续驻场输出，凭借稳定的伤害覆盖维持场上压制力。"
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

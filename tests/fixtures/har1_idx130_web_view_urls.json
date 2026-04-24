@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "message": "get success",
+  "result": {
+    "qqUrl": "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=100456354&redirect_uri=%s&scope=get_user_info,list_album,upload_pic,add_weibo,add_t,add_pic_t,add_share",
+    "wxLoginRedirect": "https://user.laohu.com/m/newThird/wxLogin",
+    "sinaGetFansRedi": "https://user.laohu.com/m/newThird/sinaGetFans",
+    "pwUrl": "https://passport.wanmei.com/oauth2/oauth/authorize?client_id=6&response_type=authorization_code&redirect_uri=%s&state=%s",
+    "wxUrl": "https://id.wanmei.com/weChatRedirect?redirectURL=%s&state=%s",
+    "pwCompRedi": "https://user.laohu.com/m/newThird/pwComplete",
+    "qqBindRedi": "https://user.laohu.com/m/newThird/qqBind",
+    "sinaBindRedi": "https://user.laohu.com/m/newThird/sinaBind",
+    "sinaLoginRedi": "https://user.laohu.com/m/newThird/sinaLogin",
+    "sinaUrl": "https://api.weibo.com/oauth2/authorize?client_id=853784803&forcelogin=true&response_type=code&display=mobile&redirect_uri=%s?location=%s",
+    "pwLoginRedi": "https://user.laohu.com/m/newThird/pwLogin",
+    "qqCompRedi": "https://user.laohu.com/m/newThird/qqComplete",
+    "qqLoginRedi": "https://user.laohu.com/m/newThird/qqLogin",
+    "state": "am5wyTNwnUU3vsx",
+    "sinaCompRedi": "https://user.laohu.com/m/newThird/sinaComplete"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "message": "获取成功",
+  "result": {
+    "oneKeySmsLogin": {
+      "appKey": "977207056B082EDFFC5B634049A0156A",
+      "oneKeyAppId": "300012577888",
+      "ymOneKeyAppId": "",
+      "chuanglanOneKeyAppId": "f3ea6f6fa560",
+      "probability": "100-100-100"
+    },
+    "loginOptionConfig": [
+      15
+    ],
+    "wmOauth2ClientId": 6,
+    "ace": null,
+    "serviceTerms": null,
+    "clientLogSwitch": 0,
+    "qq_app_id": "-1",
+    "weixin_app_id": "-1",
+    "taptap": {},
+    "gameCustomizationLogUploadAddress": null,
+    "rvc": true,
+    "generalLogUploadAddress": null,
+    "realNameStatus": 2,
+    "gdtAdPreAttributionConfig": {
+      "gdtSwitch": 0,
+      "gdtUserActionSetId": "",
+      "gdtAppSecretKey": ""
+    },
+    "DisableIAAd": 0,
+    "request_idfa": 0,
+    "bbsSwitch": 0,
+    "activityWmPassportSwitch": 0,
+    "realNameTips": "根据国家新闻出版署《关于防止未成年人沉迷网络游戏的通知》《关于进一步严格管理 切实防止未成年人沉迷网络游戏的通知》有关要求，请提供您的下述真实有效的身份信息，其中您的境内居民身份证号属于敏感个人信息。完美世界将为履行法定义务收集下述信息并提供给新闻出版署网络游戏防沉迷实名验证系统，以便完成实名认证。",
+    "imei": 0,
+    "receipt": 1,
+    "weibo_app_key": "-1",
+    "kefuSwitch": 0
+  }
+}

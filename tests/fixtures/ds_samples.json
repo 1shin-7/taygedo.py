@@ -1,0 +1,132 @@
+[
+  {
+    "ts": "1776903909",
+    "r": "FenHnqu9",
+    "expected_sign": "72e5cc6c9af072172a5c889a543cb91f"
+  },
+  {
+    "ts": "1776903909",
+    "r": "iQ6tsqUq",
+    "expected_sign": "9755f634c6cb2e2fbbba6163a1f34687"
+  },
+  {
+    "ts": "1776903909",
+    "r": "pquR10Wc",
+    "expected_sign": "c921eaa360f0b440a91527bedf1604d6"
+  },
+  {
+    "ts": "1776903909",
+    "r": "YzBpWjFA",
+    "expected_sign": "46689c042e6f9b90775c952fbe80755d"
+  },
+  {
+    "ts": "1776903907",
+    "r": "vT8rv0A5",
+    "expected_sign": "7ad364fb20313cc55e0858a51e9df883"
+  },
+  {
+    "ts": "1776903905",
+    "r": "pqT9ilK2",
+    "expected_sign": "02b605e6b6782bd09708036e4f163a95"
+  },
+  {
+    "ts": "1776903903",
+    "r": "6JOpBBG1",
+    "expected_sign": "9233c52b1cd6ac508b9476f2806ab48f"
+  },
+  {
+    "ts": "1776903903",
+    "r": "pjkOSiAk",
+    "expected_sign": "dc3a5842fa94310ca8a630f1c7692332"
+  },
+  {
+    "ts": "1776903903",
+    "r": "juOCO7zj",
+    "expected_sign": "fcd9f4acbfc70e0864441c54d8acf19c"
+  },
+  {
+    "ts": "1776903903",
+    "r": "IpKoc1z0",
+    "expected_sign": "2ab408cfcaf5ac51d283252258c47bb8"
+  },
+  {
+    "ts": "1776903903",
+    "r": "onZ6CTvM",
+    "expected_sign": "923488d842115f04856f102fd56eb5c5"
+  },
+  {
+    "ts": "1776903903",
+    "r": "mhEXGVz6",
+    "expected_sign": "4d893be96a340a66a8452517a9602dc2"
+  },
+  {
+    "ts": "1776903903",
+    "r": "7q3hBZOi",
+    "expected_sign": "4ea1e60d6a8143342159a0c2da5a1ba9"
+  },
+  {
+    "ts": "1776903877",
+    "r": "X0vMB9uj",
+    "expected_sign": "431e4f300d1d6b6d8701edec633d7576"
+  },
+  {
+    "ts": "1776903873",
+    "r": "VI5hDLEP",
+    "expected_sign": "70ba24b4052a9cc62cb206e16ebce12f"
+  },
+  {
+    "ts": "1776903872",
+    "r": "TkFYX9m3",
+    "expected_sign": "74e58db99704b55fcde6f3264b2a9e6b"
+  },
+  {
+    "ts": "1776903872",
+    "r": "yUjjrtyx",
+    "expected_sign": "551b3ec9ac1875014d7153c14a519c93"
+  },
+  {
+    "ts": "1776903872",
+    "r": "kSArzn0i",
+    "expected_sign": "18f5df84e0dde82cf8ad3ba01783f242"
+  },
+  {
+    "ts": "1776903871",
+    "r": "rBDuyiLo",
+    "expected_sign": "95e3a07a7b2093dcd24665861047d708"
+  },
+  {
+    "ts": "1776903871",
+    "r": "tTljhEGC",
+    "expected_sign": "8eccd1604319ba2b8c967e6c48f4d824"
+  },
+  {
+    "ts": "1776903871",
+    "r": "HEAvRHNv",
+    "expected_sign": "bf447bb2f3d75bf77aadb138e87d03d0"
+  },
+  {
+    "ts": "1776903871",
+    "r": "tQGYAKiS",
+    "expected_sign": "7d2cc2a4e13ea83e7b6bb0d6dd74556d"
+  },
+  {
+    "ts": "1776903871",
+    "r": "zQzfhUTo",
+    "expected_sign": "78eb8cae4c57b1b39c010e75b79f1fc5"
+  },
+  {
+    "ts": "1776903871",
+    "r": "0uzrktgT",
+    "expected_sign": "78b4b2a3c6cbb3b897e91dfd90c00109"
+  },
+  {
+    "ts": "1776903871",
+    "r": "CTUFSLSw",
+    "expected_sign": "702e198d06c00f3d1b599a11193a8e8c"
+  },
+  {
+    "ts": "1776903871",
+    "r": "AnZgJHiY",
+    "expected_sign": "6a1977e8da36c6a650b9a43c35f48ab4"
+  }
+]

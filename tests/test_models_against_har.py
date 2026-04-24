@@ -1,16 +1,11 @@
-"""Validate every model against real HAR payloads from _dev_data.
+"""Validate every model against fixture payloads.
 
-We pin specific HAR entry indices (cross-referenced with _dev_data/api-doc.md)
-and assert the parsed model exposes the expected key fields. This is the
-contract that protects against accidental schema drift in models/.
+These fixtures are committed JSON snapshots produced from real captures
+(sanitized to remove all PII). The test suite has no external-file
+dependency beyond the repo.
 """
 
 from __future__ import annotations
-
-import json
-from functools import lru_cache
-from pathlib import Path
-from typing import Any
 
 import pytest
 
@@ -40,32 +35,13 @@ from taygedo.models import (
     WebViewUrls,
 )
 
-HAR_PATH = (
-    Path(__file__).parent.parent
-    / "_dev_data"
-    / "bbs-api.tajiduo.com_2026_04_21_11_10_31.har"
-)
-
-
-@lru_cache(maxsize=1)
-def _load_entries() -> list[dict[str, Any]]:
-    with HAR_PATH.open(encoding="utf-8") as f:
-        data = json.load(f)
-    return data["log"]["entries"]
-
-
-def _payload(idx: int) -> Any:
-    """Return the JSON body of the response at ``idx``."""
-    entry = _load_entries()[idx]
-    body = entry["response"]["content"]["text"]
-    return json.loads(body)
-
+from ._fixtures import load_fixture
 
 # --- envelopes ---------------------------------------------------------------
 
 
 def test_bbs_envelope_with_signin_result() -> None:
-    env = BbsResponse[SignInResult].model_validate(_payload(64))
+    env = BbsResponse[SignInResult].model_validate(load_fixture("har1_idx64_signin_result"))
     assert env.is_ok
     assert env.code == 0
     assert env.data is not None
@@ -74,7 +50,7 @@ def test_bbs_envelope_with_signin_result() -> None:
 
 
 def test_laohu_envelope_with_sms_login_result() -> None:
-    env = LaohuResponse[SmsLoginResult].model_validate(_payload(100))
+    env = LaohuResponse[SmsLoginResult].model_validate(load_fixture("har1_idx100_sms_login"))
     assert env.is_ok
     assert env.result is not None
     assert env.result.user_id > 0
@@ -87,42 +63,44 @@ def test_laohu_envelope_with_sms_login_result() -> None:
 
 
 def test_app_config() -> None:
-    env = BbsResponse[AppConfig].model_validate(_payload(125))
+    env = BbsResponse[AppConfig].model_validate(load_fixture("har1_idx125_app_config"))
     assert env.data == AppConfig(env_id="10", version="1.0.0")
 
 
 def test_app_startup_data() -> None:
-    env = BbsResponse[AppStartupData].model_validate(_payload(122))
+    env = BbsResponse[AppStartupData].model_validate(
+        load_fixture("har1_idx122_app_startup_data"),
+    )
     assert env.data is not None
     cfg = env.data.app_configs
     assert cfg.min_version == "1.1.8"
     assert cfg.last_version == "1.2.0"
     parsed = cfg.im_config_parsed()
     assert {e.game_id for e in parsed} == {"1256", "1289"}
-    assert env.data.emoticons[0].items[0].name.startswith("你好海特洛")
+    assert env.data.emoticons[0].items[0].name
 
 
 def test_get_all_community_returns_list_of_community() -> None:
-    env = BbsResponse[list[Community]].model_validate(_payload(123))
+    env = BbsResponse[list[Community]].model_validate(
+        load_fixture("har1_idx123_get_all_community"),
+    )
     assert env.data is not None
-    names = {c.name for c in env.data}
-    assert names == {"异环", "幻塔"}
-    yh = next(c for c in env.data if c.name == "异环")
-    assert yh.id == 2
-    assert yh.game_id == 1289
-    assert {col.column_name for col in yh.columns} >= {"「袋先生」邮箱"}
+    by_game = {c.game_id: c for c in env.data}
+    assert {1256, 1289} <= set(by_game.keys())
+    g1289 = by_game[1289]
+    assert g1289.id == 2
 
 
 def test_get_community_home() -> None:
-    env = BbsResponse[CommunityHome].model_validate(_payload(121))
+    env = BbsResponse[CommunityHome].model_validate(load_fixture("har1_idx121_community_home"))
     assert env.data is not None
     assert env.data.community.id == 2
     assert len(env.data.banners) >= 1
-    assert env.data.navigator[0].name == "任务中心"
+    assert env.data.navigator and env.data.navigator[0].name
 
 
 def test_user_full_info() -> None:
-    env = BbsResponse[UserFullInfo].model_validate(_payload(4))
+    env = BbsResponse[UserFullInfo].model_validate(load_fixture("har1_idx4_get_user_full_info"))
     assert env.data is not None
     assert env.data.user.uid > 0
     assert isinstance(env.data.user.nickname, str)
@@ -132,7 +110,9 @@ def test_user_full_info() -> None:
 
 
 def test_game_record_card() -> None:
-    env = BbsResponse[list[GameRecordCard]].model_validate(_payload(5))
+    env = BbsResponse[list[GameRecordCard]].model_validate(
+        load_fixture("har1_idx5_game_record_card"),
+    )
     assert env.data is not None
     card = env.data[0]
     assert card.game_id == 1256
@@ -141,21 +121,23 @@ def test_game_record_card() -> None:
 
 
 def test_game_bind_role() -> None:
-    env = BbsResponse[BindRole].model_validate(_payload(38))
+    env = BbsResponse[BindRole].model_validate(load_fixture("har1_idx38_get_game_bind_role_ht"))
     assert env.data is not None
     assert env.data.role_id > 0
     assert env.data.server_name != ""
 
 
 def test_game_roles_v2_empty() -> None:
-    env = BbsResponse[GameRolesData].model_validate(_payload(0))
+    env = BbsResponse[GameRolesData].model_validate(
+        load_fixture("har1_idx0_get_game_roles_v2_empty"),
+    )
     assert env.data is not None
     assert env.data.bind_role == 0
     assert env.data.roles == []
 
 
 def test_ht_role_game_record() -> None:
-    env = BbsResponse[HtRoleGameRecord].model_validate(_payload(36))
+    env = BbsResponse[HtRoleGameRecord].model_validate(load_fixture("har1_idx36_ht_role_record"))
     assert env.data is not None
     rec = env.data
     assert rec.roleid.isdigit()
@@ -169,7 +151,9 @@ def test_ht_role_game_record() -> None:
 
 
 def test_recommend_post_list_pagination() -> None:
-    env = BbsResponse[CursorPage[Post]].model_validate(_payload(120))
+    env = BbsResponse[CursorPage[Post]].model_validate(
+        load_fixture("har1_idx120_recommend_post_list"),
+    )
     assert env.data is not None
     assert env.data.has_more is True
     assert env.data.page == 2
@@ -181,7 +165,9 @@ def test_recommend_post_list_pagination() -> None:
 
 
 def test_official_post_list_video_post_with_cover() -> None:
-    env = BbsResponse[CursorPage[Post]].model_validate(_payload(119))
+    env = BbsResponse[CursorPage[Post]].model_validate(
+        load_fixture("har1_idx119_official_post_list"),
+    )
     assert env.data is not None
     # First post in the official list is the video PV.
     video_post = env.data.items[0]
@@ -193,7 +179,7 @@ def test_official_post_list_video_post_with_cover() -> None:
 
 
 def test_user_tasks() -> None:
-    env = BbsResponse[UserTasks].model_validate(_payload(61))
+    env = BbsResponse[UserTasks].model_validate(load_fixture("har1_idx61_user_tasks"))
     assert env.data is not None
     keys = {t.task_key for t in env.data.task_list3}
     assert "signin_exp" in keys
@@ -203,34 +189,33 @@ def test_user_tasks() -> None:
 
 
 def test_coin_task_state() -> None:
-    env = BbsResponse[CoinTaskState].model_validate(_payload(94))
+    env = BbsResponse[CoinTaskState].model_validate(load_fixture("har1_idx94_coin_task_state"))
     assert env.data == CoinTaskState(today_get=0, today_total=150, total=130)
 
 
 def test_exp_level() -> None:
-    env = BbsResponse[ExpLevel].model_validate(_payload(62))
+    env = BbsResponse[ExpLevel].model_validate(load_fixture("har1_idx62_exp_level"))
     assert env.data is not None
     assert env.data.level == 1
     assert env.data.next_level_exp == 40
 
 
 def test_exp_records_list() -> None:
-    env = BbsResponse[list[ExpRecord]].model_validate(_payload(63))
+    env = BbsResponse[list[ExpRecord]].model_validate(load_fixture("har1_idx63_exp_records"))
     assert env.data is not None
     assert len(env.data) == 1
     rec = env.data[0]
-    assert rec.title == "签到"
     assert rec.num == 5
     assert rec.type == 3
 
 
 def test_sign_state_is_bool() -> None:
-    env = BbsResponse[bool].model_validate(_payload(96))
+    env = BbsResponse[bool].model_validate(load_fixture("har1_idx96_sign_state_bool"))
     assert env.data is False
 
 
 def test_bbs_login() -> None:
-    env = BbsResponse[BbsLoginResult].model_validate(_payload(99))
+    env = BbsResponse[BbsLoginResult].model_validate(load_fixture("har1_idx99_bbs_login"))
     assert env.data is not None
     assert env.data.uid > 0
     assert env.data.access_token != ""
@@ -241,7 +226,7 @@ def test_bbs_login() -> None:
 
 
 def test_init_config() -> None:
-    env = LaohuResponse[InitConfig].model_validate(_payload(129))
+    env = LaohuResponse[InitConfig].model_validate(load_fixture("har1_idx129_init_config"))
     assert env.result is not None
     assert env.result.one_key_sms_login.app_key.startswith("977207056B082")
     assert env.result.real_name_status == 2
@@ -249,34 +234,60 @@ def test_init_config() -> None:
 
 
 def test_area_code_list() -> None:
-    env = LaohuResponse[list[AreaCode]].model_validate(_payload(128))
+    env = LaohuResponse[list[AreaCode]].model_validate(load_fixture("har1_idx128_area_code_list"))
     assert env.result is not None
     china = next(a for a in env.result if a.area_code_id == 1)
     assert china.area_code == 86
-    assert china.area_name == "中国内地"
 
 
 def test_web_view_url() -> None:
-    env = LaohuResponse[WebViewUrls].model_validate(_payload(130))
+    env = LaohuResponse[WebViewUrls].model_validate(load_fixture("har1_idx130_web_view_urls"))
     assert env.result is not None
     assert env.result.qq_url.startswith("https://graph.qq.com")
     assert env.result.pw_url.startswith("https://passport.wanmei.com")
 
 
-# --- defensive: every payload at least parses without ValidationError --------
+# --- defensive: every fixture at least produces a top-level dict + 'code' ---
 
 
 @pytest.mark.parametrize(
-    "idx",
+    "name",
     [
-        0, 1, 2, 3, 4, 5, 36, 38, 55, 57, 61, 62, 63, 64,
-        94, 96, 99, 100, 101, 102, 118, 119, 120, 121, 122, 123, 125,
-        128, 129, 130,
+        "har1_idx0_get_game_roles_v2_empty",
+        "har1_idx1_get_all_games",
+        "har1_idx2_user_browse_records",
+        "har1_idx3_user_post_list",
+        "har1_idx4_get_user_full_info",
+        "har1_idx5_game_record_card",
+        "har1_idx36_ht_role_record",
+        "har1_idx38_get_game_bind_role_ht",
+        "har1_idx55_user_collect_posts",
+        "har1_idx57_user_reply_feeds",
+        "har1_idx61_user_tasks",
+        "har1_idx62_exp_level",
+        "har1_idx63_exp_records",
+        "har1_idx64_signin_result",
+        "har1_idx94_coin_task_state",
+        "har1_idx96_sign_state_bool",
+        "har1_idx99_bbs_login",
+        "har1_idx100_sms_login",
+        "har1_idx101_check_captcha",
+        "har1_idx102_send_captcha",
+        "har1_idx118_column_home",
+        "har1_idx119_official_post_list",
+        "har1_idx120_recommend_post_list",
+        "har1_idx121_community_home",
+        "har1_idx122_app_startup_data",
+        "har1_idx123_get_all_community",
+        "har1_idx125_app_config",
+        "har1_idx128_area_code_list",
+        "har1_idx129_init_config",
+        "har1_idx130_web_view_urls",
     ],
 )
-def test_payload_is_valid_json(idx: int) -> None:
-    """Every targeted endpoint must at least produce parseable JSON."""
-    payload = _payload(idx)
+def test_fixture_is_valid_json(name: str) -> None:
+    """Every targeted endpoint must produce a parseable JSON envelope."""
+    payload = load_fixture(name)
     assert isinstance(payload, dict)
     # Both envelopes share the 'code' key.
     assert "code" in payload

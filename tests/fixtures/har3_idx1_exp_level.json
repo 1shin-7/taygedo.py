@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "data": {
+    "exp": 17,
+    "level": 1,
+    "levelExp": 17,
+    "nextLevel": 2,
+    "nextLevelExp": 40,
+    "todayExp": 0
+  },
+  "msg": "ok",
+  "ok": true
+}

@@ -1,0 +1,92 @@
+{
+  "code": 0,
+  "data": {
+    "detail": [
+      {
+        "id": "vehicle008",
+        "name": "M1000",
+        "own": false
+      },
+      {
+        "id": "vehicle006",
+        "name": "B100",
+        "own": false
+      },
+      {
+        "id": "vehicle007",
+        "name": "C2000",
+        "own": false
+      },
+      {
+        "id": "vehicle018",
+        "name": "ST79",
+        "own": false
+      },
+      {
+        "id": "vehicle020",
+        "name": "Enforcer",
+        "own": false
+      },
+      {
+        "id": "vehicle002",
+        "name": "Griffin",
+        "own": false
+      },
+      {
+        "id": "vehicle004",
+        "name": "Griffin Volante",
+        "own": false
+      },
+      {
+        "id": "vehicle016",
+        "name": "LaVelox",
+        "own": false
+      },
+      {
+        "id": "vehicle017",
+        "name": "Pursuit V8",
+        "own": false
+      },
+      {
+        "id": "vehicle021",
+        "name": "Pendragon",
+        "own": false
+      },
+      {
+        "id": "vehicle010",
+        "name": "Novis ST-X 950",
+        "own": false
+      },
+      {
+        "id": "vehicle024",
+        "name": "Blizzard-V4",
+        "own": false
+      },
+      {
+        "id": "vehicle003",
+        "name": "G3",
+        "own": false
+      },
+      {
+        "id": "vehicle015",
+        "name": "Rover A1",
+        "own": false
+      },
+      {
+        "id": "vehicle023",
+        "name": "K01",
+        "own": false
+      },
+      {
+        "id": "vehicle030",
+        "name": "「冲向明天！」",
+        "own": false
+      }
+    ],
+    "showId": "vehicle008",
+    "showName": "M1000",
+    "total": 17
+  },
+  "msg": "ok",
+  "ok": true
+}

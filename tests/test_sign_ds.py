@@ -1,42 +1,28 @@
-"""Validate SignDs against HAR2 ground-truth ``ds`` headers.
+"""Validate SignDs against captured ground-truth ``ds`` headers.
 
 The captured App 1.2.2 fires ``ds`` on every bbs-api request:
 ``ds = "{ts},{r},{md5(ts + r + appVersion + salt)}"``.
 
 We can't reproduce the exact ``ds`` value (``r`` and ``ts`` are random per
 call) but we can replay the algorithm against captured triples and confirm
-the digest matches.
+the digest matches. The triples live in ``tests/fixtures/ds_samples.json``
+so the test has no external-file dependency.
 """
 
 from __future__ import annotations
 
 import hashlib
-import json
-from pathlib import Path
 
 import pytest
 
 from taygedo.core import PreparedRequest
 from taygedo.signers import HTASSISTANT_DS_SALT, DsConfig, SignDs
 
-HAR_PATH = (
-    Path(__file__).parent.parent
-    / "_dev_data"
-    / "webstatic.tajiduo.com_2026_04_23_08_25_44.har"
-)
+from ._fixtures import load_fixture
 
 
 def _captured_ds_triples() -> list[tuple[str, str, str]]:
-    with HAR_PATH.open(encoding="utf-8") as f:
-        entries = json.load(f)["log"]["entries"]
-    out: list[tuple[str, str, str]] = []
-    for e in entries:
-        for h in e["request"]["headers"]:
-            if h["name"].lower() == "ds":
-                ts, r, sign = h["value"].split(",")
-                out.append((ts, r, sign))
-                break
-    return out
+    return [(s["ts"], s["r"], s["expected_sign"]) for s in load_fixture("ds_samples")]
 
 
 @pytest.mark.parametrize("ts_r_sign", _captured_ds_triples())

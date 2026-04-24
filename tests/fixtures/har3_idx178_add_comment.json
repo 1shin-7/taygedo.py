@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "data": {
+    "comment": {
+      "content": "_(你好EventName第三期-好耶)Persona1 可爱～",
+      "createTime": 1777040562119,
+      "id": 654648,
+      "images": [],
+      "isDelete": false,
+      "mentions": [],
+      "parentId": 0,
+      "postId": 189988,
+      "replyUid": 0,
+      "showingMissing": false,
+      "structuredContent": "[{\"txt\":\"_(你好EventName第三期-好耶)\"},{\"txt\":\"Persona1 可爱～\"}]",
+      "uid": 10000001,
+      "updateTime": 1777040562119
+    },
+    "users": [
+      {
+        "account": "9_100000001",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t8.png",
+        "certification": {},
+        "createTime": 1729427894768,
+        "deviceId": "0123456789abcdef0123456789abcdef",
+        "forbidEndTime": 0,
+        "gender": -1,
+        "ipRegion": "福建",
+        "isRealname": false,
+        "nickname": "tester",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10000001,
+        "updateTime": 1777040506842,
+        "userMaster": false
+      }
+    ]
+  },
+  "msg": "ok",
+  "ok": true
+}

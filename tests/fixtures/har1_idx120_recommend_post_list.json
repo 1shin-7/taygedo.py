@@ -1,0 +1,1144 @@
+{
+  "code": 0,
+  "data": {
+    "hasMore": true,
+    "page": 2,
+    "posts": [
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n",
+        "createTime": 1776701008399,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 502,
+            "url": "https://bbs-upload.tajiduo.com/20260421/126847538/10157245_1776701004222.jpg",
+            "width": 501
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182312,
+        "postStat": {
+          "collectNum": 2,
+          "commentNum": 56,
+          "likeNum": 500,
+          "postId": 182312
+        },
+        "prime": false,
+        "region": "河北",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776701008399,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260421/126847538/10157245_1776701004222.jpg\",\"attributes\":{\"width\":\"501\",\"height\":\"502\"}},{\"txt\":\"\\n\"}]",
+        "subject": "打卡",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10157245,
+        "updateTime": 1776701013536,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\nEventName市新市民扶持计划将在3天后开启。\n你、你要加入我们吗？\n距离《Game1》公测全平台上线还有3天，预下载将于4月21日开启！\n",
+        "createTime": 1776570317339,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 3840,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/AHLD9ENUSNQEHSH0FUEPJNT1N8NRM48R.png",
+            "width": 2160
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 180318,
+        "postStat": {
+          "collectNum": 30,
+          "commentNum": 267,
+          "likeNum": 2188,
+          "postId": 180318
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776650400034,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/AHLD9ENUSNQEHSH0FUEPJNT1N8NRM48R.png\",\"attributes\":{\"width\":\"2160\",\"height\":\"3840\"}},{\"txt\":\"\\n\"},{\"txt\":\"EventName市新市民扶持计划将在3天后开启。\"},{\"txt\":\"\\n\"},{\"txt\":\"你、你要加入我们吗？\"},{\"txt\":\"\\n\"},{\"txt\":\"距离《Game1》公测全平台上线还有3天，预下载将于4月21日开启！\"},{\"txt\":\"\\n\"}]",
+        "subject": "距离《Game1》公测还有3天！",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776650400034,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "留言回去给你们刷赞评收藏的ouo\n",
+        "createTime": 1776701846896,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182375,
+        "postStat": {
+          "collectNum": 5,
+          "commentNum": 182,
+          "likeNum": 717,
+          "postId": 182375
+        },
+        "prime": false,
+        "region": "广东",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776701846896,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"留言回去给你们刷赞评收藏的ouo\"},{\"txt\":\"\\n\"}]",
+        "subject": "求互关呀ʢ˶ᵒ ᵕ ˂˶ʡᶻ",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10247382,
+        "updateTime": 1776701846985,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "《Game1》即将全平台公测，愿每份祝福都伴你同行。\n「一起来场超乎想象的都市冒险吧！」\n\n超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\n点击立即前往&gt;&gt;&gt;\n",
+        "cover": "{\"cropRect\":{\"height\":0,\"width\":0},\"url\":\"https://bbs-upload.tajiduo.com/20260418/10000002/BMTINDN30597RQ5RV6PGHRGMHARN69CI.jpg\"}",
+        "createTime": 1776495013997,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 1776569352543,
+        "mentions": [],
+        "postId": 178799,
+        "postStat": {
+          "collectNum": 45,
+          "commentNum": 205,
+          "likeNum": 2888,
+          "postId": 178799
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776571200017,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"《Game1》即将全平台公测，愿每份祝福都伴你同行。\"},{\"txt\":\"\\n\"},{\"txt\":\"「一起来场超乎想象的都市冒险吧！」\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\"},{\"txt\":\"\\n\"},{\"txt\":\"点击立即前往\",\"attributes\":{\"link\":\"https://yh.wanmei.com/index.html?entrance=tajiduo\"}},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"\\n\"}]",
+        "subject": "《Game1》公测前瞻特别节目丨声优祝福",
+        "topicIds": [],
+        "type": 3,
+        "uid": 10000002,
+        "updateTime": 1776571200017,
+        "userStick": false,
+        "version": 1,
+        "vods": [
+          {
+            "cover": "https://bbs-upload.tajiduo.com/20260418/10000002/BMTINDN30597RQ5RV6PGHRGMHARN69CI.jpg",
+            "items": [
+              {
+                "height": 0,
+                "size": 249986948,
+                "url": "https://bbs-upload.tajiduo.com/20260418/10000002/IIBDJOPBA2BNA7SL6SBAGFGRE1IAMS5E.mp4",
+                "width": 0
+              }
+            ],
+            "url": "https://bbs-upload.tajiduo.com/20260418/10000002/IIBDJOPBA2BNA7SL6SBAGFGRE1IAMS5E.mp4"
+          }
+        ]
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "学院风格服装，兼顾美观与舒适。袖标由Persona1自行制作，本人对此颇为满意。\n「咳咳，Persona1Family有Persona1Family的风纪！」\n[图片]\n[图片]\n超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\n点击立即前往&gt;&gt;&gt;\n",
+        "createTime": 1776570114970,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1080,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/VOLLPROB6MG3F1QPCHGG523UK47LBFSS.jpg",
+            "width": 1920
+          },
+          {
+            "height": 1440,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/7HIHQOBUHCMTJ3DS0FCPIEFATGJQ953S.jpg",
+            "width": 1080
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 180316,
+        "postStat": {
+          "collectNum": 56,
+          "commentNum": 253,
+          "likeNum": 2922,
+          "postId": 180316
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776582000017,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"学院风格服装，兼顾美观与舒适。袖标由Persona1自行制作，本人对此颇为满意。\"},{\"txt\":\"\\n\"},{\"txt\":\"「咳咳，Persona1Family有Persona1Family的风纪！」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/VOLLPROB6MG3F1QPCHGG523UK47LBFSS.jpg\",\"attributes\":{\"width\":\"1920\",\"height\":\"1080\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/7HIHQOBUHCMTJ3DS0FCPIEFATGJQ953S.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"1440\"}},{\"txt\":\"\\n\"},{\"txt\":\"超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\"},{\"txt\":\"\\n\"},{\"txt\":\"点击立即前往\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"\\n\"}]",
+        "subject": "Persona1时装丨学园之星",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776582000017,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵\n[图片]\n\n",
+        "createTime": 1776701058359,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 365,
+            "url": "https://bbs-upload.tajiduo.com/20260421/156089950/10208924_1776701048687.jpg",
+            "width": 365
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182320,
+        "postStat": {
+          "collectNum": 9,
+          "commentNum": 433,
+          "likeNum": 965,
+          "postId": 182320
+        },
+        "prime": false,
+        "region": "安徽",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776701058359,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵氵\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260421/156089950/10208924_1776701048687.jpg\",\"attributes\":{\"width\":\"365\",\"height\":\"365\"}},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"}]",
+        "subject": "猜猜我在干嘛？评论都会回。收藏再取消一下，谢谢。互氵。",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10208924,
+        "updateTime": 1776701063501,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "欢迎来到「新赫兰德区」——全EventName最富饶、最先进、最文明、最炙手可热的顶级地段！\n我们不允许有任何一位VIP客户，错过领略此地风采的机会！\n「请、请留步，打扰了……」\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n",
+        "createTime": 1776648987063,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1920,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/1LR74N790IL7QT2S72DM8HN08OSG48PE.jpg",
+            "width": 1080
+          },
+          {
+            "height": 2240,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/E1V3VJK3LVB4P4APBRHF37JGH3DOQ4A6.jpg",
+            "width": 1080
+          },
+          {
+            "height": 2890,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/QM1GVVD6P5QUE8KEKVQ52A7EN8EFUBTS.jpg",
+            "width": 1080
+          },
+          {
+            "height": 2890,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/RS2KFOLBTSGHTD20VSRDP3RK25JTC0R4.jpg",
+            "width": 1080
+          },
+          {
+            "height": 2320,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/1B32K3V5L3E038IPE5KFOUJOV2QEQK6S.jpg",
+            "width": 1080
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 181555,
+        "postStat": {
+          "collectNum": 16,
+          "commentNum": 123,
+          "likeNum": 1678,
+          "postId": 181555
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776675600047,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"欢迎来到「新赫兰德区」——全EventName最富饶、最先进、最文明、最炙手可热的顶级地段！\"},{\"txt\":\"\\n\"},{\"txt\":\"我们不允许有任何一位VIP客户，错过领略此地风采的机会！\"},{\"txt\":\"\\n\"},{\"txt\":\"「请、请留步，打扰了……」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/1LR74N790IL7QT2S72DM8HN08OSG48PE.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"1920\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/E1V3VJK3LVB4P4APBRHF37JGH3DOQ4A6.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"2240\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/QM1GVVD6P5QUE8KEKVQ52A7EN8EFUBTS.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"2890\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/RS2KFOLBTSGHTD20VSRDP3RK25JTC0R4.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"2890\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/1B32K3V5L3E038IPE5KFOUJOV2QEQK6S.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"2320\"}},{\"txt\":\"\\n\"}]",
+        "subject": "EventName漫游特别刊 | 感谢支持粉爪银行",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776675600047,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n",
+        "createTime": 1776644764907,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1500,
+            "url": "https://bbs-upload.tajiduo.com/20260420/127010042/10100669_1776644759668.png",
+            "width": 1500
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 181463,
+        "postStat": {
+          "collectNum": 63,
+          "commentNum": 337,
+          "likeNum": 1115,
+          "postId": 181463
+        },
+        "prime": false,
+        "region": "福建",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776644764907,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260420/127010042/10100669_1776644759668.png\",\"attributes\":{\"width\":\"1500\",\"height\":\"1500\"}},{\"txt\":\"\\n\"}]",
+        "subject": "打卡",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10100669,
+        "updateTime": 1776644770156,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n鉴定师，这一次的特派委托就靠你啦~\n\n\n活动时间：4 月 23 日～4 月 29 日 每日10:30-18:00\n活动地点：上海、苏州、广州、成都\n活动说明：参与现场活动，完成活动集章，即可获得《Game1》公测KV文件袋。完成打卡互动还可获得随机款式的Q版拍立得透卡！\n*更多活动详情详见下图，不同活动参与规则请以现场引导为准。\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n",
+        "createTime": 1776680339952,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 2160,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/KTURGTHI77BMNJKJMBHAIG6KENIJ2RG1.png",
+            "width": 3240
+          },
+          {
+            "height": 1100,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/8CTBH9QSI29I7GD5U37EPH5HHO15GHUS.jpg",
+            "width": 750
+          },
+          {
+            "height": 1000,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/R45RHALA7BU1OORBCG98EEEDSEO2DAPU.jpg",
+            "width": 750
+          },
+          {
+            "height": 1200,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/HE7TUP28IJ1OVHLJNTMQN9GB5NNCKL4M.jpg",
+            "width": 750
+          },
+          {
+            "height": 1308,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/3J5AR0850B3148OST9I41S4SPHSEAF25.jpg",
+            "width": 1080
+          },
+          {
+            "height": 1370,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/B3KAECANK3BA5SN82DJBHSUHQ5C6D5CG.jpg",
+            "width": 1080
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "platform": "WEB",
+        "postId": 181973,
+        "postStat": {
+          "collectNum": 25,
+          "commentNum": 171,
+          "likeNum": 1590,
+          "postId": 181973
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776680339952,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/KTURGTHI77BMNJKJMBHAIG6KENIJ2RG1.png\",\"attributes\":{\"width\":\"3240\",\"height\":\"2160\"}},{\"txt\":\"\\n\"},{\"txt\":\"鉴定师，这一次的特派委托就靠你啦~\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"活动时间：\"},{\"txt\":\"4 月 23 日～4 月 29 日 每日10:30-18:00\"},{\"txt\":\"\\n\"},{\"txt\":\"活动地点：\"},{\"txt\":\"上海、苏州、广州、成都\"},{\"txt\":\"\\n\"},{\"txt\":\"活动说明：\"},{\"txt\":\"参与现场活动，完成活动集章，即可获得《Game1》公测KV文件袋。完成打卡互动还可获得随机款式的Q版拍立得透卡！\"},{\"txt\":\"\\n\"},{\"txt\":\"*更多活动详情详见下图，不同活动参与规则请以现场引导为准。\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/8CTBH9QSI29I7GD5U37EPH5HHO15GHUS.jpg\",\"attributes\":{\"width\":\"750\",\"height\":\"1100\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/R45RHALA7BU1OORBCG98EEEDSEO2DAPU.jpg\",\"attributes\":{\"width\":\"750\",\"height\":\"1000\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/HE7TUP28IJ1OVHLJNTMQN9GB5NNCKL4M.jpg\",\"attributes\":{\"width\":\"750\",\"height\":\"1200\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/3J5AR0850B3148OST9I41S4SPHSEAF25.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"1308\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/B3KAECANK3BA5SN82DJBHSUHQ5C6D5CG.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"1370\"}},{\"txt\":\"\\n\"}]",
+        "subject": "《Game1》「EventName特派委托」主题线下快闪活动即将开启！",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776680339952,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "看到了会回的，每天早上和晚上统一回，其他时间要去学校做苦工，对，最后，小吱好可爱_(你好EventName第一期-可怜)太可爱了！！！\n",
+        "createTime": 1776614626028,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 1776701824448,
+        "mentions": [],
+        "postId": 181043,
+        "postStat": {
+          "collectNum": 21,
+          "commentNum": 423,
+          "likeNum": 1331,
+          "postId": 181043
+        },
+        "prime": false,
+        "region": "四川",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776614626028,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"看到了会回的，每天早上和晚上统一回，其他时间要去学校做苦工，对，最后，小吱好可爱\"},{\"txt\":\"_(你好EventName第一期-可怜)\"},{\"txt\":\"太可爱了！！！\"},{\"txt\":\"\\n\"}]",
+        "subject": "求点赞评论收藏",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10220740,
+        "updateTime": 1776701824531,
+        "userStick": false,
+        "version": 2,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "打卡第一百一十九天_(不可思议日常Ⅰ-喵)\n",
+        "createTime": 1776700912905,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182301,
+        "postStat": {
+          "collectNum": 2,
+          "commentNum": 100,
+          "likeNum": 566,
+          "postId": 182301
+        },
+        "prime": false,
+        "region": "浙江",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776700912905,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"打卡第一百一十九天\"},{\"txt\":\"_(不可思议日常Ⅰ-喵)\"},{\"txt\":\"\\n\"}]",
+        "subject": "今日打卡",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10184473,
+        "updateTime": 1776700913000,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "「 堂堂Persona1Family家族一代目登场！」\n「这可是我精心设计的独家出场方式！」\n「感觉有点晕？是正常的！」\n[图片]\n[图片]\n",
+        "createTime": 1776570019451,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1600,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/D6QSU8EFMRTUHUMVA4C0LKOIQB8UC3CF.jpg",
+            "width": 1200
+          },
+          {
+            "height": 1600,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/3GNQ1BPUTJ4TSIB78GUBGUG7RL8SLF4C.jpg",
+            "width": 1200
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 180310,
+        "postStat": {
+          "collectNum": 32,
+          "commentNum": 180,
+          "likeNum": 2836,
+          "postId": 180310
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776574800016,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"「 堂堂Persona1Family家族一代目登场！」\"},{\"txt\":\"\\n\"},{\"txt\":\"「这可是我精心设计的独家出场方式！」\"},{\"txt\":\"\\n\"},{\"txt\":\"「感觉有点晕？是正常的！」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/D6QSU8EFMRTUHUMVA4C0LKOIQB8UC3CF.jpg\",\"attributes\":{\"width\":\"1200\",\"height\":\"1600\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/3GNQ1BPUTJ4TSIB78GUBGUG7RL8SLF4C.jpg\",\"attributes\":{\"width\":\"1200\",\"height\":\"1600\"}},{\"txt\":\"\\n\"}]",
+        "subject": "闲趣时光丨Persona1",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776574800016,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "「 从那之后......过去多久了?」\n「 明音、铃羽，现在也一定在哪里熠熠生辉吧。」\n「 今天——是个好天气呢。」\n[图片]\n[图片]\n",
+        "createTime": 1776648820934,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1600,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/MIML2QA7M5F0O8VGFODEFCF0J9VTGO75.jpg",
+            "width": 1200
+          },
+          {
+            "height": 1600,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/6D41GF0PIUFIV5EQ8GTLDM9F7QRJIURL.jpg",
+            "width": 1200
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 181552,
+        "postStat": {
+          "collectNum": 21,
+          "commentNum": 140,
+          "likeNum": 1886,
+          "postId": 181552
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776661200027,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"「 从那之后......过去多久了?」\"},{\"txt\":\"\\n\"},{\"txt\":\"「 明音、铃羽，现在也一定在哪里熠熠生辉吧。」\"},{\"txt\":\"\\n\"},{\"txt\":\"「 今天——是个好天气呢。」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/MIML2QA7M5F0O8VGFODEFCF0J9VTGO75.jpg\",\"attributes\":{\"width\":\"1200\",\"height\":\"1600\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/6D41GF0PIUFIV5EQ8GTLDM9F7QRJIURL.jpg\",\"attributes\":{\"width\":\"1200\",\"height\":\"1600\"}},{\"txt\":\"\\n\"}]",
+        "subject": "闲趣时光丨海月",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776661200027,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n是可可！碎雪冰淇淋又要出新口味了！\n要不要2个人一起尝尝呢？\n\n\n距离《Game1》公测全平台上线还有2天，预下载现已开启！\n",
+        "createTime": 1776690667836,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 3840,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/BQE2JORNQLNPM6VM0TC08LMJV6IS6SNL.png",
+            "width": 2160
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182108,
+        "postStat": {
+          "collectNum": 7,
+          "commentNum": 72,
+          "likeNum": 300,
+          "postId": 182108
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776736800042,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/BQE2JORNQLNPM6VM0TC08LMJV6IS6SNL.png\",\"attributes\":{\"width\":\"2160\",\"height\":\"3840\"}},{\"txt\":\"\\n\"},{\"txt\":\"是可可！碎雪冰淇淋又要出新口味了！\"},{\"txt\":\"\\n\"},{\"txt\":\"要不要2个人一起尝尝呢？\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"距离《Game1》公测全平台上线还有2天，预下载现已开启！\"},{\"txt\":\"\\n\"}]",
+        "subject": "距离《Game1》公测还有2天！",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776736800042,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 2,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n",
+        "createTime": 1776635839508,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1216,
+            "url": "https://bbs-upload.tajiduo.com/20260420/165394972/10187948_1776635828918.jpg",
+            "width": 832
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 181311,
+        "postStat": {
+          "collectNum": 43,
+          "commentNum": 916,
+          "likeNum": 1783,
+          "postId": 181311
+        },
+        "prime": false,
+        "region": "安徽",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776635839508,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260420/165394972/10187948_1776635828918.jpg\",\"attributes\":{\"width\":\"832\",\"height\":\"1216\"}},{\"txt\":\"\\n\"}]",
+        "subject": "打卡",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10187948,
+        "updateTime": 1776635844647,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "海月战斗机制现已公开，详细资料汇总如下，请鉴定师查阅。\n「美妙的音乐不会只由一个音符组成。」\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n[图片]\n",
+        "createTime": 1776648741751,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 3840,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/TFBR61TS04UML7L4UR83CADRV6C1CJSE.jpg",
+            "width": 2160
+          },
+          {
+            "height": 1920,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/CUEKKQ2I677B825VEF6EMRBCH8QNVIAR.png",
+            "width": 1080
+          },
+          {
+            "height": 460,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/4T94AIR9M5GDBD7QLIOS8TLL9P2R3DCB.gif",
+            "width": 460
+          },
+          {
+            "height": 960,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/DJ93O1Q24SD99RP60TDPM7KF1SMA40LF.gif",
+            "width": 540
+          },
+          {
+            "height": 960,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/KTQMT367OSP8QOCB6TLEQQ2HHBNS6JM7.gif",
+            "width": 540
+          },
+          {
+            "height": 1260,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/MDNR8OHBUEFHA40BADL8U4L1L2FGQ6K2.gif",
+            "width": 540
+          },
+          {
+            "height": 960,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/Q9I5TVUL1AUVOKMOOHQHFI1DD6BAUULH.gif",
+            "width": 540
+          },
+          {
+            "height": 960,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/1751RKS4R07GGEEI5NTI0KKA9PNM3G55.gif",
+            "width": 540
+          },
+          {
+            "height": 960,
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/BO1BDTKJ93FSFCPTAL11OJIHNGHFF7N1.gif",
+            "width": 540
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 1776654283512,
+        "mentions": [],
+        "postId": 181548,
+        "postStat": {
+          "collectNum": 26,
+          "commentNum": 142,
+          "likeNum": 1980,
+          "postId": 181548
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776651300017,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"海月战斗机制现已公开，详细资料汇总如下，请鉴定师查阅。\"},{\"txt\":\"\\n\"},{\"txt\":\"「美妙的音乐不会只由一个音符组成。」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/TFBR61TS04UML7L4UR83CADRV6C1CJSE.jpg\",\"attributes\":{\"width\":\"2160\",\"height\":\"3840\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/CUEKKQ2I677B825VEF6EMRBCH8QNVIAR.png\",\"attributes\":{\"width\":\"1080\",\"height\":\"1920\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/4T94AIR9M5GDBD7QLIOS8TLL9P2R3DCB.gif\",\"attributes\":{\"width\":\"460\",\"height\":\"460\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/DJ93O1Q24SD99RP60TDPM7KF1SMA40LF.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"960\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/KTQMT367OSP8QOCB6TLEQQ2HHBNS6JM7.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"960\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/MDNR8OHBUEFHA40BADL8U4L1L2FGQ6K2.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"1260\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/Q9I5TVUL1AUVOKMOOHQHFI1DD6BAUULH.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"960\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/1751RKS4R07GGEEI5NTI0KKA9PNM3G55.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"960\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260420/10000002/BO1BDTKJ93FSFCPTAL11OJIHNGHFF7N1.gif\",\"attributes\":{\"width\":\"540\",\"height\":\"960\"}},{\"txt\":\"\\n\"}]",
+        "subject": "角色档案介绍丨海月",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776654283512,
+        "userStick": false,
+        "version": 2,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\n《Game1》预下载现已开启！\n点击立刻前往&gt;&gt;&gt;\n一切正常，就是异常。\n鉴定师，欢迎来到EventName。\n\n《Game1》全平台公测将于 4 月 23 日10:00正式开启！\n\n\n▸预下载说明\n开放平台：PC、Android、iOS、鸿蒙\n数据互通说明：PC、Android、iOS、鸿蒙多端账号数据互通，即同一账号可在上述任意设备登录，且游戏进度同步。\n各平台均为同一UID，且均为随机生成。感谢鉴定师们的支持。\n\n\n\n\n▸设备要求\n&gt;&gt; PC&lt;&lt;\n◆系统◆\nWindows 10 64位及以上\n◆CPU◆\n推荐&gt;&gt;12th Gen Intel Cor",
+        "createTime": 1776734787443,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1080,
+            "url": "https://bbs-upload.tajiduo.com/20260421/10000002/ETTPNF9QUCEVB6N1PHH7A91CKCIU4EUL.jpg",
+            "width": 1920
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "platform": "WEB",
+        "postId": 182932,
+        "postStat": {
+          "collectNum": 13,
+          "commentNum": 293,
+          "likeNum": 478,
+          "postId": 182932
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776734787443,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260421/10000002/ETTPNF9QUCEVB6N1PHH7A91CKCIU4EUL.jpg\",\"attributes\":{\"width\":\"1920\",\"height\":\"1080\"}},{\"txt\":\"\\n\"},{\"txt\":\"《Game1》预下载现已开启！\"},{\"txt\":\"\\n\"},{\"txt\":\"点击立刻前往\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"\\n\"},{\"txt\":\"一切正常，就是异常。\"},{\"txt\":\"\\n\"},{\"txt\":\"鉴定师，欢迎来到EventName。\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"《Game1》全平台公测将于\"},{\"txt\":\" 4 月 23 日10:00\"},{\"txt\":\"正式开启！\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"▸预下载说明\"},{\"txt\":\"\\n\"},{\"txt\":\"开放平台：PC、Android、iOS、鸿蒙\"},{\"txt\":\"\\n\"},{\"txt\":\"数据互通说明：PC、Android、iOS、鸿蒙多端账号数据互通，即同一账号可在上述任意设备登录，且游戏进度同步。\"},{\"txt\":\"\\n\"},{\"txt\":\"各平台均为同一UID，且均为随机生成。感谢鉴定师们的支持。\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"▸设备要求\"},{\"txt\":\"\\n\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" PC\"},{\"txt\":\"<\"},{\"txt\":\"<\"},{\"txt\":\"\\n\"},{\"txt\":\"◆系统◆\"},{\"txt\":\"\\n\"},{\"txt\":\"Windows 10 64位及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"◆CPU◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"12th Gen Intel Core i7-12700同等级及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"10th Gen Intel Core i7-10700\"},{\"txt\":\"\\n\"},{\"txt\":\"◆显卡◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" NVIDIA GeForce RTX 3060/AMD Radeon RX 6700同等级及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" NVIDIA GeForce GTX 1660/AMD Radeon RX 5600\"},{\"txt\":\"\\n\"},{\"txt\":\"◆运行内存◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"32GB及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"16GB\"},{\"txt\":\"\\n\"},{\"txt\":\"◆存储空间◆\"},{\"txt\":\"\\n\"},{\"txt\":\"预留45GB或更多存储空间（解压过程中需要额外预留45GB存储空间）\"},{\"txt\":\"\\n\"},{\"txt\":\"※ 为了您的游戏体验，建议将游戏安装在固态硬盘。\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" Android\"},{\"txt\":\"<\"},{\"txt\":\"<\"},{\"txt\":\"\\n\"},{\"txt\":\"◆CPU◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"骁龙8 Gen2、骁龙8 Gen3及联发科天玑9200、麒麟9000S同等性能芯片\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"骁龙855及联发科天玑 8000、麒麟990同等性能芯片\"},{\"txt\":\"\\n\"},{\"txt\":\"◆运行内存◆\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"6GB\"},{\"txt\":\"\\n\"},{\"txt\":\"◆系统版本◆\"},{\"txt\":\"\\n\"},{\"txt\":\"安卓10.0及以上版本\"},{\"txt\":\"\\n\"},{\"txt\":\"◆存储空间◆\"},{\"txt\":\"\\n\"},{\"txt\":\"预留20GB或更多存储空间\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" iOS\"},{\"txt\":\"<\"},{\"txt\":\"<\"},{\"txt\":\"\\n\"},{\"txt\":\"◆设备要求◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"iPhone14 Pro及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"iPhone12 Pro Max\"},{\"txt\":\"\\n\"},{\"txt\":\"◆运行内存◆\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"6GB\"},{\"txt\":\"\\n\"},{\"txt\":\"◆系统版本◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"iOS 17.0及以上版本\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"iOS 15.0\"},{\"txt\":\"\\n\"},{\"txt\":\"◆存储空间◆\"},{\"txt\":\"\\n\"},{\"txt\":\"预留20GB或更多存储空间\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\" 鸿蒙\"},{\"txt\":\"<\"},{\"txt\":\"<\"},{\"txt\":\"\\n\"},{\"txt\":\"◆CPU◆\"},{\"txt\":\"\\n\"},{\"txt\":\"推荐\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"麒麟9000S及以上\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"麒麟990\"},{\"txt\":\"\\n\"},{\"txt\":\"◆运行内存◆\"},{\"txt\":\"\\n\"},{\"txt\":\"最低\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"6GB\"},{\"txt\":\"\\n\"},{\"txt\":\"◆系统版本◆\"},{\"txt\":\"\\n\"},{\"txt\":\"HarmonyOS 5.0.0及以上版本\"},{\"txt\":\"\\n\"},{\"txt\":\"◆存储空间◆\"},{\"txt\":\"\\n\"},{\"txt\":\"预留20GB或更多存储空间\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"※ 目前《Game1》的游戏性能、稳定性及画面表现仍在持续优化中。使用低于最低配置要求的设备，可能会出现卡顿、掉帧等问题，感谢各位鉴定师的理解。\"},{\"txt\":\"\\n\"}]",
+        "subject": "《Game1》预下载现已开启",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776734787443,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "粉爪银行某年年会的表演着装，彼时的乔望尼先生正异常沉迷这种黑白色生物。\n「我、我们银行是要和胖达火锅联名吗……」\n[图片]\n[图片]\n超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\n点击立即前往&gt;&gt;&gt;\n",
+        "createTime": 1776570177202,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 1080,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/LVHA2CSPHUMCBDRFE1D3788P38RB8U1G.jpg",
+            "width": 1920
+          },
+          {
+            "height": 1440,
+            "url": "https://bbs-upload.tajiduo.com/20260419/10000002/BPLP046OMA9N1SDB0OUS2KGHDT58TRFQ.jpg",
+            "width": 1080
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 180317,
+        "postStat": {
+          "collectNum": 70,
+          "commentNum": 281,
+          "likeNum": 3113,
+          "postId": 180317
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776582300028,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"粉爪银行某年年会的表演着装，彼时的乔望尼先生正异常沉迷这种黑白色生物。\"},{\"txt\":\"\\n\"},{\"txt\":\"「我、我们银行是要和胖达火锅联名吗……」\"},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/LVHA2CSPHUMCBDRFE1D3788P38RB8U1G.jpg\",\"attributes\":{\"width\":\"1920\",\"height\":\"1080\"}},{\"txt\":\"\\n\"},{\"image\":\"https://bbs-upload.tajiduo.com/20260419/10000002/BPLP046OMA9N1SDB0OUS2KGHDT58TRFQ.jpg\",\"attributes\":{\"width\":\"1080\",\"height\":\"1440\"}},{\"txt\":\"\\n\"},{\"txt\":\"超自然都市开放世界RPG《Game1》全平台公测正式定档4月23日！\"},{\"txt\":\"\\n\"},{\"txt\":\"点击立即前往\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\">\"},{\"txt\":\"\\n\"}]",
+        "subject": "小吱时装丨青竹猗猗",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776582300028,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "[图片]\nE.T.D4队……安魂曲，到了。\n唔……工作，还没开始？那安魂曲，先睡一会……\n\n距离《Game1》公测全平台上线还有4天，预下载将于4月21日开启！\n",
+        "createTime": 1776499120000,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [
+          {
+            "height": 3840,
+            "url": "https://bbs-upload.tajiduo.com/20260418/10000002/R0303VIII5DAFGMHIE0PISBK8EFO4GV9.png",
+            "width": 2160
+          }
+        ],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 178818,
+        "postStat": {
+          "collectNum": 43,
+          "commentNum": 295,
+          "likeNum": 3186,
+          "postId": 178818
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776564000016,
+        "showingMissing": false,
+        "structuredContent": "[{\"image\":\"https://bbs-upload.tajiduo.com/20260418/10000002/R0303VIII5DAFGMHIE0PISBK8EFO4GV9.png\",\"attributes\":{\"width\":\"2160\",\"height\":\"3840\"}},{\"txt\":\"\\n\"},{\"txt\":\"E.T.D4队……安魂曲，到了。\"},{\"txt\":\"\\n\"},{\"txt\":\"唔……工作，还没开始？那安魂曲，先睡一会……\"},{\"txt\":\"\\n\"},{\"txt\":\"\\n\"},{\"txt\":\"距离《Game1》公测全平台上线还有4天，预下载将于4月21日开启！\"},{\"txt\":\"\\n\"}]",
+        "subject": "距离《Game1》公测还有4天！",
+        "topicIds": [],
+        "type": 1,
+        "uid": 10000002,
+        "updateTime": 1776564000016,
+        "userStick": false,
+        "version": 0,
+        "vods": []
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "财富。名誉。权利。\n统领整个虎特洛的虎老大消失前，只留下了他的勋章。\n传闻只要拥有这枚勋章，就能继承虎特洛家族的一切！\n然而——\n「英雄可不需要这种东西——！」\n",
+        "cover": "{\"cropRect\":{\"height\":0,\"width\":0},\"url\":\"https://bbs-upload.tajiduo.com/20260420/10000002/HDILNSMJAA8EHQ7ERJ8F8RCT6H5JMJ2A.png\"}",
+        "createTime": 1776690854872,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182113,
+        "postStat": {
+          "collectNum": 0,
+          "commentNum": 13,
+          "likeNum": 21,
+          "postId": 182113
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "selfOperation": {
+          "liked": false
+        },
+        "sendTime": 1776740400058,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"财富。名誉。权利。\"},{\"txt\":\"\\n\"},{\"txt\":\"统领整个虎特洛的虎老大消失前，只留下了他的勋章。\"},{\"txt\":\"\\n\"},{\"txt\":\"传闻只要拥有这枚勋章，就能继承虎特洛家族的一切！\"},{\"txt\":\"\\n\"},{\"txt\":\"然而——\"},{\"txt\":\"\\n\"},{\"txt\":\"「英雄可不需要这种东西——！」\"},{\"txt\":\"\\n\"}]",
+        "subject": "Persona1角色PV丨心有猛虎",
+        "topicIds": [],
+        "type": 3,
+        "uid": 10000002,
+        "updateTime": 1776740400058,
+        "userStick": false,
+        "version": 0,
+        "vods": [
+          {
+            "cover": "https://bbs-upload.tajiduo.com/20260420/10000002/HDILNSMJAA8EHQ7ERJ8F8RCT6H5JMJ2A.png",
+            "duration": 254,
+            "items": [
+              {
+                "height": 0,
+                "size": 192600240,
+                "url": "https://bbs-upload.tajiduo.com/20260420/10000002/QMFIVTUJ91HI0NQAK826FOFRFG659N78.mp4",
+                "width": 0
+              }
+            ],
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/QMFIVTUJ91HI0NQAK826FOFRFG659N78.mp4"
+          }
+        ]
+      }
+    ],
+    "topics": [],
+    "users": [
+      {
+        "account": "9_156000803",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t3.png",
+        "certification": {},
+        "createTime": 1766567155993,
+        "deviceId": "CB866A311A84A1B286B5C72E9F70AABF",
+        "expLevel": {
+          "communityId": 2,
+          "exp": 34250,
+          "level": 10
+        },
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "零氪不抽卡囤囤鼠",
+        "ipRegion": "浙江",
+        "isRealname": false,
+        "nickname": "易相識",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10184473,
+        "updateTime": 1776738690288,
+        "userMaster": false
+      },
+      {
+        "account": "9_126847538",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t1.png",
+        "certification": {},
+        "createTime": 1737556438889,
+        "deviceId": "c878369fc2311a5a",
+        "expLevel": {
+          "communityId": 2,
+          "exp": 120650,
+          "level": 12
+        },
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "做人嘛，最重要的是开心",
+        "ipRegion": "河北",
+        "isRealname": false,
+        "nickname": "一个朋友",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10157245,
+        "updateTime": 1776701488878,
+        "userMaster": false
+      },
+      {
+        "account": "9_156089950",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t11.png",
+        "certification": {},
+        "createTime": 1776426638253,
+        "deviceId": "c390b040d663477991798901a7c65af9",
+        "forbidEndTime": 0,
+        "gender": 1,
+        "introduce": "咕咕嘎嘎",
+        "ipRegion": "安徽",
+        "isRealname": false,
+        "nickname": "芝士雪豹",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10208924,
+        "updateTime": 1776723448453,
+        "userMaster": false
+      },
+      {
+        "account": "9_127010042",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t3.png",
+        "certification": {},
+        "createTime": 1729410415086,
+        "deviceId": "96f4b701bc29464788a614e862a983c8",
+        "expLevel": {
+          "communityId": 2,
+          "exp": 108289,
+          "level": 12
+        },
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "等Game1",
+        "ipRegion": "福建",
+        "isRealname": false,
+        "nickname": "不咲猫",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10100669,
+        "updateTime": 1776726986351,
+        "userMaster": false
+      },
+      {
+        "account": "9_165394972",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t3.png",
+        "certification": {},
+        "createTime": 1767594071971,
+        "deviceId": "e2a040f524ee47dbbcc829da206d6cdd",
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "希望Game1早日上线",
+        "ipRegion": "安徽",
+        "isRealname": false,
+        "nickname": "死神",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10187948,
+        "updateTime": 1776723798378,
+        "userMaster": false
+      },
+      {
+        "account": "9_166647709",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t7.png",
+        "certification": {},
+        "createTime": 1776616492177,
+        "deviceId": "19a349694fe54c52a44e1500cd06dfff",
+        "expLevel": {
+          "communityId": 2,
+          "exp": 580,
+          "level": 3
+        },
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "期待更完美的明天",
+        "ipRegion": "广东",
+        "isRealname": false,
+        "nickname": "思君ʢ˶ᵒ ᵕ ˂˶ʡᶻ",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10247382,
+        "updateTime": 1776721340104,
+        "userMaster": false
+      },
+      {
+        "account": "9_100000099",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+        "certification": {},
+        "createTime": 1729068040848,
+        "deviceId": "ABCDEF0123456789ABCDEF0123456789",
+        "forbidEndTime": 0,
+        "gender": -1,
+        "ipRegion": "江苏",
+        "isRealname": false,
+        "nickname": "Game1",
+        "officialMaster": true,
+        "silentEndTime": 0,
+        "uid": 10000002,
+        "updateTime": 1776739254657,
+        "userMaster": false
+      },
+      {
+        "account": "9_165694371",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t16.png",
+        "certification": {},
+        "createTime": 1776515834740,
+        "deviceId": "840197f49dfb4a1b8bfc92561bba77c6",
+        "forbidEndTime": 0,
+        "gender": -1,
+        "introduce": "小吱好可爱",
+        "ipRegion": "四川",
+        "isRealname": false,
+        "nickname": "余清涂万岁！",
+        "officialMaster": false,
+        "silentEndTime": 0,
+        "uid": 10220740,
+        "updateTime": 1776723158551,
+        "userMaster": false
+      }
+    ],
+    "version": 0
+  },
+  "msg": "ok",
+  "ok": true
+}

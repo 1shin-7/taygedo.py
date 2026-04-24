@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "cover": "https://webstatic.tajiduo.com/bbs/pic/huati-nanali-icon.png",
+        "createTime": 1776744620826,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/huati-nanali-icon.png",
+        "id": 28,
+        "introduce": "「 堂堂Persona1Family家族一代目登场！」",
+        "readNum": 0,
+        "recommendTime": 1840636800000,
+        "relatedNum": 1527,
+        "state": 0,
+        "topic": "Persona1",
+        "type": 0,
+        "updateTime": 1776744620826
+      }
+    ],
+    "more": false,
+    "page": 2
+  },
+  "msg": "ok",
+  "ok": true
+}

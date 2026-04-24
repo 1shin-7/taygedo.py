@@ -268,3 +268,33 @@ async def sign(
         console.print(f"✓ 今日签到成功 (累计 [bold]{new_state.days}[/bold] 天)")
         if reward:
             console.print(f"🎁 [bold]{reward.name}[/bold] x{reward.num}")
+
+
+@nte_group.command()
+@_uid_option
+@_json_option
+@async_command
+async def team(uid: int | None, json_out: bool) -> None:
+    """Server-curated team-recommendation list."""
+    client, account = load_client(uid=uid)
+    async with client:
+        env = await client.nte.get_team_recommends()
+        flush_session(client, account)
+    if env.data is None:
+        raise click.ClickException(env.msg or "no data")
+    render(env.data, json_out=json_out)
+
+
+@nte_group.command()
+@_uid_option
+@_json_option
+@async_command
+async def cards(uid: int | None, json_out: bool) -> None:
+    """Game-record cards bound to your bbs uid (across all games)."""
+    client, account = load_client(uid=uid)
+    async with client:
+        env = await client.community.get_game_record_cards(uid=account.uid)
+        flush_session(client, account)
+    if env.data is None:
+        raise click.ClickException(env.msg or "no data")
+    render(env.data, json_out=json_out)

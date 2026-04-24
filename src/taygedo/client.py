@@ -25,6 +25,8 @@ from .services import (
     LoginService,
     NteService,
     NteSignService,
+    PostService,
+    SearchService,
     UserService,
 )
 
@@ -55,6 +57,8 @@ class TaygedoClient(BaseClient):
     auth: AuthService = service()
     user: UserService = service()
     community: CommunityService = service()
+    post: PostService = service()
+    search: SearchService = service()
     bind_role: BindRoleService = service()
     ht: HtService = service()
     nte: NteService = service()

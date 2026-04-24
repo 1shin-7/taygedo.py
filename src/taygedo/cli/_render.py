@@ -23,7 +23,19 @@ from rich.table import Table
 from rich.text import Text
 
 from ..models import (
+    AppStartupData,
     BindRole,
+    Comment,
+    CommentPage,
+    Community,
+    CommunityHome,
+    CursorPage,
+    ExpLevel,
+    ExpRecord,
+    GameRecordCard,
+    Good,
+    GoodsPage,
+    HotWord,
     HtNamedId,
     HtRoleGameRecord,
     HtWeaponInfo,
@@ -33,7 +45,19 @@ from ..models import (
     NteRoleHome,
     NteSignReward,
     NteSignState,
+    NteTeamRecommend,
     NteVehicleData,
+    Post,
+    PostFull,
+    Reply,
+    ReplyFeedPage,
+    SearchTopicResult,
+    SearchUsersPage,
+    SignInResult,
+    Task,
+    Topic,
+    User,
+    UserFullInfo,
 )
 from ._storage import StoredAccount
 
@@ -91,6 +115,34 @@ def _dispatch(value: Any) -> Callable[[Any, Console], None] | None:
         return _render_ht_record
     if isinstance(value, BindRole):
         return _render_bind_role
+    if isinstance(value, PostFull):
+        return _render_post_full
+    if isinstance(value, Post):
+        return _render_post_single
+    if isinstance(value, CommentPage):
+        return _render_comment_page
+    if isinstance(value, SearchTopicResult):
+        return _render_search_topic_result
+    if isinstance(value, SearchUsersPage):
+        return _render_search_users_page
+    if isinstance(value, CursorPage):
+        return _render_cursor_page_of_posts
+    if isinstance(value, ReplyFeedPage):
+        return _render_reply_feed_page
+    if isinstance(value, GoodsPage):
+        return _render_goods_page
+    if isinstance(value, ExpLevel):
+        return _render_exp_level
+    if isinstance(value, SignInResult):
+        return _render_signin_result
+    if isinstance(value, Community):
+        return _render_community_single
+    if isinstance(value, CommunityHome):
+        return _render_community_home
+    if isinstance(value, UserFullInfo):
+        return _render_user_full_info
+    if isinstance(value, AppStartupData):
+        return None  # falls back to JSON — startup is a debug dump
     if isinstance(value, list) and value:
         first = value[0]
         if isinstance(first, NteCharacter):
@@ -99,12 +151,32 @@ def _dispatch(value: Any) -> Callable[[Any, Console], None] | None:
             return _render_nte_areas
         if isinstance(first, NteSignReward):
             return _render_nte_sign_rewards
+        if isinstance(first, NteTeamRecommend):
+            return _render_nte_teams
         if isinstance(first, HtWeaponInfo):
             return _render_ht_weapons
         if isinstance(first, HtNamedId):
             return _render_ht_named_id_list
         if isinstance(first, StoredAccount):
             return _render_account_list
+        if isinstance(first, Community):
+            return _render_community_list
+        if isinstance(first, GameRecordCard):
+            return _render_game_record_cards
+        if isinstance(first, Task):
+            return _render_tasks
+        if isinstance(first, ExpRecord):
+            return _render_exp_records
+        if isinstance(first, HotWord):
+            return _render_hot_words
+        if isinstance(first, Good):
+            return _render_goods
+        if isinstance(first, Topic):
+            return _render_topics
+        if isinstance(first, User):
+            return _render_user_list
+        if isinstance(first, Comment):
+            return _render_comments
     return None
 
 
@@ -337,4 +409,339 @@ def _render_account_list(accounts: list[StoredAccount], console: Console) -> Non
             "✓" if a.uid == active else "",
             a.last_used_at or "—",
         )
+    console.print(t)
+
+
+# ---------- posts / comments ------------------------------------------------
+
+
+def _truncate(s: str, limit: int = 80) -> str:
+    s = s.replace("\n", " ")
+    return s if len(s) <= limit else s[: limit - 1] + "…"
+
+
+def _render_post_single(post: Post, console: Console) -> None:
+    console.print(
+        _kv_table(
+            f"Post #{post.post_id}",
+            [
+                ("subject", post.subject),
+                ("uid", post.uid),
+                ("community", post.community_id),
+                ("column", post.column_id),
+                ("type", post.type),
+                ("likes", post.post_stat.like_num),
+                ("comments", post.post_stat.comment_num),
+                ("collects", post.post_stat.collect_num),
+                ("region", post.region or "—"),
+                ("created", post.create_time),
+            ],
+        ),
+    )
+    if post.content:
+        console.print(Panel(Text(_truncate(post.content, 400)), title="content"))
+
+
+def _render_post_full(value: PostFull, console: Console) -> None:
+    _render_post_single(value.post, console)
+    if value.users:
+        author = value.users[0]
+        console.print(
+            _kv_table(
+                "author",
+                [
+                    ("uid", author.uid),
+                    ("nickname", author.nickname),
+                    ("ipRegion", author.ip_region),
+                ],
+            ),
+        )
+
+
+def _render_cursor_page_of_posts(page: CursorPage[Post], console: Console) -> None:
+    t = Table(title=f"Posts (page={page.page} hasMore={page.has_more})")
+    t.add_column("id", style="cyan")
+    t.add_column("subject")
+    t.add_column("uid")
+    t.add_column("likes")
+    t.add_column("comments")
+    for p in page.items:
+        t.add_row(
+            str(p.post_id),
+            _truncate(p.subject, 50),
+            str(p.uid),
+            str(p.post_stat.like_num),
+            str(p.post_stat.comment_num),
+        )
+    console.print(t)
+
+
+def _render_reply_feed_page(page: ReplyFeedPage[Reply], console: Console) -> None:
+    t = Table(title=f"Reply feed (more={page.more})")
+    t.add_column("reply_id")
+    t.add_column("post_id")
+    t.add_column("uid")
+    t.add_column("content")
+    for r in page.items:
+        t.add_row(
+            str(r.reply_id or "—"),
+            str(r.post_id or "—"),
+            str(r.uid or "—"),
+            _truncate(r.content, 50),
+        )
+    console.print(t)
+
+
+def _render_comment_page(page: CommentPage, console: Console) -> None:
+    # uid -> nickname lookup
+    names = {u.uid: u.nickname for u in page.users}
+    t = Table(title=f"Comments (page={page.page} hasMore={page.has_more})")
+    t.add_column("id", style="cyan")
+    t.add_column("uid")
+    t.add_column("author")
+    t.add_column("likes")
+    t.add_column("content")
+    for c in page.comments:
+        likes = c.comment_stat.like_num if c.comment_stat else 0
+        t.add_row(
+            str(c.id),
+            str(c.uid),
+            names.get(c.uid, "—"),
+            str(likes),
+            _truncate(c.content, 50),
+        )
+    console.print(t)
+
+
+def _render_comments(items: list[Comment], console: Console) -> None:
+    t = Table(title="Comments")
+    t.add_column("id", style="cyan")
+    t.add_column("uid")
+    t.add_column("content")
+    for c in items:
+        t.add_row(str(c.id), str(c.uid), _truncate(c.content, 60))
+    console.print(t)
+
+
+# ---------- search ----------------------------------------------------------
+
+
+def _render_hot_words(words: list[HotWord], console: Console) -> None:
+    t = Table(title="Hot keywords")
+    t.add_column("keyword")
+    t.add_column("count")
+    for w in words:
+        t.add_row(w.keyword, str(w.count))
+    console.print(t)
+
+
+def _render_topics(topics: list[Topic], console: Console) -> None:
+    t = Table(title="Topics")
+    t.add_column("id", style="cyan")
+    t.add_column("topic")
+    t.add_column("related")
+    t.add_column("introduce")
+    for tp in topics:
+        t.add_row(
+            str(tp.id),
+            tp.topic,
+            str(tp.related_num),
+            _truncate(tp.introduce, 50),
+        )
+    console.print(t)
+
+
+def _render_search_topic_result(result: SearchTopicResult, console: Console) -> None:
+    _render_topics(result.items, console)
+
+
+def _render_user_list(users: list[User], console: Console) -> None:
+    t = Table(title="Users")
+    t.add_column("uid", style="cyan")
+    t.add_column("nickname")
+    t.add_column("account")
+    t.add_column("region")
+    for u in users:
+        t.add_row(str(u.uid), u.nickname, u.account, u.ip_region)
+    console.print(t)
+
+
+def _render_search_users_page(page: SearchUsersPage, console: Console) -> None:
+    _render_user_list(page.items, console)
+
+
+# ---------- community / shop / tasks / exp ---------------------------------
+
+
+def _render_community_single(c: Community, console: Console) -> None:
+    console.print(
+        _kv_table(
+            f"Community #{c.id}",
+            [
+                ("name", c.name),
+                ("gameId", c.game_id),
+                ("state", c.state),
+                ("columns", ", ".join(col.column_name for col in c.columns)),
+            ],
+        ),
+    )
+
+
+def _render_community_list(items: list[Community], console: Console) -> None:
+    t = Table(title="Communities")
+    t.add_column("id", style="cyan")
+    t.add_column("name")
+    t.add_column("gameId")
+    t.add_column("columns")
+    for c in items:
+        t.add_row(
+            str(c.id),
+            c.name,
+            str(c.game_id),
+            ", ".join(col.column_name for col in c.columns),
+        )
+    console.print(t)
+
+
+def _render_community_home(home: CommunityHome, console: Console) -> None:
+    _render_community_single(home.community, console)
+    if home.banners:
+        t = Table(title="Banners")
+        t.add_column("title")
+        t.add_column("url")
+        for b in home.banners:
+            t.add_row(_truncate(getattr(b, "title", ""), 40), getattr(b, "url", ""))
+        console.print(t)
+    if home.navigator:
+        t = Table(title="Navigator")
+        t.add_column("name")
+        for n in home.navigator:
+            t.add_row(n.name)
+        console.print(t)
+
+
+def _render_game_record_cards(cards: list[GameRecordCard], console: Console) -> None:
+    t = Table(title="Game record cards")
+    t.add_column("gameId", style="cyan")
+    t.add_column("name")
+    t.add_column("role")
+    t.add_column("roleId")
+    t.add_column("lev")
+    for c in cards:
+        t.add_row(
+            str(c.game_id),
+            c.game_name,
+            c.bind_role_info.role_name,
+            str(c.bind_role_info.role_id),
+            str(c.bind_role_info.lev),
+        )
+    console.print(t)
+
+
+def _render_tasks(tasks: list[Task], console: Console) -> None:
+    t = Table(title="Daily tasks")
+    t.add_column("key", style="cyan")
+    t.add_column("title")
+    t.add_column("exp")
+    t.add_column("coin")
+    t.add_column("progress")
+    for task in tasks:
+        t.add_row(
+            task.task_key,
+            task.title,
+            str(task.exp),
+            str(task.coin),
+            f"{task.complete_times}/{task.limit_times}",
+        )
+    console.print(t)
+
+
+def _render_exp_level(el: ExpLevel, console: Console) -> None:
+    console.print(
+        _kv_table(
+            "Exp / Level",
+            [
+                ("level", el.level),
+                ("exp", el.exp),
+                ("today +exp", el.today_exp),
+                ("next level", el.next_level),
+                ("next level exp", el.next_level_exp),
+            ],
+        ),
+    )
+
+
+def _render_exp_records(records: list[ExpRecord], console: Console) -> None:
+    if not records:
+        console.print("(no exp records)")
+        return
+    t = Table(title="Exp records")
+    t.add_column("id", style="cyan")
+    t.add_column("type")
+    t.add_column("community")
+    t.add_column("uid")
+    for r in records:
+        t.add_row(str(r.id), str(r.type), str(r.community_id), str(r.uid))
+    console.print(t)
+
+
+def _render_signin_result(r: SignInResult, console: Console) -> None:
+    console.print(
+        _kv_table("Signin", [("exp", r.exp), ("goldCoin", r.gold_coin)]),
+    )
+
+
+def _render_goods(goods: list[Good], console: Console) -> None:
+    t = Table(title="Shop goods")
+    t.add_column("id", style="cyan")
+    t.add_column("name")
+    t.add_column("tab")
+    t.add_column("price")
+    t.add_column("stock")
+    for g in goods:
+        t.add_row(
+            str(g.id),
+            _truncate(g.name, 40),
+            g.tab,
+            str(g.price),
+            str(g.stock) if g.stock else "—",
+        )
+    console.print(t)
+
+
+def _render_goods_page(page: GoodsPage, console: Console) -> None:
+    _render_goods(page.goods, console)
+
+
+# ---------- user full info -------------------------------------------------
+
+
+def _render_user_full_info(info: UserFullInfo, console: Console) -> None:
+    u = info.user
+    console.print(
+        _kv_table(
+            f"User #{u.uid}",
+            [
+                ("nickname", u.nickname),
+                ("account", u.account),
+                ("region", u.ip_region),
+                ("realname", "✓" if u.is_realname else "✗"),
+                ("fans", info.user_stat.fans_cnt),
+                ("follows", info.user_stat.follow_cnt),
+                ("posts", info.user_stat.post_num),
+            ],
+        ),
+    )
+
+
+# ---------- NTE team recommendations ---------------------------------------
+
+
+def _render_nte_teams(teams: list[NteTeamRecommend], console: Console) -> None:
+    t = Table(title="Team recommendations")
+    t.add_column("id", style="cyan")
+    t.add_column("name")
+    t.add_column("desc")
+    for team in teams:
+        t.add_row(team.id, team.name, _truncate(team.desc, 60))
     console.print(t)

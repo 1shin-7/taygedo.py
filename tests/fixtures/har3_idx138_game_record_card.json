@@ -1,0 +1,41 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "backgroundImage": "https://webstatic.tajiduo.com/bbs/pic/yihuanbeijing.png",
+      "bindRoleInfo": {
+        "account": "9_100000001",
+        "gameId": 1289,
+        "gender": 0,
+        "lev": 16,
+        "roleId": 2000000000001,
+        "roleName": "tester",
+        "serverId": 14001,
+        "serverName": "Game1"
+      },
+      "gameIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+      "gameId": 1289,
+      "gameName": "Game1",
+      "link": "https://webstatic.tajiduo.com/bbs/yh-game-record/index.html?hotta_presentation_style=fullscreen"
+    },
+    {
+      "backgroundImage": "https://webstatic.tajiduo.com/bbs/pic/huantabeijing.png",
+      "bindRoleInfo": {
+        "account": "9_100000001",
+        "gameId": 1256,
+        "gender": 1,
+        "lev": 100,
+        "roleId": 1000000000001,
+        "roleName": "TesterHT",
+        "serverId": 14508,
+        "serverName": "方舟演算"
+      },
+      "gameIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-huanta.png",
+      "gameId": 1256,
+      "gameName": "Game2",
+      "link": "https://webstatic.tajiduo.com/bbs/game-records/index.html?fullscreen=1"
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

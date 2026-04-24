@@ -160,3 +160,16 @@ async def fashion(uid: int | None, role_id: int | None, json_out: bool) -> None:
     """Dress fashion (时装)."""
     rec = await _fetch_record(uid, role_id)
     render(rec.dressfashionlist, json_out=json_out)
+
+
+@ht_group.command()
+def sign() -> None:
+    """Submit Tower of Fantasy in-game sign-in (NOT YET IMPLEMENTED).
+
+    The HAR captures available so far do not include any TOF in-game sign-in
+    request, so the wire format is unknown. Capture one and share to enable.
+    """
+    raise click.ClickException(
+        "ht sign 暂未实现 — TOF in-game signin endpoint is not in any captured HAR yet. "
+        "Please share a HAR including the request to enable support.",
+    )

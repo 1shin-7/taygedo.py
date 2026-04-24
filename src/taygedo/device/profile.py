@@ -4,8 +4,8 @@ The LaohuSDK request signature embeds a fixed set of device-identity fields
 (``deviceId``, ``deviceType``, etc.) plus a host-app identity (``appId``,
 ``bid``, ``channelId``). Both blocks are stable per host-app, so this module
 exposes a small dataclass holding them and a convenience constructor for
-``com.pwrd.htassistant`` populated with values verified against the captured
-HAR (``_dev_data/bbs-api.tajiduo.com_2026_04_21_11_10_31.har``).
+``com.pwrd.htassistant`` populated with values verified against captured
+traffic.
 """
 
 from __future__ import annotations

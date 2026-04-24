@@ -1,0 +1,94 @@
+{
+  "code": 0,
+  "data": {
+    "audit": {
+      "avatarInAudit": false,
+      "avatarState": 0,
+      "introduceInAudit": false,
+      "introduceState": 0,
+      "nicknameInAudit": false,
+      "nicknameState": 0
+    },
+    "auths": [
+      {
+        "columnAuths": [
+          {
+            "columnId": 5,
+            "supper": false
+          },
+          {
+            "columnId": 3,
+            "supper": false
+          },
+          {
+            "columnId": 1,
+            "supper": false
+          },
+          {
+            "columnId": 9,
+            "supper": false
+          }
+        ],
+        "communityId": 1,
+        "supper": false
+      },
+      {
+        "columnAuths": [
+          {
+            "columnId": 4,
+            "supper": false
+          },
+          {
+            "columnId": 2,
+            "supper": false
+          },
+          {
+            "columnId": 8,
+            "supper": false
+          }
+        ],
+        "communityId": 2,
+        "supper": false
+      }
+    ],
+    "certification": {},
+    "inBlackList": false,
+    "privacySetting": {
+      "createTime": 1776740744001,
+      "privacyCollect": true,
+      "privacyPost": true,
+      "privacyReply": true,
+      "privacyUserCenter": true,
+      "uid": 10000001,
+      "updateTime": 1776740744001
+    },
+    "user": {
+      "account": "100000001",
+      "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/icon_t8.png",
+      "certification": {},
+      "createTime": 1729427894768,
+      "deviceId": "0123456789abcdef0123456789abcdef",
+      "forbidEndTime": 0,
+      "gender": -1,
+      "ipRegion": "福建",
+      "isRealname": false,
+      "nickname": "tester",
+      "officialMaster": false,
+      "silentEndTime": 0,
+      "uid": 10000001,
+      "updateTime": 1776740728319,
+      "userMaster": false
+    },
+    "userStat": {
+      "belikedNum": 0,
+      "createTime": 1729427894772,
+      "fansCnt": 0,
+      "followCnt": 0,
+      "postNum": 0,
+      "uid": 10000001,
+      "updateTime": 1729427894772
+    }
+  },
+  "msg": "ok",
+  "ok": true
+}

@@ -1,0 +1,174 @@
+{
+  "code": 0,
+  "data": {
+    "anns": [
+      {
+        "appPath": "htapp://article/182113?version=",
+        "title": "《Game1》Persona1角色PV丨心有猛虎",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/nanaliPV-gonggaolan.jpg",
+        "webPath": "post?postId=182113"
+      },
+      {
+        "appPath": "htapp://article/183456?version=",
+        "title": "【有奖活动】EventName情报局丨Persona1",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/huodong-nanali-gonggaolan.jpg",
+        "webPath": "post?postId=183456"
+      },
+      {
+        "appPath": "htapp://article/166327?version=",
+        "title": "《Game1》全平台公测正式定档2026年4月23日",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/gongce-gonggaolan.png",
+        "webPath": "post?postId=166327"
+      },
+      {
+        "appPath": "https://www.wjx.cn/vm/exeBt91.aspx",
+        "title": "塔吉多游戏玩家社区反馈问卷",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/tajiduo-wenjuanfankui.jpg",
+        "webPath": "https://www.wjx.cn/vm/exeBt91.aspx"
+      }
+    ],
+    "banners": [
+      {
+        "appPath": "htapp://article/178813?version=",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/fuli-toutu.jpg",
+        "webPath": "post?postId=178813"
+      },
+      {
+        "appPath": "htapp://article/189988?version=",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/nanaliEP1.jpg",
+        "webPath": "post?postId=189988"
+      },
+      {
+        "appPath": "htapp://article/182113?version=",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/nanaliPV-toutu.jpg",
+        "webPath": "post?postId=182113"
+      },
+      {
+        "appPath": "htapp://article/186202?version=",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/kachi-nanli.jpg",
+        "webPath": "post?postId=186202"
+      },
+      {
+        "appPath": "htapp://article/186244?version=",
+        "url": "https://webstatic.tajiduo.com/bbs/pic/tongxingz1.jpg",
+        "webPath": "post?postId=186244"
+      }
+    ],
+    "community": {
+      "cardBgImg": "https://webstatic.tajiduo.com/bbs/pic/yihuanbeijing.png",
+      "cardLink": "https://webstatic.tajiduo.com/bbs/yh-game-record/index.html?hotta_presentation_style=fullscreen",
+      "columns": [
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-yihuan.png",
+          "columnName": "「袋先生」邮箱",
+          "communityId": 2,
+          "createTime": 1724312396920,
+          "gameId": 1257,
+          "id": 4,
+          "showType": 3
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-yihuan.png",
+          "columnName": "「呗果」揭示板",
+          "communityId": 2,
+          "createTime": 1724310837428,
+          "gameId": 1257,
+          "id": 2,
+          "showType": 1
+        },
+        {
+          "columnIcon": "https://webstatic.tajiduo.com/bbs/pic/YH-gonglve.png",
+          "columnName": "「猎人帮」营地",
+          "communityId": 2,
+          "createTime": 1776405750461,
+          "gameId": 1289,
+          "id": 10,
+          "showType": 2
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/xianliao-yihuan.png",
+          "columnName": "「Zoomer」选辑",
+          "communityId": 2,
+          "createTime": 1732255362658,
+          "gameId": 1257,
+          "id": 8,
+          "showType": 4
+        }
+      ],
+      "createTime": 1724310485911,
+      "gameId": 1289,
+      "homeBgImg": "https://tjdapp-user-1251008858.cos.ap-beijing.myqcloud.com/20240926/4_1727319563112.jpeg",
+      "icon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+      "id": 2,
+      "name": "Game1",
+      "state": 0
+    },
+    "navigator": [
+      {
+        "appPath": "https://webstatic.tajiduo.com/bbs/yh-signin/index.html?presentation_style=1&gameId=1289&title=《Game1》每日签到",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/meiriqiandao-yh.png",
+        "name": "每日签到",
+        "redpointTime": 1776064444995,
+        "sort": 1,
+        "webPath": ""
+      },
+      {
+        "appPath": "https://webstatic.tajiduo.com/bbs/team-rec/index.html?hotta_presentation_style=fullscreen",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/peidui.png",
+        "name": "配队推荐",
+        "redpointTime": 1776064634739,
+        "sort": 2,
+        "webPath": ""
+      },
+      {
+        "appPath": "htapp://exchange_center",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/duihuanzhongxin-yh.png",
+        "name": "兑换中心",
+        "redpointTime": 1776064520706,
+        "sort": 3,
+        "webPath": ""
+      },
+      {
+        "appPath": "htapp://task_center",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/yh-renwuzhongxin.png",
+        "name": "任务中心",
+        "redpointTime": 1747106695695,
+        "sort": 4,
+        "webPath": ""
+      },
+      {
+        "appPath": "https://webstatic.tajiduo.com/bbs/yh-game-record/index.html?hotta_presentation_style=fullscreen",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/gerenxinxi-yh.png",
+        "name": "游戏角色",
+        "redpointTime": 1776066686618,
+        "sort": 5,
+        "webPath": ""
+      },
+      {
+        "appPath": "htapp://article/178813",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/yh-zixunzhongxin.png",
+        "name": "资讯中心",
+        "redpointTime": 1747106751247,
+        "sort": 6,
+        "webPath": ""
+      },
+      {
+        "appPath": "https://yh.wanmei.com/net/251229charge/m/index.html",
+        "communityId": 2,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/yh-gongjulan-fnlichaxun.png",
+        "name": "返还查询",
+        "redpointTime": 1770101943507,
+        "sort": 7,
+        "webPath": "https://yh.wanmei.com/net/251229charge/index.html"
+      }
+    ]
+  },
+  "msg": "ok",
+  "ok": true
+}

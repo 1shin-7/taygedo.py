@@ -1,0 +1,270 @@
+{
+  "code": 0,
+  "data": {
+    "detail": [
+      {
+        "fdetail": [
+          {
+            "id": "SF_0001",
+            "name": "咕咕警报",
+            "own": true
+          },
+          {
+            "id": "SF_0002",
+            "name": "无人来电",
+            "own": false
+          },
+          {
+            "id": "SF_0003",
+            "name": "玛门",
+            "own": false
+          },
+          {
+            "id": "SF_0010",
+            "name": "压缩嘭嘭朵",
+            "own": false
+          },
+          {
+            "id": "SF_0012",
+            "name": "休憩的拳王",
+            "own": false
+          },
+          {
+            "id": "SF_0016",
+            "name": "纸飞机",
+            "own": false
+          },
+          {
+            "id": "SF_0018",
+            "name": "修车工",
+            "own": false
+          }
+        ],
+        "id": "bigword_l_1",
+        "name": "维纳公寓",
+        "own": false
+      },
+      {
+        "fdetail": [
+          {
+            "id": "SF_0001",
+            "name": "咕咕警报",
+            "own": true
+          },
+          {
+            "id": "SF_0002",
+            "name": "无人来电",
+            "own": false
+          },
+          {
+            "id": "SF_0006",
+            "name": "老旧邮箱",
+            "own": false
+          },
+          {
+            "id": "SF_0009",
+            "name": "织梦结",
+            "own": false
+          },
+          {
+            "id": "SF_0010",
+            "name": "压缩嘭嘭朵",
+            "own": false
+          },
+          {
+            "id": "SF_0008",
+            "name": "何人的头盔",
+            "own": false
+          },
+          {
+            "id": "SF_0004",
+            "name": "银边管家",
+            "own": false
+          },
+          {
+            "id": "SF_0005",
+            "name": "仓鼠球",
+            "own": false
+          },
+          {
+            "id": "SF_0018",
+            "name": "修车工",
+            "own": false
+          }
+        ],
+        "id": "bigword_ll_1",
+        "name": "伊登公寓",
+        "own": false
+      },
+      {
+        "fdetail": [
+          {
+            "id": "SF_0001",
+            "name": "咕咕警报",
+            "own": true
+          },
+          {
+            "id": "SF_0002",
+            "name": "无人来电",
+            "own": false
+          },
+          {
+            "id": "SF_0005",
+            "name": "仓鼠球",
+            "own": false
+          },
+          {
+            "id": "SF_0004",
+            "name": "银边管家",
+            "own": false
+          },
+          {
+            "id": "SF_0007",
+            "name": "破损的木箱",
+            "own": false
+          },
+          {
+            "id": "SF_0011",
+            "name": "无名刃",
+            "own": false
+          },
+          {
+            "id": "SF_0013",
+            "name": "空铠甲",
+            "own": false
+          },
+          {
+            "id": "SF_0015",
+            "name": "旧滑板",
+            "own": false
+          },
+          {
+            "id": "SF_0018",
+            "name": "修车工",
+            "own": false
+          }
+        ],
+        "id": "bigword_ll_2",
+        "name": "天景空馆",
+        "own": false
+      },
+      {
+        "fdetail": [
+          {
+            "id": "SF_0001",
+            "name": "咕咕警报",
+            "own": true
+          },
+          {
+            "id": "SF_0002",
+            "name": "无人来电",
+            "own": false
+          },
+          {
+            "id": "SF_0006",
+            "name": "老旧邮箱",
+            "own": false
+          },
+          {
+            "id": "SF_0009",
+            "name": "织梦结",
+            "own": false
+          },
+          {
+            "id": "SF_0008",
+            "name": "何人的头盔",
+            "own": false
+          },
+          {
+            "id": "SF_0005",
+            "name": "银边管家",
+            "own": false
+          },
+          {
+            "id": "SF_0007",
+            "name": "破损的木箱",
+            "own": false
+          },
+          {
+            "id": "SF_0012",
+            "name": "休憩的拳王",
+            "own": false
+          },
+          {
+            "id": "SF_0018",
+            "name": "修车工",
+            "own": false
+          }
+        ],
+        "id": "bigword_lll_1",
+        "name": "金都云邸",
+        "own": false
+      },
+      {
+        "fdetail": [
+          {
+            "id": "SF_0001",
+            "name": "咕咕警报",
+            "own": true
+          },
+          {
+            "id": "SF_0002",
+            "name": "无人来电",
+            "own": false
+          },
+          {
+            "id": "SF_0003",
+            "name": "玛门",
+            "own": false
+          },
+          {
+            "id": "SF_0010",
+            "name": "压缩嘭嘭朵",
+            "own": false
+          },
+          {
+            "id": "SF_0014",
+            "name": "仿制幽灵车",
+            "own": false
+          },
+          {
+            "id": "SF_0011",
+            "name": "无名刃",
+            "own": false
+          },
+          {
+            "id": "SF_0013",
+            "name": "空铠甲",
+            "own": false
+          },
+          {
+            "id": "SF_0015",
+            "name": "旧滑板",
+            "own": false
+          },
+          {
+            "id": "SF_0016",
+            "name": "纸飞机",
+            "own": false
+          },
+          {
+            "id": "SF_0017",
+            "name": "双鱼旗",
+            "own": false
+          },
+          {
+            "id": "SF_0018",
+            "name": "修车工",
+            "own": false
+          }
+        ],
+        "id": "bigword_lll_2",
+        "name": "峰林别墅",
+        "own": false
+      }
+    ],
+    "total": 5
+  },
+  "msg": "ok",
+  "ok": true
+}

@@ -1,0 +1,265 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "awakenEffect": [],
+      "awakenLev": 0,
+      "citySkills": [
+        {
+          "id": "city_ability_palyer_01",
+          "items": [
+            {
+              "desc": "当角色羁遇等级为<Green2>4</>级及以下时，赠送礼物增加的好感值提高<Green2>5%</>。"
+            },
+            {
+              "desc": "当角色羁遇等级为<Green2>6</>级及以下时，赠送礼物增加的好感值提高<Green2>5%</>。"
+            },
+            {
+              "desc": "羁遇等级上限解锁至<Green2>8</>级（默认为<Green2>6</>级）。"
+            },
+            {
+              "desc": "羁遇等级上限解锁至<Green2>9</>级。"
+            },
+            {
+              "desc": "羁遇等级上限解锁至<Green2>10</>级。"
+            }
+          ],
+          "level": 0,
+          "name": "五星好人",
+          "type": "City"
+        }
+      ],
+      "elementType": "CHARACTER_ELEMENT_TYPE_COSMOS",
+      "fork": {
+        "alev": "",
+        "blev": "",
+        "id": "",
+        "properties": [],
+        "slev": ""
+      },
+      "groupType": "CHARACTER_GROUP_TYPE_ONE",
+      "id": "1051",
+      "name": "TesterChar(女)",
+      "properties": [
+        {
+          "id": "hpmax",
+          "name": "生命值",
+          "value": "1250"
+        },
+        {
+          "id": "atk",
+          "name": "攻击力",
+          "value": "85"
+        },
+        {
+          "id": "def",
+          "name": "防御力",
+          "value": "75"
+        },
+        {
+          "id": "crit",
+          "name": "暴击率",
+          "value": "5%"
+        },
+        {
+          "id": "critdamage",
+          "name": "暴击伤害",
+          "value": "50%"
+        },
+        {
+          "id": "chargegetefficiency",
+          "name": "充能效率",
+          "value": "100%"
+        },
+        {
+          "id": "mag",
+          "name": "环合强度",
+          "value": "0"
+        },
+        {
+          "id": "healup",
+          "name": "治疗加成",
+          "value": "0%"
+        },
+        {
+          "id": "healbeup",
+          "name": "受治疗加成",
+          "value": "0%"
+        },
+        {
+          "id": "damageupgeneral",
+          "name": "通用伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageupcosmos",
+          "name": "光属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageupnature",
+          "name": "灵属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageupincantation",
+          "name": "咒属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageupchaos",
+          "name": "暗属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageupsyche",
+          "name": "魂属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageuplakshana",
+          "name": "相属性异能伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageuppsychically",
+          "name": "心灵伤害增强",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistcosmos",
+          "name": "光属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistnature",
+          "name": "灵属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistincantation",
+          "name": "咒属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistchaos",
+          "name": "暗属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistsyche",
+          "name": "魂属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistlakshana",
+          "name": "相属性异能伤害抗性",
+          "value": "0%"
+        },
+        {
+          "id": "damageresistpsychically",
+          "name": "心灵伤害抗性",
+          "value": "0%"
+        }
+      ],
+      "quality": "ITEM_QUALITY_ORANGE",
+      "skills": [
+        {
+          "id": "ga_female051_melee",
+          "items": [
+            {
+              "desc": "零挥动武器牵引能量，进行至多<NumGreen>5</>段的连续攻击，造成<Guang>光属性异能伤害</>。",
+              "title": "<Title>普通攻击：鉴痕·断</>"
+            },
+            {
+              "desc": "零在空中挥动武器，并迅速下落冲击地面，落地时造成<NumGreen>1</>次范围性的<Guang>光属性异能伤害</>，伤害随下落高度升高而提升，最高提升200%。",
+              "title": "<Title>普通攻击：鉴痕·破</>"
+            },
+            {
+              "desc": "触发极限闪避后使用「普通攻击：鉴痕·断」触发。零抓住敌人攻击落空的破绽挥动武器进行反击，造成<NumGreen>1</>次范围性的<Guang>光属性异能伤害</>，并额外扣除一定倾陷值。",
+              "title": "<Title>极限反击：一瞬灵感</>"
+            },
+            {
+              "desc": "<Italic>使用剑的方法，是那时唯独能感觉到握于手中的东西。</>"
+            }
+          ],
+          "level": 1,
+          "name": "鉴痕",
+          "type": "Proactive"
+        },
+        {
+          "id": "ga_female051_skill",
+          "items": [
+            {
+              "desc": "破绽，于此揭露！零连续挥动武器造成<NumGreen>3</>段伤害并跃至空中蓄力，发射一枚「异能炮」，造成<NumGreen>1</>次范围性的<Guang>光属性异能伤害</>，并对命中的第一个等级低于零自身等级的敌人额外造成<NumGreen>1</>次<Guang>光属性异能伤害</>。"
+            },
+            {
+              "desc": "<Italic>超脱现实之景，由斩击浅浅刻画出一角，显现于凭空。</>"
+            }
+          ],
+          "level": 1,
+          "name": "铭隙鉴刻",
+          "type": "Proactive"
+        },
+        {
+          "id": "ga_female051_ultraskill",
+          "items": [
+            {
+              "desc": "将只有自己能看见的连结奇点之线——以舞动般的剑法一扫俱尽，造成多次范围性的<Guang>光属性异能伤害</>。"
+            },
+            {
+              "desc": "<Italic>感应到的异象奇点，环绕着无形、无声、无味的纽带……以流丽的招式全数切断，只消一瞬。</>"
+            }
+          ],
+          "level": 1,
+          "name": "奇零除尽",
+          "type": "Proactive"
+        },
+        {
+          "id": "ga_female051_qte",
+          "items": [
+            {
+              "desc": "以宛同切割空间之势发动斩击，引爆破绽的裂隙，造成<NumGreen>2</>次范围性的<Guang>光属性异能伤害</>。"
+            }
+          ],
+          "level": 1,
+          "name": "绽裂",
+          "type": "Proactive"
+        },
+        {
+          "id": "ga_female_passive_1",
+          "items": [
+            {
+              "desc": "<TextHLT>「盈蓄」强化</>：当前驻场角色获得终结能量时，基于零基础攻击力的50%回复生命。"
+            },
+            {
+              "desc": "<Italic>这份能够鉴明异象、解读异象的特殊能力，会将命运引往何处？</>"
+            }
+          ],
+          "level": 0,
+          "name": "鉴定师",
+          "type": "Passive"
+        },
+        {
+          "id": "ga_female_passive_2",
+          "items": [
+            {
+              "desc": "「极轨终结：奇零除尽」造成的伤害提升<NumGreen>25%</>。"
+            },
+            {
+              "desc": "<Italic>第零感——同调。</>"
+            }
+          ],
+          "level": 0,
+          "name": "异象感知力",
+          "type": "Passive"
+        }
+      ],
+      "suit": {
+        "suitActivateNum": 0
+      }
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}
