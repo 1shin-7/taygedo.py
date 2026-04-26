@@ -1,0 +1,147 @@
+{
+  "code": 0,
+  "data": {
+    "hasMore": false,
+    "page": 0,
+    "posts": [
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "「你好！要加入Persona1Family家族吗？」\n「收下这枚家族信物，以后你就是我的小弟啦！」\n「喂喂……不准嫌弃它是饮料瓶盖做的……」\n",
+        "cover": "{\"cropRect\":{\"height\":0,\"width\":0},\"url\":\"https://bbs-upload.tajiduo.com/20260422/10000002/PLO9GNA0CKS6RRVRN3N5JUR9GMDCJ9DN.png\"}",
+        "createTime": 1776823523797,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 186129,
+        "postStat": {
+          "collectNum": 182,
+          "commentNum": 725,
+          "likeNum": 10679,
+          "postId": 186129
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "sendTime": 1776826800030,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"「你好！要加入Persona1Family家族吗？」\"},{\"txt\":\"\\n\"},{\"txt\":\"「收下这枚家族信物，以后你就是我的小弟啦！」\"},{\"txt\":\"\\n\"},{\"txt\":\"「喂喂……不准嫌弃它是饮料瓶盖做的……」\"},{\"txt\":\"\\n\"}]",
+        "subject": "《Game1》Persona1角色短片丨一个「老大」的邀请",
+        "topicIds": [
+          28
+        ],
+        "type": 3,
+        "uid": 10000002,
+        "updateTime": 1776826800030,
+        "userStick": false,
+        "version": 0,
+        "vods": [
+          {
+            "cover": "https://bbs-upload.tajiduo.com/20260422/10000002/PLO9GNA0CKS6RRVRN3N5JUR9GMDCJ9DN.png",
+            "duration": 246,
+            "items": [
+              {
+                "height": 0,
+                "size": 244584072,
+                "url": "https://bbs-upload.tajiduo.com/20260422/10000002/SQ1OBAJVB9V0UE83C9IUSESA55EAIFBF.mp4",
+                "width": 0
+              }
+            ],
+            "url": "https://bbs-upload.tajiduo.com/20260422/10000002/SQ1OBAJVB9V0UE83C9IUSESA55EAIFBF.mp4"
+          }
+        ]
+      },
+      {
+        "columnId": 4,
+        "columnTop": false,
+        "communityId": 2,
+        "content": "财富。名誉。权利。\n统领整个虎特洛的虎老大消失前，只留下了他的勋章。\n传闻只要拥有这枚勋章，就能继承虎特洛家族的一切！\n然而——\n「英雄可不需要这种东西——！」\n",
+        "cover": "{\"cropRect\":{\"height\":0,\"width\":0},\"url\":\"https://bbs-upload.tajiduo.com/20260420/10000002/HDILNSMJAA8EHQ7ERJ8F8RCT6H5JMJ2A.png\"}",
+        "createTime": 1776690854872,
+        "deleteTime": 0,
+        "draftId": 0,
+        "images": [],
+        "isDelete": false,
+        "lastEditTime": 0,
+        "mentions": [],
+        "postId": 182113,
+        "postStat": {
+          "collectNum": 182,
+          "commentNum": 825,
+          "likeNum": 9688,
+          "postId": 182113
+        },
+        "prime": false,
+        "region": "江苏",
+        "scheduleTime": 0,
+        "sendTime": 1776740400058,
+        "showingMissing": false,
+        "structuredContent": "[{\"txt\":\"财富。名誉。权利。\"},{\"txt\":\"\\n\"},{\"txt\":\"统领整个虎特洛的虎老大消失前，只留下了他的勋章。\"},{\"txt\":\"\\n\"},{\"txt\":\"传闻只要拥有这枚勋章，就能继承虎特洛家族的一切！\"},{\"txt\":\"\\n\"},{\"txt\":\"然而——\"},{\"txt\":\"\\n\"},{\"txt\":\"「英雄可不需要这种东西——！」\"},{\"txt\":\"\\n\"}]",
+        "subject": "Persona1角色PV丨心有猛虎",
+        "topicIds": [],
+        "type": 3,
+        "uid": 10000002,
+        "updateTime": 1776740400058,
+        "userStick": false,
+        "version": 0,
+        "vods": [
+          {
+            "cover": "https://bbs-upload.tajiduo.com/20260420/10000002/HDILNSMJAA8EHQ7ERJ8F8RCT6H5JMJ2A.png",
+            "duration": 254,
+            "items": [
+              {
+                "height": 0,
+                "size": 192600240,
+                "url": "https://bbs-upload.tajiduo.com/20260420/10000002/QMFIVTUJ91HI0NQAK826FOFRFG659N78.mp4",
+                "width": 0
+              }
+            ],
+            "url": "https://bbs-upload.tajiduo.com/20260420/10000002/QMFIVTUJ91HI0NQAK826FOFRFG659N78.mp4"
+          }
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "cover": "https://webstatic.tajiduo.com/bbs/pic/huati-nanali-icon.png",
+        "createTime": 1776744620826,
+        "icon": "https://webstatic.tajiduo.com/bbs/pic/huati-nanali-icon.png",
+        "id": 28,
+        "introduce": "「 堂堂Persona1Family家族一代目登场！」",
+        "readNum": 0,
+        "recommendTime": 1840636800000,
+        "relatedNum": 1842,
+        "state": 0,
+        "topic": "Persona1",
+        "type": 0,
+        "updateTime": 1776744620826
+      }
+    ],
+    "users": [
+      {
+        "account": "9_100000099",
+        "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+        "certification": {},
+        "createTime": 1729068040848,
+        "deviceId": "ABCDEF0123456789ABCDEF0123456789",
+        "forbidEndTime": 0,
+        "gender": -1,
+        "ipRegion": "江苏",
+        "isRealname": false,
+        "nickname": "Game1",
+        "officialMaster": true,
+        "silentEndTime": 0,
+        "uid": 10000002,
+        "updateTime": 1777008252209,
+        "userMaster": false
+      }
+    ],
+    "version": 0
+  },
+  "msg": "ok",
+  "ok": true
+}

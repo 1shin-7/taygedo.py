@@ -1,7 +1,7 @@
 """taygedo — a Pythonic, LSP-friendly HTTP API client framework."""
 
-from .client import TaygedoClient
-from .core import (
+from taygedo.client import TaygedoClient
+from taygedo.core import (
     ApiError,
     BaseClient,
     Body,

@@ -8,9 +8,9 @@ import subprocess
 import click
 from rich.console import Console
 
-from . import _storage
-from ._render import render
-from ._shared import storage
+from taygedo.cli import _storage
+from taygedo.cli._render import render
+from taygedo.cli._shared import storage
 
 __all__ = ["conf_group"]
 

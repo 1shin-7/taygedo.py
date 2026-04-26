@@ -16,11 +16,11 @@ from typing import TYPE_CHECKING, Any
 
 from curl_cffi.requests import AsyncSession
 
-from .auth_provider import AuthProvider
-from .signing import PreparedRequest
+from taygedo.core.auth_provider import AuthProvider
+from taygedo.core.signing import PreparedRequest
 
 if TYPE_CHECKING:
-    from .service import Service
+    from taygedo.core.service import Service
 
 __all__ = ["BaseClient", "Response"]
 

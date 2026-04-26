@@ -15,15 +15,15 @@ from __future__ import annotations
 
 from typing import Annotated, Any, ClassVar
 
-from ..core import Body, Service, endpoint
-from ..models import (
+from taygedo.core import Body, Service, endpoint
+from taygedo.models import (
     CaptchaRequest,
     CheckCaptchaRequest,
     LaohuResponse,
     SmsLoginRequest,
     SmsLoginResult,
 )
-from ..signers import LOGIN_SENSITIVE_FIELDS, LaohuConfig, SignLaohu
+from taygedo.signers import LOGIN_SENSITIVE_FIELDS, LaohuConfig, SignLaohu
 
 __all__ = ["LoginService"]
 

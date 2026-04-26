@@ -1,0 +1,105 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "cardBgImg": "https://webstatic.tajiduo.com/bbs/pic/yihuanbeijing.png",
+      "cardLink": "https://webstatic.tajiduo.com/bbs/yh-game-record/index.html?hotta_presentation_style=fullscreen",
+      "columns": [
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-yihuan.png",
+          "columnName": "「袋先生」邮箱",
+          "communityId": 2,
+          "createTime": 1724312396920,
+          "gameId": 1257,
+          "id": 4,
+          "showType": 3
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-yihuan.png",
+          "columnName": "「呗果」揭示板",
+          "communityId": 2,
+          "createTime": 1724310837428,
+          "gameId": 1257,
+          "id": 2,
+          "showType": 1
+        },
+        {
+          "columnIcon": "https://webstatic.tajiduo.com/bbs/pic/YH-gonglve.png",
+          "columnName": "「猎人帮」营地",
+          "communityId": 2,
+          "createTime": 1776405750461,
+          "gameId": 1289,
+          "id": 10,
+          "showType": 2
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/xianliao-yihuan.png",
+          "columnName": "「Zoomer」选辑",
+          "communityId": 2,
+          "createTime": 1732255362658,
+          "gameId": 1257,
+          "id": 8,
+          "showType": 4
+        }
+      ],
+      "createTime": 1724310485911,
+      "gameId": 1289,
+      "homeBgImg": "https://tjdapp-user-1251008858.cos.ap-beijing.myqcloud.com/20240926/4_1727319563112.jpeg",
+      "icon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+      "id": 2,
+      "name": "Game1",
+      "state": 0
+    },
+    {
+      "cardBgImg": "https://webstatic.tajiduo.com/bbs/pic/huantabeijing.png",
+      "cardLink": "https://webstatic.tajiduo.com/bbs/game-records/index.html?fullscreen=1",
+      "columns": [
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/guanfang-huanta.png",
+          "columnName": "海嘉德资讯",
+          "communityId": 1,
+          "createTime": 1728698602324,
+          "gameId": 1256,
+          "id": 5,
+          "showType": 3
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/shuiqu-huanta.png",
+          "columnName": "回声廊",
+          "communityId": 1,
+          "createTime": 1724312342240,
+          "gameId": 1256,
+          "id": 3,
+          "showType": 1
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/gonglve-huanta.png",
+          "columnName": "攻略数据",
+          "communityId": 1,
+          "createTime": 1724310778126,
+          "gameId": 1256,
+          "id": 1,
+          "showType": 2
+        },
+        {
+          "columnIcon": "https://serverlist-yh.wmupd.com/notice_test5/pic/tongrenqu-huanta.png",
+          "columnName": "同人创作",
+          "communityId": 1,
+          "createTime": 1732255438108,
+          "gameId": 1256,
+          "id": 9,
+          "showType": 4
+        }
+      ],
+      "createTime": 1724233334619,
+      "gameId": 1256,
+      "homeBgImg": "https://serverlist-yh.wmupd.com/notice_test5/pic/home_top@21x.png",
+      "icon": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-huanta.png",
+      "id": 1,
+      "name": "Game2",
+      "state": 0
+    }
+  ],
+  "msg": "ok",
+  "ok": true
+}

@@ -18,9 +18,9 @@ from typing import Any
 
 import click
 
-from ..client import TaygedoClient
-from ..device import AndroidDeviceProfile
-from ._storage import Storage, StoredAccount
+from taygedo.cli._storage import Storage, StoredAccount
+from taygedo.client import TaygedoClient
+from taygedo.device import AndroidDeviceProfile
 
 __all__ = [
     "async_command",

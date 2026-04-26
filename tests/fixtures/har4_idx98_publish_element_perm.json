@@ -1,0 +1,9 @@
+{
+  "code": 0,
+  "data": {
+    "canPublish": false,
+    "prompt": "仅认证用户可插入外部视屏功能"
+  },
+  "msg": "ok",
+  "ok": true
+}

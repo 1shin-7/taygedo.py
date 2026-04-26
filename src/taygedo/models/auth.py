@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pydantic import Field
 
-from ._base import BbsBase, LaohuBase
+from taygedo.models._base import BbsBase, LaohuBase
 
 __all__ = [
     "AreaCode",

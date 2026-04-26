@@ -5,7 +5,7 @@ from __future__ import annotations
 import orjson
 from pydantic import Field
 
-from ._base import BbsBase
+from taygedo.models._base import BbsBase
 
 __all__ = [
     "AppConfig",

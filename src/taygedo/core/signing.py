@@ -12,7 +12,7 @@ from copy import deepcopy
 from dataclasses import dataclass, field
 from typing import Protocol, runtime_checkable
 
-from .types import JsonObject
+from taygedo.core.types import JsonObject
 
 __all__ = ["NullSigner", "PreparedRequest", "Signer", "resolve_signer"]
 

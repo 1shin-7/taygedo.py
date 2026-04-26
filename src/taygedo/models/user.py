@@ -4,13 +4,17 @@ from __future__ import annotations
 
 from pydantic import Field
 
-from ._base import BbsBase
+from taygedo.models._base import BbsBase
 
 __all__ = [
     "AuditState",
     "ColumnAuth",
     "CommunityAuth",
+    "FollowEntry",
+    "FollowsPage",
     "PrivacySetting",
+    "PublishElementPerm",
+    "SysAvatar",
     "User",
     "UserFullInfo",
     "UserStat",
@@ -90,3 +94,42 @@ class UserFullInfo(BbsBase):
     privacy_setting: PrivacySetting = Field(alias="privacySetting")
     certification: dict[str, object] = Field(default_factory=dict)
     in_black_list: bool = Field(alias="inBlackList", default=False)
+
+
+# ---------- system-provided avatar pool ------------------------------------
+
+
+class SysAvatar(BbsBase):
+    """One row in ``GET /apihub/api/assets/getUserSysAvatars`` — official avatar."""
+
+    id: int
+    name: str = ""
+    icon: str = ""
+
+
+# ---------- follow listings ------------------------------------------------
+
+
+class FollowEntry(BbsBase):
+    """``queryFollows.follows[*]`` — a User plus the relation flags."""
+
+    user: User
+    fr: dict[str, bool] = Field(default_factory=dict)
+
+
+class FollowsPage(BbsBase):
+    """``GET /usercenter/api/queryFollows`` payload (cursor-paginated)."""
+
+    follows: list[FollowEntry] = Field(default_factory=list)
+    last_id: int = Field(alias="lastId", default=0)
+    more: bool = False
+
+
+# ---------- post-publishing permission check -------------------------------
+
+
+class PublishElementPerm(BbsBase):
+    """``GET /bbs/api/publishElementPerm`` — can the current user insert X?"""
+
+    can_publish: bool = Field(alias="canPublish", default=False)
+    prompt: str = ""

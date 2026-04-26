@@ -12,8 +12,8 @@ from typing import Generic, TypeVar
 
 from pydantic import Field
 
-from ._base import BbsBase
-from .user import User
+from taygedo.models._base import BbsBase
+from taygedo.models.user import User
 
 __all__ = ["CursorPage", "ReplyFeedPage"]
 

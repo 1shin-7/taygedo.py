@@ -26,7 +26,7 @@ import string
 import time
 from dataclasses import dataclass
 
-from ..core.signing import PreparedRequest
+from taygedo.core.signing import PreparedRequest
 
 __all__ = ["HTASSISTANT_DS_SALT", "DsConfig", "SignDs"]
 

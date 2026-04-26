@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "data": {
+    "day": 25,
+    "days": 1,
+    "month": 4,
+    "reSignCnt": 0,
+    "todaySign": true
+  },
+  "msg": "ok",
+  "ok": true
+}

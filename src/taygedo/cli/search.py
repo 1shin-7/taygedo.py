@@ -7,8 +7,8 @@ from typing import Any
 
 import click
 
-from ._render import render
-from ._shared import async_command, flush_session, load_client
+from taygedo.cli._render import render
+from taygedo.cli._shared import async_command, flush_session, load_client
 
 __all__ = ["search_group"]
 

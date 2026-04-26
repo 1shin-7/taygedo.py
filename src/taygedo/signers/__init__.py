@@ -1,7 +1,7 @@
 """Built-in request signers (computational header/param injection only)."""
 
-from .ds import HTASSISTANT_DS_SALT, DsConfig, SignDs
-from .laohu import (
+from taygedo.signers.ds import HTASSISTANT_DS_SALT, DsConfig, SignDs
+from taygedo.signers.laohu import (
     HTASSISTANT_APP_KEY,
     LOGIN_SENSITIVE_FIELDS,
     LaohuConfig,

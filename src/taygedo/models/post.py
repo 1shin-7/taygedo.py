@@ -7,9 +7,9 @@ from typing import Any
 import orjson
 from pydantic import Field, field_validator
 
-from ._base import BbsBase
-from .common import Image, Vod
-from .user import User
+from taygedo.models._base import BbsBase
+from taygedo.models.common import Image, Vod
+from taygedo.models.user import User
 
 __all__ = [
     "AddCommentRequest",
@@ -17,6 +17,8 @@ __all__ = [
     "CommentPage",
     "CommentStat",
     "CommentSubmitResult",
+    "CreatePostRequest",
+    "CreatePostResult",
     "FollowRel",
     "Post",
     "PostCover",
@@ -234,3 +236,28 @@ class CommentSubmitResult(BbsBase):
 
     comment: Comment
     users: list[User] = Field(default_factory=list)
+
+
+# ---------- post creation --------------------------------------------------
+
+
+class CreatePostRequest(BbsBase):
+    """``POST /bbs/api/post`` JSON body.
+
+    ``content`` is a Quill-generated HTML string with embedded image / divider /
+    mention nodes. ``type`` follows :class:`PostType` (1 = text/image, 3 = video).
+    ``topic_ids`` may be empty.
+    """
+
+    type: int = PostType.TEXT_OR_IMAGE
+    community_id: int = Field(alias="communityId")
+    column_id: int = Field(alias="columnId")
+    subject: str
+    content: str
+    topic_ids: list[int] = Field(alias="topicIds", default_factory=list)
+
+
+class CreatePostResult(BbsBase):
+    """``POST /bbs/api/post`` response data — only the new ``post_id``."""
+
+    post_id: int = Field(alias="postId")

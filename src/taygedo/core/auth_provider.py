@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Protocol, runtime_checkable
 
-from .signing import PreparedRequest
+from taygedo.core.signing import PreparedRequest
 
 __all__ = ["AuthProvider", "BearerProvider"]
 

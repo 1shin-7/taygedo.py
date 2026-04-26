@@ -13,9 +13,9 @@ from typing import Annotated, ClassVar
 
 from pydantic import BaseModel, Field
 
-from ..core import BearerAuthService, Body, Query, endpoint
-from ..models import BbsResponse, NteSignReward, NteSignState
-from ..signers import SignDs
+from taygedo.core import BearerAuthService, Body, Query, endpoint
+from taygedo.models import BbsResponse, NteSignReward, NteSignState
+from taygedo.signers import SignDs
 
 __all__ = ["NteSignRequest", "NteSignService"]
 

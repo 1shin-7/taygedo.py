@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Annotated, ClassVar
 
-from ..core import BearerAuthService, Query, endpoint
-from ..models import (
+from taygedo.core import BearerAuthService, Query, endpoint
+from taygedo.models import (
     BbsResponse,
     CursorPage,
     HotWord,
@@ -13,7 +13,7 @@ from ..models import (
     SearchTopicResult,
     SearchUsersPage,
 )
-from ..signers import SignDs
+from taygedo.signers import SignDs
 
 __all__ = ["SearchService"]
 

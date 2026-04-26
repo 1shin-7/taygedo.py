@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from typing import Generic, TypeVar
 
-from ._base import BbsBase, LaohuBase
+from taygedo.models._base import BbsBase, LaohuBase
 
 __all__ = ["BbsResponse", "LaohuResponse"]
 

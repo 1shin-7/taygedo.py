@@ -11,14 +11,14 @@ import os
 
 import click
 
-from .auth import auth_group
-from .community import community_group
-from .conf import conf_group
-from .ht import ht_group
-from .nte import nte_group
-from .post import post_group
-from .search import search_group
-from .user import user_group
+from taygedo.cli.auth import auth_group
+from taygedo.cli.community import community_group
+from taygedo.cli.conf import conf_group
+from taygedo.cli.ht import ht_group
+from taygedo.cli.nte import nte_group
+from taygedo.cli.post import post_group
+from taygedo.cli.search import search_group
+from taygedo.cli.user import user_group
 
 __all__ = ["app"]
 

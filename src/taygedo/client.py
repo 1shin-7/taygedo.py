@@ -9,9 +9,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from .core import BaseClient, BearerProvider, service
-from .device import AndroidDeviceProfile, DeviceProfile
-from .services import (
+from taygedo.core import BaseClient, BearerProvider, service
+from taygedo.device import AndroidDeviceProfile, DeviceProfile
+from taygedo.services import (
     AuthService,
     BindRoleService,
     CommunityService,

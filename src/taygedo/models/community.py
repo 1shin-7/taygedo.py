@@ -8,8 +8,8 @@ from __future__ import annotations
 
 from pydantic import Field
 
-from ._base import BbsBase
-from .common import Ann, Banner, Column, NavigatorEntry
+from taygedo.models._base import BbsBase
+from taygedo.models.common import Ann, Banner, Column, NavigatorEntry
 
 __all__ = ["ColumnHome", "Community", "CommunityHome", "NotificationUnread", "UnreadCount"]
 

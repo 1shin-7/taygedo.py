@@ -18,13 +18,13 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Annotated, ClassVar, cast
 
-from ..core import ApiError, Body, Header, Service, SignError, endpoint
-from ..models import BbsLoginResult, BbsResponse, ExchangeTokenRequest
-from ..signers import SignDs
+from taygedo.core import ApiError, Body, Header, Service, SignError, endpoint
+from taygedo.models import BbsLoginResult, BbsResponse, ExchangeTokenRequest
+from taygedo.signers import SignDs
 
 if TYPE_CHECKING:
-    from ..client import TaygedoClient
-    from ..models import SmsLoginResult
+    from taygedo.client import TaygedoClient
+    from taygedo.models import SmsLoginResult
 
 __all__ = ["AuthService"]
 

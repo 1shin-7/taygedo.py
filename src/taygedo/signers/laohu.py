@@ -25,9 +25,9 @@ from typing import Literal
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.padding import PKCS7
 
-from ..core.exceptions import SignError
-from ..core.signing import PreparedRequest
-from ..device import DeviceProfile
+from taygedo.core.exceptions import SignError
+from taygedo.core.signing import PreparedRequest
+from taygedo.device import DeviceProfile
 
 __all__ = ["LaohuConfig", "SignLaohu"]
 

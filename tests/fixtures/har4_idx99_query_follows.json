@@ -1,0 +1,33 @@
+{
+  "code": 0,
+  "data": {
+    "follows": [
+      {
+        "fr": {
+          "followed": false,
+          "following": true
+        },
+        "user": {
+          "account": "9_100000099",
+          "avatar": "https://serverlist-yh.wmupd.com/notice_test5/pic/touxiang-yihuan.png",
+          "createTime": 1729068040848,
+          "deviceId": "ABCDEF0123456789ABCDEF0123456789",
+          "forbidEndTime": 0,
+          "gender": -1,
+          "ipRegion": "江苏",
+          "isRealname": false,
+          "loginTime": 1776918802983,
+          "master": 1,
+          "nickname": "Game1",
+          "silentEndTime": 0,
+          "uid": 10000002,
+          "updateTime": 1777008252209
+        }
+      }
+    ],
+    "lastId": 1777040541351,
+    "more": false
+  },
+  "msg": "ok",
+  "ok": true
+}

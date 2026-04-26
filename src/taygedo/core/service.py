@@ -25,8 +25,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Any, ClassVar, Generic, TypeVar, cast, overload
 
 if TYPE_CHECKING:
-    from .client import BaseClient
-    from .signing import Signer
+    from taygedo.core.client import BaseClient
+    from taygedo.core.signing import Signer
 
 
 __all__ = ["BearerAuthService", "Service", "ServiceDescriptor", "service"]

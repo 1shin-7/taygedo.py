@@ -417,16 +417,35 @@ def test_nte_cards(
     assert "异环" in result.output
 
 
-def test_ht_sign_placeholder(
+def test_ht_sign_when_already_signed(
     isolated_storage: Path,  # noqa: F811
+    monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    """When server reports today's TOF sign is already done, just print and exit."""
+    Storage(config_dir=isolated_storage).upsert_account(
+        StoredAccount(
+            uid=10000001, nickname="t", cellphone_masked="138****0000",
+            access_token="at", refresh_token="rt",
+            laohu_token="lt", laohu_user_id=999, device_id="dev",
+            ht_role_id=1000000000001,
+        ),
+        set_active=True,
+    )
+
+    def respond(req: PreparedRequest) -> Response:
+        if req.url.endswith("/awapi/signin/state"):
+            return _ok(
+                {
+                    "code": 0, "ok": True,
+                    "data": {
+                        "month": 4, "day": 25, "days": 1,
+                        "todaySign": True, "reSignCnt": 0,
+                    },
+                },
+            )
+        return _ok({"code": 0, "ok": True})
+
+    install_scripted_client(monkeypatch, respond)
     result = CliRunner().invoke(app, ["ht", "sign"])
-    assert result.exit_code != 0
-    assert "NOT YET IMPLEMENTED" in result.output or "暂未实现" in result.output
-
-
-def test_tof_alias_for_sign_placeholder(
-    isolated_storage: Path,  # noqa: F811
-) -> None:
-    result = CliRunner().invoke(app, ["tof", "sign"])
-    assert result.exit_code != 0
+    assert result.exit_code == 0, result.output
+    assert "已签到" in result.output

@@ -9,8 +9,8 @@ Models are organised by business domain (``community``, ``post``, ``user``,
 * :mod:`taygedo.models.common` — atomic value objects (``Image``, ``Vod``, ...).
 """
 
-from ._base import BbsBase, LaohuBase
-from .app import (
+from taygedo.models._base import BbsBase, LaohuBase
+from taygedo.models.app import (
     AppConfig,
     AppConfigs,
     AppStartupData,
@@ -18,7 +18,7 @@ from .app import (
     EmoticonGroup,
     ImConfigEntry,
 )
-from .auth import (
+from taygedo.models.auth import (
     AreaCode,
     BbsLoginResult,
     CaptchaRequest,
@@ -32,16 +32,16 @@ from .auth import (
     UserIdentify,
     WebViewUrls,
 )
-from .common import Ann, Banner, Column, Image, NavigatorEntry, Vod, VodItem
-from .community import (
+from taygedo.models.common import Ann, Banner, Column, Image, NavigatorEntry, Vod, VodItem
+from taygedo.models.community import (
     ColumnHome,
     Community,
     CommunityHome,
     NotificationUnread,
     UnreadCount,
 )
-from .envelope import BbsResponse, LaohuResponse
-from .game import (
+from taygedo.models.envelope import BbsResponse, LaohuResponse
+from taygedo.models.game import (
     BindRole,
     GameRecordCard,
     GameRolesData,
@@ -50,7 +50,7 @@ from .game import (
     HtRoleGameRecord,
     HtWeaponInfo,
 )
-from .nte import (
+from taygedo.models.nte import (
     NteAchieveProgress,
     NteArea,
     NteAreaDetail,
@@ -75,13 +75,15 @@ from .nte import (
     NteVehicleData,
     NteVehicleShow,
 )
-from .pagination import CursorPage, ReplyFeedPage
-from .post import (
+from taygedo.models.pagination import CursorPage, ReplyFeedPage
+from taygedo.models.post import (
     AddCommentRequest,
     Comment,
     CommentPage,
     CommentStat,
     CommentSubmitResult,
+    CreatePostRequest,
+    CreatePostResult,
     FollowRel,
     Post,
     PostCover,
@@ -91,14 +93,18 @@ from .post import (
     Reply,
     SelfOperation,
 )
-from .search import HotWord, SearchTopicResult, SearchUsersPage, Topic
-from .shop import Good, GoodsPage
-from .task import CoinTaskState, ExpLevel, ExpRecord, SignInResult, Task, UserTasks
-from .user import (
+from taygedo.models.search import HotWord, SearchTopicResult, SearchUsersPage, Topic
+from taygedo.models.shop import Good, GoodsPage
+from taygedo.models.task import CoinTaskState, ExpLevel, ExpRecord, SignInResult, Task, UserTasks
+from taygedo.models.user import (
     AuditState,
     ColumnAuth,
     CommunityAuth,
+    FollowEntry,
+    FollowsPage,
     PrivacySetting,
+    PublishElementPerm,
+    SysAvatar,
     User,
     UserFullInfo,
     UserStat,
@@ -130,13 +136,17 @@ __all__ = [
     "Community",
     "CommunityAuth",
     "CommunityHome",
+    "CreatePostRequest",
+    "CreatePostResult",
     "CursorPage",
     "Emoticon",
     "EmoticonGroup",
     "ExchangeTokenRequest",
     "ExpLevel",
     "ExpRecord",
+    "FollowEntry",
     "FollowRel",
+    "FollowsPage",
     "GameRecordCard",
     "GameRolesData",
     "GdtAdConfig",
@@ -184,6 +194,7 @@ __all__ = [
     "PostStat",
     "PostType",
     "PrivacySetting",
+    "PublishElementPerm",
     "Reply",
     "ReplyFeedPage",
     "SearchTopicResult",
@@ -192,6 +203,7 @@ __all__ = [
     "SignInResult",
     "SmsLoginRequest",
     "SmsLoginResult",
+    "SysAvatar",
     "Task",
     "Topic",
     "UnreadCount",

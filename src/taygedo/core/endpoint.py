@@ -35,10 +35,10 @@ from typing import (
 
 from pydantic import BaseModel, ValidationError
 
-from .exceptions import ApiError, ResponseValidationError, SignError
-from .params import Body, Header, ParamMarker, Path, Query
-from .signing import PreparedRequest, Signer, resolve_signer
-from .types import P, R
+from taygedo.core.exceptions import ApiError, ResponseValidationError, SignError
+from taygedo.core.params import Body, Header, ParamMarker, Path, Query
+from taygedo.core.signing import PreparedRequest, Signer, resolve_signer
+from taygedo.core.types import P, R
 
 __all__ = ["EndpointSpec", "Method", "endpoint"]
 
@@ -296,7 +296,7 @@ def _endpoint_impl(
 
         @wraps(func)
         async def wrapper(*args: Any, **kwargs: Any) -> Any:
-            from .service import Service as _Service
+            from taygedo.core.service import Service as _Service
 
             if not args or not isinstance(args[0], _Service):
                 raise TypeError(

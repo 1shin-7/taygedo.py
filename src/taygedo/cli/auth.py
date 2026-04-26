@@ -12,17 +12,9 @@ from typing import Any
 import click
 from rich.console import Console
 
-from ..client import TaygedoClient
-from ..core import ApiError, ResponseValidationError
-from ..device import AndroidDeviceProfile
-from ..models import (
-    CaptchaRequest,
-    CheckCaptchaRequest,
-    SmsLoginRequest,
-)
-from ._interactive import mask_cellphone, prompt_captcha, prompt_cellphone
-from ._render import render
-from ._shared import (
+from taygedo.cli._interactive import mask_cellphone, prompt_captcha, prompt_cellphone
+from taygedo.cli._render import render
+from taygedo.cli._shared import (
     async_command,
     flush_session,
     load_client,
@@ -30,7 +22,15 @@ from ._shared import (
     require_account,
     storage,
 )
-from ._storage import StoredAccount
+from taygedo.cli._storage import StoredAccount
+from taygedo.client import TaygedoClient
+from taygedo.core import ApiError, ResponseValidationError
+from taygedo.device import AndroidDeviceProfile
+from taygedo.models import (
+    CaptchaRequest,
+    CheckCaptchaRequest,
+    SmsLoginRequest,
+)
 
 __all__ = ["auth_group"]
 
